@@ -248,12 +248,13 @@ QUIZZES = {
         {"pergunta": "Em E.T., qual personagem quer voltar para casa?", "alternativas": ["Um robô", "Um astronauta", "Um extraterrestre"], "correta": 2},
     ],
 
-    "Filmes de Fantasia": [
-        {"pergunta": "Qual objeto Frodo precisa destruir em O Senhor dos Anéis?", "alternativas": ["Um colar", "Uma espada", "Um anel"], "correta": 2},
-        {"pergunta": "Qual é a escola de magia frequentada por Harry Potter?", "alternativas": ["Hogwarts", "Nárnia", "Camelot"], "correta": 0},
-        {"pergunta": "Por qual objeto as crianças entram em Nárnia no primeiro filme da série?", "alternativas": ["Espelho", "Guarda-roupa", "Janela"], "correta": 1},
-        {"pergunta": "Quem é o protagonista de O Hobbit?", "alternativas": ["Aragorn", "Gandalf", "Bilbo Bolseiro"], "correta": 2},
-  ],
+"Filmes de Fantasia": [
+    {"pergunta": "Qual objeto Frodo precisa destruir em O Senhor dos Anéis?", "alternativas": ["Um colar", "Uma espada", "Um anel"], "correta": 2},
+    {"pergunta": "Qual é a escola de magia frequentada por Harry Potter?", "alternativas": ["Hogwarts", "Nárnia", "Camelot"], "correta": 0},
+    {"pergunta": "Por qual objeto as crianças entram em Nárnia no primeiro filme da série?", "alternativas": ["Espelho", "Guarda-roupa", "Janela"], "correta": 1},
+    {"pergunta": "Quem é o protagonista de O Hobbit?", "alternativas": ["Aragorn", "Gandalf", "Bilbo Bolseiro"], "correta": 2},
+    {"pergunta": "Qual é o nome da protagonista de O Mágico de Oz?", "alternativas": ["Dorothy", "Alice", "Wendy"], "correta": 0},
+],
 
     "Oscar e Premiações do Cinema": [
         {"pergunta": "Qual organização entrega o Oscar?", "alternativas": ["Academia de Artes e Ciências Cinematográficas", "Grammy Academy", "FIFA"], "correta": 0},
