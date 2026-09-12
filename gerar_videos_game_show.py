@@ -47,369 +47,2129 @@ PASTA_SAIDA = PASTA_RAIZ / DATA_DO_DIA
 # correta: 0=A, 1=B, 2=C
 # As perguntas abaixo são diferentes das 40 usadas no gerador rosa.
 # ============================================================
+
+  # 45 novos temas de quiz - 5 perguntas por tema
+# Total: 225 perguntas
+# Respostas corretas variando entre A/B/C.
+
 QUIZZES = {
-
-    "Curiosidades sobre o Sono": [
-        {"pergunta": "Qual hormônio está relacionado ao controle do ciclo do sono?", "alternativas": ["Insulina", "Melatonina", "Adrenalina"], "correta": 1},
-        {"pergunta": "Durante qual fase do sono os sonhos costumam ser mais intensos?", "alternativas": ["Vigília", "Sono leve inicial", "REM"], "correta": 2},
-        {"pergunta": "Como é chamado o relógio biológico que regula sono e vigília?", "alternativas": ["Ritmo circadiano", "Reflexo pupilar", "Metabolismo basal"], "correta": 0},
-        {"pergunta": "Qual ambiente normalmente favorece o sono?", "alternativas": ["Muito iluminado", "Escuro e silencioso", "Com televisão alta"], "correta": 1},
-        {"pergunta": "Qual substância presente no café pode dificultar o sono?", "alternativas": ["Vitamina C", "Cálcio", "Cafeína"], "correta": 2},
+    "Fatos Engraçados sobre a História das Eleições": [
+        {
+            "pergunta": "Qual animal virou símbolo de voto de protesto em São Paulo em 1959?",
+            "alternativas": [
+                "Um cavalo",
+                "Um papagaio",
+                "Uma rinoceronte"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual primata ficou famoso como candidato de protesto no Rio em 1988?",
+            "alternativas": [
+                "Macaco Tião",
+                "Gorila Zico",
+                "Mico-leão"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual objeto virou símbolo da campanha presidencial de Jânio Quadros?",
+            "alternativas": [
+                "Vassoura",
+                "Chapéu",
+                "Panela"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Em que década a urna eletrônica começou a ser usada em eleições brasileiras?",
+            "alternativas": [
+                "Década de 1970",
+                "Década de 2010",
+                "Década de 1990"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual foi o primeiro presidente civil eleito diretamente após a Proclamação da República?",
+            "alternativas": [
+                "Prudente de Morais",
+                "Getúlio Vargas",
+                "Deodoro da Fonseca"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Sonhos e Pesadelos": [
-        {"pergunta": "Em qual fase do sono os sonhos vívidos são mais comuns?", "alternativas": ["Vigília", "Sono profundo apenas", "Sono REM"], "correta": 2},
-        {"pergunta": "Como é chamado um sonho que provoca medo intenso?", "alternativas": ["Pesadelo", "Devaneio", "Reflexo"], "correta": 0},
-        {"pergunta": "Qual órgão está diretamente envolvido na formação dos sonhos?", "alternativas": ["Pulmão", "Cérebro", "Estômago"], "correta": 1},
-        {"pergunta": "Como é chamado o sonho no qual a pessoa percebe que está sonhando?", "alternativas": ["Sonambulismo", "Insônia", "Sonho lúcido"], "correta": 2},
-        {"pergunta": "Pesadelos podem ocorrer com maior frequência após períodos de quê?", "alternativas": ["Estresse", "Beber água", "Comer cenoura"], "correta": 0},
+    "Eleições 2026": [
+        {
+            "pergunta": "Em que data acontece o primeiro turno das Eleições 2026?",
+            "alternativas": [
+                "4 de outubro",
+                "25 de outubro",
+                "11 de outubro"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quando está previsto o segundo turno, quando necessário?",
+            "alternativas": [
+                "25 de outubro",
+                "18 de outubro",
+                "1º de novembro"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quantas escolhas o eleitor faz na urna no primeiro turno de 2026?",
+            "alternativas": [
+                "Cinco",
+                "Quatro",
+                "Seis"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cargo aparece primeiro na ordem de votação de 2026?",
+            "alternativas": [
+                "Deputado federal",
+                "Governador",
+                "Presidente"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quantas vagas para o Senado estão em disputa nas Eleições 2026?",
+            "alternativas": [
+                "81",
+                "54",
+                "27"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Memória e Inteligência": [
-        {"pergunta": "Qual parte do cérebro tem papel importante na formação de novas memórias?", "alternativas": ["Hipocampo", "Pâncreas", "Medula óssea"], "correta": 0},
-        {"pergunta": "Como é chamada a memória que mantém informações por pouco tempo?", "alternativas": ["Memória genética", "Memória muscular", "Memória de curto prazo"], "correta": 2},
-        {"pergunta": "Qual atividade ajuda a exercitar a memória?", "alternativas": ["Nunca aprender nada novo", "Resolver desafios mentais", "Dormir zero horas"], "correta": 1},
-        {"pergunta": "Aprender uma nova habilidade envolve principalmente qual órgão?", "alternativas": ["Cérebro", "Rim", "Fígado"], "correta": 0},
-        {"pergunta": "A repetição pode ajudar em qual processo?", "alternativas": ["Digestão", "Respiração", "Memorização"], "correta": 2},
+    "Fatos Engraçados do Rock in Rio 2026": [
+        {
+            "pergunta": "Qual atração de 2026 tem um número escrito no próprio nome?",
+            "alternativas": [
+                "Foo Fighters",
+                "Twenty One Pilots",
+                "Halsey"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual grupo de 2026 tem fãs conhecidos como STAYs?",
+            "alternativas": [
+                "Maroon 5",
+                "Black Eyed Peas",
+                "Stray Kids"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual artista do Palco Mundo de 2026 tem 'John' no nome artístico?",
+            "alternativas": [
+                "J Balvin",
+                "Elton John",
+                "Jon Batiste"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual banda retorna ao Rock in Rio em 2026 sete anos depois de sua apresentação anterior?",
+            "alternativas": [
+                "The Hives",
+                "Sepultura",
+                "Foo Fighters"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual atração de 2026 tem a palavra 'Eyes' no nome?",
+            "alternativas": [
+                "Black Eyed Peas",
+                "Nova Twins",
+                "Twenty One Pilots"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Emoções do Corpo Humano": [
-        {"pergunta": "Qual emoção pode aumentar os batimentos cardíacos?", "alternativas": ["Sono profundo", "Medo", "Tédio"], "correta": 1},
-        {"pergunta": "Qual substância está associada à resposta de luta ou fuga?", "alternativas": ["Queratina", "Melanina", "Adrenalina"], "correta": 2},
-        {"pergunta": "Qual parte do rosto costuma se elevar quando sorrimos?", "alternativas": ["Bochechas", "Queixo", "Orelhas"], "correta": 0},
-        {"pergunta": "Qual emoção frequentemente está associada ao choro?", "alternativas": ["Equilíbrio", "Tristeza", "Fome"], "correta": 1},
-        {"pergunta": "Qual órgão participa diretamente do processamento das emoções?", "alternativas": ["Pulmão", "Fígado", "Cérebro"], "correta": 2},
+    "Famosos no Rock in Rio 2026": [
+        {
+            "pergunta": "Quem é o headliner do Palco Mundo em 4 de setembro de 2026?",
+            "alternativas": [
+                "Maroon 5",
+                "Stray Kids",
+                "Foo Fighters"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Quem lidera o Palco Mundo em 7 de setembro de 2026?",
+            "alternativas": [
+                "Avenged Sevenfold",
+                "Calvin Harris",
+                "Elton John"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual grupo de K-pop é headliner em 11 de setembro de 2026?",
+            "alternativas": [
+                "NEXZ",
+                "HWASA",
+                "Stray Kids"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual banda é headliner em 12 de setembro de 2026?",
+            "alternativas": [
+                "Foo Fighters",
+                "Maroon 5",
+                "Twenty One Pilots"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual artista brasileira está no Palco Mundo em 13 de setembro de 2026?",
+            "alternativas": [
+                "Ivete Sangalo",
+                "Anitta",
+                "Luísa Sonza"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Hábitos Estranhos do Corpo": [
-        {"pergunta": "O mecanismo exato do bocejo é totalmente compreendido pela ciência?", "alternativas": ["Não", "Sim, completamente", "Só durante o sono"], "correta": 0},
-        {"pergunta": "O que normalmente causa soluços?", "alternativas": ["Movimento dos ossos", "Contrações involuntárias do diafragma", "Crescimento do cabelo"], "correta": 1},
-        {"pergunta": "Por que os pelos ficam arrepiados quando sentimos frio?", "alternativas": ["Os ossos encolhem", "A pele desliga", "Pequenos músculos ligados aos pelos se contraem"], "correta": 2},
-        {"pergunta": "O que acontece durante um espirro?", "alternativas": ["O ar é expulso rapidamente pelas vias respiratórias", "O coração para por minutos", "Os pulmões deixam de funcionar"], "correta": 0},
-        {"pergunta": "Por que piscamos várias vezes por minuto?", "alternativas": ["Para ajudar na digestão", "Para lubrificar e proteger os olhos", "Para aumentar a visão à distância"], "correta": 1},
+    "Curiosidades dos Presidentes do Brasil": [
+        {
+            "pergunta": "Quem foi o primeiro presidente do Brasil?",
+            "alternativas": [
+                "Floriano Peixoto",
+                "Deodoro da Fonseca",
+                "Prudente de Morais"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual presidente ficou conhecido pelo plano de '50 anos em 5'?",
+            "alternativas": [
+                "Jânio Quadros",
+                "Juscelino Kubitschek",
+                "João Goulart"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual presidente tinha o sobrenome curioso 'Café Filho'?",
+            "alternativas": [
+                "João Café Filho",
+                "Itamar Franco",
+                "Tancredo Neves"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem governava o Brasil na inauguração de Brasília em 1960?",
+            "alternativas": [
+                "Eurico Gaspar Dutra",
+                "Juscelino Kubitschek",
+                "Getúlio Vargas"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual presidente renunciou ao cargo em 1961 poucos meses após tomar posse?",
+            "alternativas": [
+                "José Sarney",
+                "Jânio Quadros",
+                "João Goulart"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Coisas que o Cérebro Faz sem Você Perceber": [
-        {"pergunta": "Qual função o cérebro ajuda a controlar automaticamente?", "alternativas": ["Cor do cabelo", "Tamanho do pé", "Respiração"], "correta": 2},
-        {"pergunta": "O cérebro continua funcionando enquanto dormimos?", "alternativas": ["Sim", "Não", "Somente quando sonhamos"], "correta": 0},
-        {"pergunta": "Qual ação pode ocorrer sem pensamento consciente?", "alternativas": ["Escrever uma redação", "Reflexo", "Resolver uma equação"], "correta": 1},
-        {"pergunta": "Qual estrutura ajuda a controlar respiração e frequência cardíaca?", "alternativas": ["Fêmur", "Pele", "Tronco encefálico"], "correta": 2},
-        {"pergunta": "O cérebro recebe continuamente informações dos sentidos?", "alternativas": ["Sim", "Não", "Somente durante o sono"], "correta": 0},
+    "Campanhas Eleitorais que Viraram Memória Popular": [
+        {
+            "pergunta": "A vassoura ficou associada à campanha de qual político?",
+            "alternativas": [
+                "Juscelino Kubitschek",
+                "Jânio Quadros",
+                "Ulysses Guimarães"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual recurso musical é criado para fixar o nome de um candidato na memória?",
+            "alternativas": [
+                "Vinheta de cinema",
+                "Trilha instrumental",
+                "Jingle eleitoral"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual frase ficou associada ao projeto desenvolvimentista de Juscelino Kubitschek?",
+            "alternativas": [
+                "Diretas Já",
+                "50 anos em 5",
+                "Brasil, ame-o"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Em qual eleição presidencial a televisão teve papel marcante nos debates entre candidatos?",
+            "alternativas": [
+                "1945",
+                "1930",
+                "1989"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual movimento popular dos anos 1980 defendia eleições diretas para presidente?",
+            "alternativas": [
+                "Diretas Já",
+                "Queremismo",
+                "Tenentismo"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Alimentos que Enganam": [
-        {"pergunta": "Botanicamente, o tomate é classificado como quê?", "alternativas": ["Raiz", "Fruto", "Folha"], "correta": 1},
-        {"pergunta": "Qual destes é botanicamente um fruto apesar de ser usado como legume?", "alternativas": ["Batata", "Cenoura", "Pepino"], "correta": 2},
-        {"pergunta": "O amendoim pertence a qual grupo?", "alternativas": ["Leguminosas", "Tubérculos", "Frutas cítricas"], "correta": 0},
-        {"pergunta": "Qual destas é botanicamente considerada uma baga?", "alternativas": ["Morango", "Banana", "Maçã"], "correta": 1},
-        {"pergunta": "A batata que normalmente comemos é qual parte da planta?", "alternativas": ["Fruto", "Folha", "Tubérculo"], "correta": 2},
+    "Urnas Eletrônicas e Curiosidades da Votação": [
+        {
+            "pergunta": "Em qual década a urna eletrônica estreou no Brasil?",
+            "alternativas": [
+                "Década de 2010",
+                "Década de 1960",
+                "Década de 1990"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "O que o eleitor digita principalmente para escolher uma candidatura na urna?",
+            "alternativas": [
+                "CEP",
+                "CPF",
+                "Número do candidato ou legenda"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual tecla normalmente confirma o voto?",
+            "alternativas": [
+                "Branco",
+                "Confirma",
+                "Corrige"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual recurso ajuda a identificar visualmente a candidatura na tela?",
+            "alternativas": [
+                "Brasão do estado",
+                "Mapa da cidade",
+                "Foto do candidato"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Em 2000, a votação eletrônica passou a alcançar o quê?",
+            "alternativas": [
+                "Todo o eleitorado do país",
+                "Somente cidades com mais de 1 milhão",
+                "Somente capitais"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Curiosidades sobre Chocolate": [
-        {"pergunta": "De qual planta vem o ingrediente principal do chocolate?", "alternativas": ["Cacaueiro", "Cafeeiro", "Oliveira"], "correta": 0},
-        {"pergunta": "Qual tipo de chocolate geralmente possui maior teor de cacau?", "alternativas": ["Chocolate branco", "Chocolate ao leite", "Chocolate amargo"], "correta": 2},
-        {"pergunta": "Qual ingrediente é característico do chocolate branco?", "alternativas": ["Café", "Manteiga de cacau", "Caramelo"], "correta": 1},
-        {"pergunta": "De qual parte do fruto do cacau é produzido o chocolate?", "alternativas": ["Sementes", "Folhas", "Raízes"], "correta": 0},
-        {"pergunta": "O cacaueiro se desenvolve melhor principalmente em qual clima?", "alternativas": ["Polar", "Desértico", "Tropical"], "correta": 2},
+    "Símbolos e Curiosidades da Democracia": [
+        {
+            "pergunta": "Qual objeto representa de forma direta o ato de escolher representantes?",
+            "alternativas": [
+                "Ampulheta",
+                "Bússola",
+                "Urna"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual documento reúne as regras fundamentais de um país?",
+            "alternativas": [
+                "Constituição",
+                "Dicionário",
+                "Atlas"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quais são os três Poderes da República no Brasil?",
+            "alternativas": [
+                "Câmara, Senado e STF",
+                "União, estados e municípios",
+                "Executivo, Legislativo e Judiciário"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual palavra descreve a participação da população na escolha de representantes?",
+            "alternativas": [
+                "Censo",
+                "Voto",
+                "Inventário"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual princípio significa que diferentes opiniões podem coexistir na democracia?",
+            "alternativas": [
+                "Herança",
+                "Pluralismo",
+                "Monarquia"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Curiosidades sobre Café": [
-        {"pergunta": "Qual substância estimulante existe naturalmente no café?", "alternativas": ["Vitamina D", "Cafeína", "Colágeno"], "correta": 1},
-        {"pergunta": "O café é produzido principalmente a partir de quê?", "alternativas": ["Folhas", "Raízes", "Sementes do fruto"], "correta": 2},
-        {"pergunta": "Qual país é um dos maiores produtores mundiais de café?", "alternativas": ["Brasil", "Islândia", "Groenlândia"], "correta": 0},
-        {"pergunta": "Qual destes é um tipo conhecido de café?", "alternativas": ["Cedro", "Arábica", "Granito"], "correta": 1},
-        {"pergunta": "A torra influencia principalmente quais características do café?", "alternativas": ["Número de grãos", "Altura da planta", "Aroma e sabor"], "correta": 2},
+    "Como Funcionam as Eleições no Brasil": [
+        {
+            "pergunta": "Qual órgão organiza e regulamenta as eleições brasileiras em âmbito nacional?",
+            "alternativas": [
+                "IBGE",
+                "Banco Central",
+                "TSE"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual sistema é usado para eleger deputados no Brasil?",
+            "alternativas": [
+                "Sorteio",
+                "Sistema proporcional",
+                "Rodízio"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cargo pode ter segundo turno quando ninguém alcança a maioria exigida?",
+            "alternativas": [
+                "Presidente",
+                "Senador",
+                "Deputado federal"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "De quanto em quanto tempo ocorrem as eleições gerais para presidente?",
+            "alternativas": [
+                "Dois anos",
+                "Quatro anos",
+                "Seis anos"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual aplicativo oficial permite consultar dados eleitorais do próprio eleitor?",
+            "alternativas": [
+                "Meu INSS",
+                "Carteira de Trabalho",
+                "e-Título"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Temperos do Mundo": [
-        {"pergunta": "Qual tempero amarelo é muito usado na culinária indiana?", "alternativas": ["Cúrcuma", "Açúcar", "Baunilha"], "correta": 0},
-        {"pergunta": "Qual erva é um dos principais ingredientes do pesto tradicional?", "alternativas": ["Alecrim", "Coentro", "Manjericão"], "correta": 2},
-        {"pergunta": "Qual especiaria é obtida da casca de uma árvore?", "alternativas": ["Cravo", "Canela", "Pimenta"], "correta": 1},
-        {"pergunta": "Qual especiaria é formada por botões florais secos?", "alternativas": ["Cravo-da-índia", "Noz-moscada", "Cominho"], "correta": 0},
-        {"pergunta": "Qual tempero é produzido a partir dos frutos secos de uma planta do gênero Piper?", "alternativas": ["Sal", "Canela", "Pimenta-do-reino"], "correta": 2},
+    "Curiosidades sobre Prefeitos, Governadores e Presidentes": [
+        {
+            "pergunta": "Quem chefia o Poder Executivo de um município?",
+            "alternativas": [
+                "Prefeito",
+                "Governador",
+                "Senador"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem chefia o Poder Executivo de um estado?",
+            "alternativas": [
+                "Deputado federal",
+                "Governador",
+                "Vereador"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem chefia o Poder Executivo federal?",
+            "alternativas": [
+                "Presidente da Câmara",
+                "Presidente do STF",
+                "Presidente da República"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual desses cargos tem mandato de quatro anos?",
+            "alternativas": [
+                "Prefeito",
+                "Senador",
+                "Ministro do STF"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual cargo possui vice para substituir o titular quando necessário?",
+            "alternativas": [
+                "Deputado estadual",
+                "Governador",
+                "Vereador"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Comidas com Nomes Estranhos": [
-        {"pergunta": "O que é um escondidinho?", "alternativas": ["Uma bebida", "Um prato com purê e recheio", "Um biscoito"], "correta": 1},
-        {"pergunta": "O arrumadinho é tradicionalmente associado a qual região brasileira?", "alternativas": ["Sul", "Centro-Oeste", "Nordeste"], "correta": 2},
-        {"pergunta": "Qual doce leva ameixa e coco e tem um nome curioso?", "alternativas": ["Olho de sogra", "Pé de moleque", "Quindim"], "correta": 0},
-        {"pergunta": "Qual doce tradicional é preparado principalmente com amendoim e açúcar ou rapadura?", "alternativas": ["Brigadeiro", "Pé de moleque", "Maria-mole"], "correta": 1},
-        {"pergunta": "Qual doce possui textura macia e leva claras, açúcar e gelatina em muitas receitas?", "alternativas": ["Paçoca", "Rapadura", "Maria-mole"], "correta": 2},
+    "Momentos Inusitados da Política Brasileira": [
+        {
+            "pergunta": "Qual presidente eleito em 1985 morreu antes de tomar posse?",
+            "alternativas": [
+                "Itamar Franco",
+                "José Sarney",
+                "Tancredo Neves"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual presidente renunciou em 1961 após poucos meses no cargo?",
+            "alternativas": [
+                "Jânio Quadros",
+                "Eurico Dutra",
+                "Café Filho"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual presidente ficou apenas poucos dias no cargo em novembro de 1955?",
+            "alternativas": [
+                "Nereu Ramos",
+                "Carlos Luz",
+                "Café Filho"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem assumiu a Presidência em 1985 no lugar de Tancredo Neves?",
+            "alternativas": [
+                "Itamar Franco",
+                "Fernando Collor",
+                "José Sarney"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual presidente brasileiro ficou conhecido pela campanha com uma vassoura?",
+            "alternativas": [
+                "Juscelino Kubitschek",
+                "Getúlio Vargas",
+                "Jânio Quadros"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Frutas que Parecem Outras Coisas": [
-        {"pergunta": "Qual fruta cortada transversalmente lembra uma estrela?", "alternativas": ["Carambola", "Banana", "Maçã"], "correta": 0},
-        {"pergunta": "Qual fruta possui casca formada por segmentos que lembram escamas?", "alternativas": ["Uva", "Melancia", "Pinha"], "correta": 2},
-        {"pergunta": "Qual fruta possui uma grande casca verde e espinhosa?", "alternativas": ["Pera", "Jaca", "Ameixa"], "correta": 1},
-        {"pergunta": "Qual fruta frequentemente possui formato semelhante a um coração?", "alternativas": ["Morango", "Limão", "Banana"], "correta": 0},
-        {"pergunta": "Qual fruta também é conhecida como fruta-do-dragão?", "alternativas": ["Caju", "Mamão", "Pitaya"], "correta": 2},
+    "Frases Históricas da Política Brasileira": [
+        {
+            "pergunta": "A frase 'Saio da vida para entrar na História' aparece na carta-testamento de quem?",
+            "alternativas": [
+                "Getúlio Vargas",
+                "Jânio Quadros",
+                "Tancredo Neves"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual slogan ficou associado ao governo de Juscelino Kubitschek?",
+            "alternativas": [
+                "Ordem e Progresso",
+                "O petróleo é nosso",
+                "50 anos em 5"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual expressão marcou o movimento por eleições presidenciais diretas nos anos 1980?",
+            "alternativas": [
+                "Diretas Já",
+                "Queremos votar",
+                "Brasil Novo"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual frase ficou ligada à campanha nacionalista em defesa da exploração brasileira do petróleo?",
+            "alternativas": [
+                "Açúcar é energia",
+                "Brasil em marcha",
+                "O petróleo é nosso"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual jingle começava com a ideia de 'varrer' a corrupção?",
+            "alternativas": [
+                "Varre, varre, vassourinha",
+                "Lula Lá",
+                "Pra Frente Brasil"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Animais com Habilidades Incríveis": [
-        {"pergunta": "Qual animal é famoso por mudar de cor?", "alternativas": ["Galinha", "Camaleão", "Cavalo"], "correta": 1},
-        {"pergunta": "Qual animal consegue regenerar braços perdidos em determinadas condições?", "alternativas": ["Cachorro", "Pombo", "Estrela-do-mar"], "correta": 2},
-        {"pergunta": "Qual animal utiliza ecolocalização para se orientar?", "alternativas": ["Morcego", "Girafa", "Elefante"], "correta": 0},
-        {"pergunta": "Qual ave consegue pairar no ar batendo rapidamente as asas?", "alternativas": ["Pinguim", "Beija-flor", "Avestruz"], "correta": 1},
-        {"pergunta": "Qual animal pode liberar tinta para confundir predadores?", "alternativas": ["Golfinho", "Cavalo-marinho", "Polvo"], "correta": 2},
+    "Curiosidades sobre o Congresso Nacional": [
+        {
+            "pergunta": "O Congresso Nacional brasileiro é formado por quais duas Casas?",
+            "alternativas": [
+                "STF e Senado",
+                "Câmara Municipal e Senado",
+                "Câmara dos Deputados e Senado Federal"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Quantos senadores compõem o Senado Federal?",
+            "alternativas": [
+                "54",
+                "81",
+                "100"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quantos deputados federais compõem a Câmara dos Deputados?",
+            "alternativas": [
+                "400",
+                "513",
+                "300"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quanto dura o mandato de um deputado federal?",
+            "alternativas": [
+                "Seis anos",
+                "Quatro anos",
+                "Oito anos"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quanto dura o mandato de um senador?",
+            "alternativas": [
+                "Oito anos",
+                "Dez anos",
+                "Quatro anos"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Animais Mais Inteligentes": [
-        {"pergunta": "Qual molusco é conhecido por resolver problemas complexos?", "alternativas": ["Polvo", "Ostra", "Mexilhão"], "correta": 0},
-        {"pergunta": "Qual mamífero marinho apresenta comunicação e comportamento social complexos?", "alternativas": ["Caranguejo", "Sardinha", "Golfinho"], "correta": 2},
-        {"pergunta": "Qual ave é conhecida por conseguir utilizar ferramentas?", "alternativas": ["Pato", "Corvo", "Galinha"], "correta": 1},
-        {"pergunta": "Qual primata é muito estudado por sua capacidade cognitiva?", "alternativas": ["Chimpanzé", "Coelho", "Capivara"], "correta": 0},
-        {"pergunta": "Qual grande mamífero é famoso por sua memória e complexa vida social?", "alternativas": ["Zebra", "Antílope", "Elefante"], "correta": 2},
+    "Brasília e os Bastidores do Poder": [
+        {
+            "pergunta": "Em que ano Brasília foi inaugurada como capital do Brasil?",
+            "alternativas": [
+                "1950",
+                "1960",
+                "1970"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem foi o principal arquiteto dos edifícios monumentais de Brasília?",
+            "alternativas": [
+                "Oscar Niemeyer",
+                "Lúcio Costa",
+                "Burle Marx"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual palácio é a residência oficial da Presidência da República?",
+            "alternativas": [
+                "Palácio do Planalto",
+                "Palácio Itamaraty",
+                "Palácio da Alvorada"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual edifício é a sede de trabalho da Presidência da República?",
+            "alternativas": [
+                "Congresso Nacional",
+                "Palácio do Planalto",
+                "Palácio da Alvorada"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem elaborou o plano urbanístico vencedor de Brasília?",
+            "alternativas": [
+                "Affonso Reidy",
+                "Lúcio Costa",
+                "Oscar Niemeyer"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Animais Mais Rápidos": [
-        {"pergunta": "Qual animal terrestre é famoso por sua enorme velocidade?", "alternativas": ["Elefante", "Guepardo", "Hipopótamo"], "correta": 1},
-        {"pergunta": "Qual ave pode atingir velocidades extremas durante mergulhos?", "alternativas": ["Pombo", "Pato", "Falcão-peregrino"], "correta": 2},
-        {"pergunta": "Qual destes peixes é conhecido por alcançar grandes velocidades?", "alternativas": ["Agulhão-vela", "Ostra", "Estrela-do-mar"], "correta": 0},
-        {"pergunta": "Qual animal africano utiliza sua velocidade para fugir de predadores?", "alternativas": ["Preguiça", "Gazela", "Tartaruga"], "correta": 1},
-        {"pergunta": "Qual grande ave terrestre é uma excelente corredora?", "alternativas": ["Pinguim", "Canário", "Avestruz"], "correta": 2},
+    "Leis Brasileiras que Parecem Inventadas": [
+        {
+            "pergunta": "O cartório pode recusar um prenome que exponha a pessoa ao ridículo?",
+            "alternativas": [
+                "Só depois dos 18 anos",
+                "Não",
+                "Sim"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Para compras feitas pela internet, qual prazo básico de arrependimento é previsto no CDC?",
+            "alternativas": [
+                "3 dias",
+                "30 dias",
+                "7 dias"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Pelo Código de Trânsito, dirigir usando calçado que não se firme nos pés pode resultar em quê?",
+            "alternativas": [
+                "Crime hediondo",
+                "Nada",
+                "Infração de trânsito"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "A partir de qual idade o voto é facultativo no Brasil?",
+            "alternativas": [
+                "14 anos",
+                "16 anos",
+                "21 anos"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Para maiores de 70 anos, o voto no Brasil é o quê?",
+            "alternativas": [
+                "Obrigatório",
+                "Proibido",
+                "Facultativo"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Animais Mais Perigosos": [
-        {"pergunta": "Qual animal é responsável pela transmissão de doenças como dengue e malária?", "alternativas": ["Mosquito", "Girafa", "Coelho"], "correta": 0},
-        {"pergunta": "Qual grande réptil possui uma mordida extremamente forte?", "alternativas": ["Tartaruga", "Lagartixa", "Crocodilo"], "correta": 2},
-        {"pergunta": "Qual animal marinho possui espécies com venenos extremamente potentes?", "alternativas": ["Sardinha", "Água-viva", "Baleia"], "correta": 1},
-        {"pergunta": "Qual grande mamífero africano pode ser bastante territorial e perigoso?", "alternativas": ["Hipopótamo", "Coelho", "Gazela"], "correta": 0},
-        {"pergunta": "Qual serpente é conhecida pelo potente veneno neurotóxico?", "alternativas": ["Jiboia", "Sucuri", "Cobra-real"], "correta": 2},
+    "Curiosidades sobre a Constituição Brasileira": [
+        {
+            "pergunta": "Em que ano foi promulgada a atual Constituição brasileira?",
+            "alternativas": [
+                "1988",
+                "2002",
+                "1964"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Como ficou conhecida a Constituição de 1988?",
+            "alternativas": [
+                "Carta Trabalhista",
+                "Constituição Cidadã",
+                "Carta Imperial"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem presidiu a Assembleia Nacional Constituinte de 1987-1988?",
+            "alternativas": [
+                "Ulysses Guimarães",
+                "Tancredo Neves",
+                "José Sarney"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Em que mês a Constituição de 1988 foi promulgada?",
+            "alternativas": [
+                "Outubro",
+                "Janeiro",
+                "Julho"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual princípio aparece como fundamento da República no artigo 1º?",
+            "alternativas": [
+                "Censura prévia",
+                "Dignidade da pessoa humana",
+                "Monarquia"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Animais com Aparência Estranha": [
-        {"pergunta": "Qual primata é famoso pelo nariz muito grande?", "alternativas": ["Gorila", "Macaco-narigudo", "Chimpanzé"], "correta": 1},
-        {"pergunta": "Qual peixe das profundezas utiliza uma estrutura luminosa para atrair presas?", "alternativas": ["Sardinha", "Tilápia", "Peixe-pescador"], "correta": 2},
-        {"pergunta": "Qual mamífero possui um bico semelhante ao de um pato?", "alternativas": ["Ornitorrinco", "Coelho", "Capivara"], "correta": 0},
-        {"pergunta": "Qual animal possui uma cabeça que lembra a de um cavalo?", "alternativas": ["Tubarão", "Cavalo-marinho", "Golfinho"], "correta": 1},
-        {"pergunta": "Qual anfíbio é famoso por suas brânquias externas?", "alternativas": ["Sapo", "Rã", "Axolote"], "correta": 2},
+    "Coisas que Já Foram Proibidas no Brasil": [
+        {
+            "pergunta": "Qual prática foi criminalizada pelo Código Penal de 1890?",
+            "alternativas": [
+                "Xadrez",
+                "Natação",
+                "Capoeira"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual atividade esportiva feminina sofreu proibição oficial por décadas no século XX?",
+            "alternativas": [
+                "Tênis",
+                "Futebol",
+                "Vôlei"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual atividade foi proibida no país em 1946 e levou ao fechamento de estabelecimentos famosos?",
+            "alternativas": [
+                "Cassinos",
+                "Cinema",
+                "Teatro"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Durante parte do século XX, o Brasil restringiu fortemente a importação de quê?",
+            "alternativas": [
+                "Medicamentos",
+                "Automóveis",
+                "Livros"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual jogo de azar ficou associado à proibição dos cassinos?",
+            "alternativas": [
+                "Xadrez",
+                "Dominó",
+                "Roleta"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Animais que Mudam de Cor": [
-        {"pergunta": "Qual réptil é famoso por alterar sua coloração?", "alternativas": ["Camaleão", "Jabuti", "Crocodilo"], "correta": 0},
-        {"pergunta": "Qual animal marinho pode alterar rapidamente cor e padrões da pele?", "alternativas": ["Golfinho", "Baleia", "Polvo"], "correta": 2},
-        {"pergunta": "Qual molusco é especialmente conhecido por mudar sua aparência rapidamente?", "alternativas": ["Ostra", "Sépia", "Mexilhão"], "correta": 1},
-        {"pergunta": "A mudança de cor pode ajudar determinados animais principalmente em quê?", "alternativas": ["Camuflagem", "Criar asas", "Aumentar o tamanho"], "correta": 0},
-        {"pergunta": "Além da camuflagem, a mudança de cor do camaleão pode estar ligada a quê?", "alternativas": ["Número de patas", "Comprimento da cauda", "Temperatura e comunicação"], "correta": 2},
+    "Costumes Antigos que Hoje Parecem Estranhos": [
+        {
+            "pergunta": "Na Europa dos séculos XVII e XVIII, qual item de moda podia ser enorme e empoadíssimo?",
+            "alternativas": [
+                "Sapato esportivo",
+                "Peruca",
+                "Relógio"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual prática médica antiga usava pequenos animais para retirar sangue?",
+            "alternativas": [
+                "Acupuntura",
+                "Inalação",
+                "Sangria com sanguessugas"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Antes do despertador popular, quem podia bater nas janelas para acordar trabalhadores?",
+            "alternativas": [
+                "Carteiro",
+                "Vendedor de leite",
+                "Knocker-up"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual objeto era usado para iluminar ruas antes da eletricidade?",
+            "alternativas": [
+                "Televisão",
+                "Farol de carro",
+                "Lampião a gás"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Em muitas casas antigas, qual cômodo nem sempre existia dentro da residência?",
+            "alternativas": [
+                "Quarto",
+                "Cozinha",
+                "Banheiro"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Animais que Dormem de Jeitos Estranhos": [
-        {"pergunta": "Qual animal costuma dormir pendurado de cabeça para baixo?", "alternativas": ["Elefante", "Morcego", "Cavalo"], "correta": 1},
-        {"pergunta": "Qual animal pode manter uma parte do cérebro mais ativa enquanto dorme?", "alternativas": ["Coelho", "Capivara", "Golfinho"], "correta": 2},
-        {"pergunta": "Qual animal passa muitas horas do dia dormindo?", "alternativas": ["Coala", "Girafa", "Cavalo"], "correta": 0},
-        {"pergunta": "Qual ave é famosa por permanecer apoiada em uma perna?", "alternativas": ["Águia", "Flamingo", "Avestruz"], "correta": 1},
-        {"pergunta": "Qual grande mamífero pode cochilar em pé?", "alternativas": ["Polvo", "Peixe", "Cavalo"], "correta": 2},
+    "Profissões Estranhas que Já Existiram": [
+        {
+            "pergunta": "Qual profissional britânico acordava pessoas batendo nas janelas?",
+            "alternativas": [
+                "Coveiro",
+                "Knocker-up",
+                "Ferreiro"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem acendia manualmente os lampiões das ruas?",
+            "alternativas": [
+                "Relojoeiro",
+                "Tipógrafo",
+                "Acendedor de lampiões"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual profissão envolvia capturar roedores em cidades antigas?",
+            "alternativas": [
+                "Leitor público",
+                "Caçador de ratos",
+                "Guardador de pontes"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem cortava grandes blocos de gelo antes das geladeiras modernas?",
+            "alternativas": [
+                "Cortador de gelo",
+                "Sapateiro",
+                "Alfaiate"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem lia textos em voz alta para operários de algumas fábricas de charutos?",
+            "alternativas": [
+                "Cobrador",
+                "Porteiro",
+                "Leitor de fábrica"
+            ],
+            "correta": 2
+        }
     ],
-
-    "Filhotes de Animais": [
-        {"pergunta": "Como é chamado o filhote do cavalo?", "alternativas": ["Potro", "Bezerro", "Leitão"], "correta": 0},
-        {"pergunta": "Como é chamado o filhote da vaca?", "alternativas": ["Cordeiro", "Potro", "Bezerro"], "correta": 2},
-        {"pergunta": "Como é chamado o filhote da galinha?", "alternativas": ["Cabrito", "Pintinho", "Leitão"], "correta": 1},
-        {"pergunta": "Como é chamado o filhote da ovelha?", "alternativas": ["Cordeiro", "Potro", "Bezerro"], "correta": 0},
-        {"pergunta": "Como é chamado o filhote do porco?", "alternativas": ["Cordeiro", "Cabrito", "Leitão"], "correta": 2},
+    "Invenções que Surgiram por Acidente": [
+        {
+            "pergunta": "Qual aparelho ganhou impulso quando Percy Spencer percebeu que uma barra de chocolate derreteu perto de um magnetron?",
+            "alternativas": [
+                "Forno de micro-ondas",
+                "Aspirador",
+                "Liquidificador"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual adesivo nasceu de uma cola que inicialmente parecia fraca demais?",
+            "alternativas": [
+                "Fita isolante",
+                "Supercola",
+                "Post-it"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual material antiaderente foi descoberto quando um gás se transformou inesperadamente em um sólido?",
+            "alternativas": [
+                "Náilon",
+                "PVC",
+                "Teflon"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual sobremesa gelada é ligada à história de uma bebida deixada ao frio com um palito?",
+            "alternativas": [
+                "Gelatina",
+                "Sorvete italiano",
+                "Picolé"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual medicamento foi descoberto após Alexander Fleming observar contaminação por mofo?",
+            "alternativas": [
+                "Aspirina",
+                "Penicilina",
+                "Insulina"
+            ],
+            "correta": 1
+        }
     ],
-
-    "Sons dos Animais": [
-        {"pergunta": "Qual animal mia?", "alternativas": ["Cachorro", "Gato", "Cavalo"], "correta": 1},
-        {"pergunta": "Qual animal late?", "alternativas": ["Gato", "Vaca", "Cachorro"], "correta": 2},
-        {"pergunta": "Qual animal relincha?", "alternativas": ["Cavalo", "Pato", "Galinha"], "correta": 0},
-        {"pergunta": "Qual animal muge?", "alternativas": ["Leão", "Vaca", "Macaco"], "correta": 1},
-        {"pergunta": "Qual animal ruge?", "alternativas": ["Coelho", "Pomba", "Leão"], "correta": 2},
-    ],
-
-    "Pegadas de Animais": [
-        {"pergunta": "Qual animal costuma deixar marcas de patas com quatro dedos e almofadas?", "alternativas": ["Cachorro", "Cavalo", "Pato"], "correta": 0},
-        {"pergunta": "Qual animal deixa uma marca característica de casco?", "alternativas": ["Gato", "Pato", "Cavalo"], "correta": 2},
-        {"pergunta": "Qual ave costuma deixar pegadas com membranas entre os dedos?", "alternativas": ["Águia", "Pato", "Canário"], "correta": 1},
-        {"pergunta": "Qual grande felino pode deixar pegadas semelhantes às de um gato, mas muito maiores?", "alternativas": ["Onça", "Capivara", "Tamanduá"], "correta": 0},
-        {"pergunta": "O estudo de pegadas permite identificar principalmente o quê?", "alternativas": ["A idade das árvores", "A temperatura", "Animais que passaram pelo local"], "correta": 2},
-    ],
-
-    "O Mundo dos Insetos": [
-        {"pergunta": "Quantas pernas possui normalmente um inseto adulto?", "alternativas": ["8", "6", "10"], "correta": 1},
-        {"pergunta": "Qual inseto é conhecido por produzir mel?", "alternativas": ["Mosquito", "Barata", "Abelha"], "correta": 2},
-        {"pergunta": "Qual inseto passa por uma fase de lagarta?", "alternativas": ["Borboleta", "Gafanhoto", "Formiga adulta"], "correta": 0},
-        {"pergunta": "Qual inseto forma colônias com rainhas e operárias?", "alternativas": ["Libélula", "Formiga", "Mosca"], "correta": 1},
-        {"pergunta": "Qual inseto produz luz em algumas espécies?", "alternativas": ["Mosquito", "Pulga", "Vaga-lume"], "correta": 2},
-    ],
-
-    "Aranhas e Escorpiões": [
-        {"pergunta": "Quantas patas possui normalmente uma aranha?", "alternativas": ["8", "6", "10"], "correta": 0},
-        {"pergunta": "Aranhas pertencem a qual grupo?", "alternativas": ["Insetos", "Moluscos", "Aracnídeos"], "correta": 2},
-        {"pergunta": "Em qual parte do escorpião fica o ferrão?", "alternativas": ["Cabeça", "Extremidade da cauda", "Pinça"], "correta": 1},
-        {"pergunta": "Qual destes animais possui grandes pinças na parte frontal do corpo?", "alternativas": ["Escorpião", "Borboleta", "Mosquito"], "correta": 0},
-        {"pergunta": "Aranhas possuem antenas?", "alternativas": ["Sim, duas", "Sim, quatro", "Não"], "correta": 2},
-    ],
-
-    "Cobras Curiosas": [
-        {"pergunta": "Qual grande serpente brasileira vive frequentemente próxima da água?", "alternativas": ["Cascavel", "Sucuri", "Coral"], "correta": 1},
-        {"pergunta": "Qual cobra possui um chocalho na cauda?", "alternativas": ["Jiboia", "Sucuri", "Cascavel"], "correta": 2},
-        {"pergunta": "Qual serpente mata suas presas principalmente por constrição?", "alternativas": ["Jiboia", "Cobra-coral", "Cascavel"], "correta": 0},
-        {"pergunta": "Qual estrutura ajuda as serpentes a captar partículas químicas do ambiente?", "alternativas": ["Patas", "Língua bifurcada", "Orelhas externas"], "correta": 1},
-        {"pergunta": "As cobras possuem pálpebras móveis?", "alternativas": ["Sim", "Somente filhotes", "Não"], "correta": 2},
-    ],
-
-    "Tubarões e Predadores do Mar": [
-        {"pergunta": "Qual tubarão possui cabeça característica em formato de martelo?", "alternativas": ["Tubarão-martelo", "Tubarão-branco", "Tubarão-lixa"], "correta": 0},
-        {"pergunta": "Qual grande tubarão é famoso por seus dentes triangulares serrilhados?", "alternativas": ["Tubarão-baleia", "Tubarão-lixa", "Tubarão-branco"], "correta": 2},
-        {"pergunta": "Qual mamífero marinho é um poderoso predador e caça cooperativamente?", "alternativas": ["Cavalo-marinho", "Orca", "Peixe-palhaço"], "correta": 1},
-        {"pergunta": "O esqueleto dos tubarões é formado principalmente por quê?", "alternativas": ["Cartilagem", "Conchas", "Ossos densos"], "correta": 0},
-        {"pergunta": "Qual é o maior peixe conhecido atualmente?", "alternativas": ["Atum", "Tubarão-branco", "Tubarão-baleia"], "correta": 2},
-    ],
-
-    "Baleias e Golfinhos": [
-        {"pergunta": "Baleias pertencem a qual grupo?", "alternativas": ["Peixes", "Mamíferos", "Répteis"], "correta": 1},
-        {"pergunta": "Golfinhos respiram usando qual órgão?", "alternativas": ["Brânquias", "Pele", "Pulmões"], "correta": 2},
-        {"pergunta": "Qual é o maior animal conhecido atualmente?", "alternativas": ["Baleia-azul", "Elefante", "Orca"], "correta": 0},
-        {"pergunta": "Como é chamada a abertura respiratória no topo da cabeça de baleias?", "alternativas": ["Barbatana", "Espiráculo", "Brânquia"], "correta": 1},
-        {"pergunta": "Qual recurso os golfinhos podem utilizar para localizar objetos?", "alternativas": ["Fotossíntese", "Visão de raios X", "Ecolocalização"], "correta": 2},
-    ],
-
-    "Criaturas das Profundezas do Oceano": [
-        {"pergunta": "Qual peixe utiliza uma estrutura luminosa para atrair presas?", "alternativas": ["Peixe-pescador", "Sardinha", "Atum"], "correta": 0},
-        {"pergunta": "Como é chamada a produção de luz por organismos vivos?", "alternativas": ["Fotossíntese", "Evaporação", "Bioluminescência"], "correta": 2},
-        {"pergunta": "Por que alguns animais das profundezas possuem olhos muito grandes?", "alternativas": ["Para respirar", "Para aproveitar a pouca luz", "Para produzir calor"], "correta": 1},
-        {"pergunta": "Qual condição aumenta muito com a profundidade no oceano?", "alternativas": ["Pressão", "Quantidade de luz", "Temperatura sempre"], "correta": 0},
-        {"pergunta": "Qual molusco das profundezas pode atingir tamanho enorme?", "alternativas": ["Ostra", "Mexilhão", "Lula-gigante"], "correta": 2},
-    ],
-
-    "Ilhas Misteriosas": [
-        {"pergunta": "Qual ilha é famosa pelas enormes estátuas chamadas moais?", "alternativas": ["Madagascar", "Ilha de Páscoa", "Islândia"], "correta": 1},
-        {"pergunta": "Qual ilha japonesa abandonada também é conhecida como Battleship Island?", "alternativas": ["Okinawa", "Hokkaido", "Hashima"], "correta": 2},
-        {"pergunta": "Qual arquipélago ajudou Charles Darwin em suas observações sobre evolução?", "alternativas": ["Galápagos", "Malta", "Sicília"], "correta": 0},
-        {"pergunta": "Qual ilha japonesa ficou conhecida por possuir muitos gatos?", "alternativas": ["Creta", "Aoshima", "Groenlândia"], "correta": 1},
-        {"pergunta": "Em qual oceano fica a Ilha de Páscoa?", "alternativas": ["Atlântico", "Índico", "Pacífico"], "correta": 2},
-    ],
-
-    "Cidades Mais Curiosas do Mundo": [
-        {"pergunta": "Qual cidade italiana é famosa por seus canais e gôndolas?", "alternativas": ["Veneza", "Roma", "Milão"], "correta": 0},
-        {"pergunta": "Em qual cidade está a famosa Torre Inclinada?", "alternativas": ["Paris", "Roma", "Pisa"], "correta": 2},
-        {"pergunta": "Qual cidade está localizada em dois continentes?", "alternativas": ["Lisboa", "Istambul", "Lima"], "correta": 1},
-        {"pergunta": "Qual cidade possui o edifício Burj Khalifa?", "alternativas": ["Dubai", "Sydney", "Roma"], "correta": 0},
-        {"pergunta": "Qual cidade é famosa por possuir a Praça de São Marcos e canais?", "alternativas": ["Florença", "Madri", "Veneza"], "correta": 2},
-    ],
-
-    "Lugares com Nomes Estranhos": [
-        {"pergunta": "Em qual estado fica o município de Não-Me-Toque?", "alternativas": ["Paraná", "Rio Grande do Sul", "Bahia"], "correta": 1},
-        {"pergunta": "Em qual estado brasileiro fica o município de Feliz?", "alternativas": ["Minas Gerais", "Goiás", "Rio Grande do Sul"], "correta": 2},
-        {"pergunta": "Venha-Ver é um município de qual estado brasileiro?", "alternativas": ["Rio Grande do Norte", "Paraná", "Bahia"], "correta": 0},
-        {"pergunta": "Passa e Fica pertence a qual estado?", "alternativas": ["Paraíba", "Rio Grande do Norte", "Ceará"], "correta": 1},
-        {"pergunta": "Anta Gorda é um município de qual estado?", "alternativas": ["Amazonas", "Bahia", "Rio Grande do Sul"], "correta": 2},
-    ],
-
-    "Fronteiras Curiosas entre Países": [
-        {"pergunta": "Qual destes países faz fronteira com o Brasil?", "alternativas": ["Bolívia", "Portugal", "México"], "correta": 0},
-        {"pergunta": "Qual país está completamente cercado pela África do Sul?", "alternativas": ["Egito", "Marrocos", "Lesoto"], "correta": 2},
-        {"pergunta": "Qual pequeno país está completamente cercado pela Itália?", "alternativas": ["Portugal", "San Marino", "Bélgica"], "correta": 1},
-        {"pergunta": "Qual país independente está localizado dentro da cidade de Roma?", "alternativas": ["Vaticano", "Mônaco", "Andorra"], "correta": 0},
-        {"pergunta": "Estados Unidos e Canadá compartilham o quê?", "alternativas": ["Nenhuma fronteira", "Somente fronteira marítima", "Uma extensa fronteira terrestre"], "correta": 2},
-    ],
-
-    "Países Pequenos do Mundo": [
-        {"pergunta": "Qual é o menor país do mundo em área?", "alternativas": ["Mônaco", "Vaticano", "Malta"], "correta": 1},
-        {"pergunta": "Qual pequeno país é famoso pelo cassino de Monte Carlo?", "alternativas": ["Andorra", "Luxemburgo", "Mônaco"], "correta": 2},
-        {"pergunta": "Qual pequeno país fica entre França e Espanha?", "alternativas": ["Andorra", "Malta", "San Marino"], "correta": 0},
-        {"pergunta": "Qual país está localizado dentro de Roma?", "alternativas": ["Liechtenstein", "Vaticano", "Mônaco"], "correta": 1},
-        {"pergunta": "Qual pequeno país fica entre a Suíça e a Áustria?", "alternativas": ["Malta", "Chipre", "Liechtenstein"], "correta": 2},
-    ],
-
-    "Países com Curiosidades Inacreditáveis": [
-        {"pergunta": "Qual país é formado por milhares de ilhas?", "alternativas": ["Indonésia", "Suíça", "Paraguai"], "correta": 0},
-        {"pergunta": "Qual país é conhecido como Terra do Sol Nascente?", "alternativas": ["Canadá", "México", "Japão"], "correta": 2},
-        {"pergunta": "Qual país possui uma folha de bordo em sua bandeira?", "alternativas": ["Chile", "Canadá", "Peru"], "correta": 1},
-        {"pergunta": "Qual país possui formato frequentemente comparado a uma bota?", "alternativas": ["Itália", "Noruega", "Índia"], "correta": 0},
-        {"pergunta": "Qual país é famoso por seus numerosos fiordes?", "alternativas": ["Egito", "Uruguai", "Noruega"], "correta": 2},
-    ],
-
-    "Costumes Estranhos pelo Mundo": [
-        {"pergunta": "Em qual país retirar os sapatos antes de entrar em casa é um costume bastante comum?", "alternativas": ["Brasil", "Japão", "México"], "correta": 1},
-        {"pergunta": "Qual país é muito associado ao cumprimento por meio de reverências?", "alternativas": ["Argentina", "Canadá", "Japão"], "correta": 2},
-        {"pergunta": "O tradicional chá da tarde é fortemente associado a qual país?", "alternativas": ["Reino Unido", "Chile", "Brasil"], "correta": 0},
-        {"pergunta": "Qual país é especialmente conhecido por sua cultura de saunas?", "alternativas": ["Egito", "Finlândia", "México"], "correta": 1},
-        {"pergunta": "Em qual país existe a tradição de comer doze uvas na virada do ano?", "alternativas": ["Japão", "Canadá", "Espanha"], "correta": 2},
-    ],
-
-    "Leis Curiosas pelo Mundo": [
-        {"pergunta": "As leis são iguais em todos os países?", "alternativas": ["Não", "Sim", "Somente na Europa"], "correta": 0},
-        {"pergunta": "Antes de viajar para outro país, o que é importante conhecer?", "alternativas": ["Somente o clima", "Somente a moeda", "Leis e regras locais"], "correta": 2},
-        {"pergunta": "Algo permitido em um país pode ser proibido em outro?", "alternativas": ["Nunca", "Sim", "Somente em ilhas"], "correta": 1},
-        {"pergunta": "As leis podem sofrer alterações ao longo do tempo?", "alternativas": ["Sim", "Não", "Apenas a cada 100 anos"], "correta": 0},
-        {"pergunta": "Quem deve respeitar as leis locais durante uma viagem?", "alternativas": ["Somente moradores", "Somente autoridades", "Também os visitantes"], "correta": 2},
-    ],
-
-    "Objetos que Você Usa e Não Sabe o Nome": [
-        {"pergunta": "Como é chamada a pequena peça que protege a ponta do cadarço?", "alternativas": ["Arruela", "Ponteira", "Rolamento"], "correta": 1},
-        {"pergunta": "Qual peça permite que uma porta gire ao abrir e fechar?", "alternativas": ["Puxador", "Trinco", "Dobradiça"], "correta": 2},
-        {"pergunta": "Como é chamada a peça usada para puxar o cursor de um zíper?", "alternativas": ["Puxador", "Botão", "Fivela"], "correta": 0},
-        {"pergunta": "Qual peça de borracha pode ser colocada na extremidade de uma perna de cadeira?", "alternativas": ["Porca", "Ponteira", "Rolha"], "correta": 1},
-        {"pergunta": "Como é chamada a parte de uma garrafa pela qual o líquido sai?", "alternativas": ["Base", "Fundo", "Gargalo"], "correta": 2},
-    ],
-
-    "Para que Serve Isso?": [
-        {"pergunta": "Para que serve um nível de bolha?", "alternativas": ["Verificar nivelamento", "Medir temperatura", "Medir peso"], "correta": 0},
-        {"pergunta": "Para que serve uma bússola?", "alternativas": ["Medir pressão", "Cortar papel", "Indicar direções"], "correta": 2},
-        {"pergunta": "Para que serve um paquímetro?", "alternativas": ["Medir som", "Medir dimensões com precisão", "Medir luminosidade"], "correta": 1},
-        {"pergunta": "Para que serve um funil?", "alternativas": ["Facilitar a transferência de líquidos", "Medir velocidade", "Ampliar sons"], "correta": 0},
-        {"pergunta": "Para que serve uma lupa?", "alternativas": ["Medir corrente", "Aquecer alimentos", "Ampliar visualmente objetos"], "correta": 2},
-    ],
-
-    "Coisas Inventadas por Acidente": [
-        {"pergunta": "Qual medicamento foi descoberto após Fleming observar um fungo em uma cultura?", "alternativas": ["Aspirina", "Penicilina", "Insulina"], "correta": 1},
-        {"pergunta": "Qual produto surgiu de um adesivo que não grudava com muita força?", "alternativas": ["Supercola", "Fita isolante", "Post-it"], "correta": 2},
-        {"pergunta": "Qual aparelho surgiu após observações sobre aquecimento provocado por micro-ondas?", "alternativas": ["Forno de micro-ondas", "Geladeira", "Liquidificador"], "correta": 0},
-        {"pergunta": "Qual alimento ficou associado à história de batatas cortadas extremamente finas e fritas?", "alternativas": ["Purê", "Batata chips", "Pão"], "correta": 1},
-        {"pergunta": "Qual invenção foi inspirada por sementes que grudavam em roupas e pelos?", "alternativas": ["Botão", "Zíper", "Velcro"], "correta": 2},
-    ],
-
-    "Produtos que Mudaram com o Tempo": [
-        {"pergunta": "Qual aparelho evoluiu de modelos de disco para smartphones?", "alternativas": ["Telefone", "Geladeira", "Liquidificador"], "correta": 0},
-        {"pergunta": "Qual mídia doméstica foi amplamente substituída pelo DVD?", "alternativas": ["CD de música", "Disquete", "VHS"], "correta": 2},
-        {"pergunta": "Qual aparelho passou de grandes telas de tubo para modelos muito finos?", "alternativas": ["Máquina de escrever", "Televisão", "Ventilador"], "correta": 1},
-        {"pergunta": "Qual formato musical foi muito popular antes dos serviços de streaming?", "alternativas": ["CD", "VHS", "Fax"], "correta": 0},
-        {"pergunta": "Qual aparelho substituiu amplamente a máquina de escrever na produção de textos?", "alternativas": ["Fogão", "Bússola", "Computador"], "correta": 2},
-    ],
-
-    "Tecnologias que Pareciam Impossíveis": [
-        {"pergunta": "Qual tecnologia permite conversar por vídeo com alguém distante?", "alternativas": ["Telégrafo", "Videoconferência", "Máquina a vapor"], "correta": 1},
-        {"pergunta": "Qual sistema permite determinar localização usando sinais de satélites?", "alternativas": ["FM", "VHS", "GPS"], "correta": 2},
-        {"pergunta": "Qual tecnologia produz objetos físicos camada por camada?", "alternativas": ["Impressão 3D", "Fax", "Rádio"], "correta": 0},
-        {"pergunta": "Qual tecnologia permite controlar dispositivos através da fala?", "alternativas": ["Disquete", "Assistente de voz", "Fita cassete"], "correta": 1},
-        {"pergunta": "Qual tecnologia permite que veículos realizem parte da condução automaticamente?", "alternativas": ["Telégrafo", "Máquina de escrever", "Direção automatizada"], "correta": 2},
-    ],
-
     "Erros que Viraram Grandes Descobertas": [
-        {"pergunta": "Qual antibiótico foi descoberto após uma contaminação acidental de uma cultura?", "alternativas": ["Penicilina", "Paracetamol", "Morfina"], "correta": 0},
-        {"pergunta": "Qual aparelho teve seu desenvolvimento ligado à descoberta do aquecimento por micro-ondas?", "alternativas": ["Geladeira", "Ventilador", "Forno de micro-ondas"], "correta": 2},
-        {"pergunta": "Qual produto surgiu após a criação de um adesivo mais fraco que o planejado?", "alternativas": ["Clips", "Post-it", "Grampeador"], "correta": 1},
-        {"pergunta": "Qual invenção foi inspirada em sementes que grudavam em roupas?", "alternativas": ["Velcro", "Vidro", "Botão"], "correta": 0},
-        {"pergunta": "Na ciência, resultados inesperados podem levar a quê?", "alternativas": ["Nada útil", "Erros obrigatoriamente", "Novas descobertas"], "correta": 2},
+        {
+            "pergunta": "Qual descoberta de Fleming começou com uma placa de cultura contaminada por mofo?",
+            "alternativas": [
+                "Vacina da gripe",
+                "Penicilina",
+                "Anestesia"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual radiação Wilhelm Röntgen percebeu durante experimentos com tubos de raios catódicos?",
+            "alternativas": [
+                "Ultravioleta",
+                "Infravermelho",
+                "Raios X"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual corante sintético surgiu quando William Perkin tentava produzir quinina?",
+            "alternativas": [
+                "Anil",
+                "Carmim",
+                "Malva"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual adesivo muito forte foi inicialmente considerado inadequado para miras ópticas por colar demais?",
+            "alternativas": [
+                "Cola escolar",
+                "Cola quente",
+                "Supercola"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual adoçante foi descoberto no século XIX após um pesquisador notar sabor doce relacionado ao trabalho de laboratório?",
+            "alternativas": [
+                "Sacarina",
+                "Aspartame",
+                "Stevia"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Perguntas que Parecem Fáceis, Mas Não São": [
-        {"pergunta": "Quantos meses do ano possuem pelo menos 28 dias?", "alternativas": ["1", "12", "6"], "correta": 1},
-        {"pergunta": "Se você tinha três maçãs e pegou duas delas, quantas maçãs você pegou?", "alternativas": ["1", "3", "2"], "correta": 2},
-        {"pergunta": "Onde são enterrados os sobreviventes de um acidente?", "alternativas": ["Sobreviventes não são enterrados", "No local do acidente", "Na cidade mais próxima"], "correta": 0},
-        {"pergunta": "O que pesa mais: 1 kg de ferro ou 1 kg de algodão?", "alternativas": ["Ferro", "Pesam igual", "Algodão"], "correta": 1},
-        {"pergunta": "Quantos animais Moisés levou para a arca?", "alternativas": ["Dois de cada", "Sete de cada", "Nenhum, a arca era de Noé"], "correta": 2},
+    "Coincidências Históricas Impressionantes": [
+        {
+            "pergunta": "Quais dois ex-presidentes dos EUA morreram em 4 de julho de 1826?",
+            "alternativas": [
+                "John Adams e Thomas Jefferson",
+                "Washington e Madison",
+                "Lincoln e Grant"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem nasceu no mesmo dia, 12 de fevereiro de 1809, que Abraham Lincoln?",
+            "alternativas": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Charles Darwin"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual escritor nasceu em 1835, ano da passagem do cometa Halley, e morreu em 1910, na passagem seguinte?",
+            "alternativas": [
+                "Mark Twain",
+                "Charles Dickens",
+                "Jules Verne"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Além de John F. Kennedy, qual escritor morreu em 22 de novembro de 1963?",
+            "alternativas": [
+                "Aldous Huxley",
+                "George Orwell",
+                "Ernest Hemingway"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual outro escritor também morreu em 22 de novembro de 1963?",
+            "alternativas": [
+                "C. S. Lewis",
+                "J. R. R. Tolkien",
+                "Agatha Christie"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Qual Você Acha que é Maior?": [
-        {"pergunta": "Qual destes animais é maior em massa?", "alternativas": ["Baleia-azul", "Elefante-africano", "Girafa"], "correta": 0},
-        {"pergunta": "Qual destes planetas é maior?", "alternativas": ["Terra", "Marte", "Júpiter"], "correta": 2},
-        {"pergunta": "Qual é o maior oceano?", "alternativas": ["Atlântico", "Pacífico", "Índico"], "correta": 1},
-        {"pergunta": "Qual destes países possui maior área territorial?", "alternativas": ["Rússia", "Brasil", "Índia"], "correta": 0},
-        {"pergunta": "Qual destes animais terrestres normalmente possui maior massa?", "alternativas": ["Girafa", "Leão", "Elefante-africano"], "correta": 2},
+    "Reis e Rainhas com Hábitos Estranhos": [
+        {
+            "pergunta": "Qual czar russo criou um imposto sobre barbas para incentivar costumes ocidentais?",
+            "alternativas": [
+                "Pedro, o Grande",
+                "Nicolau II",
+                "Ivan III"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual rei francês ficou famoso por usar saltos altos como símbolo de status?",
+            "alternativas": [
+                "Luís XVI",
+                "Luís XIV",
+                "Carlos X"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual rainha francesa ficou conhecida por visuais muito elaborados e maquiagem muito clara no século XVIII?",
+            "alternativas": [
+                "Catarina de Médici",
+                "Maria de Médici",
+                "Maria Antonieta"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual rei francês sofreu episódios da chamada 'ilusão de vidro', acreditando que podia quebrar?",
+            "alternativas": [
+                "Luís XIII",
+                "Francisco I",
+                "Carlos VI"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual rainha britânica passou décadas usando luto após a morte do príncipe Albert?",
+            "alternativas": [
+                "Rainha Vitória",
+                "Ana",
+                "Elizabeth I"
+            ],
+            "correta": 0
+        }
     ],
-
-    "Você Sabe para que Isso Serve?": [
-        {"pergunta": "Para que serve um extintor de incêndio?", "alternativas": ["Medir temperatura", "Combater princípios de incêndio", "Gerar energia"], "correta": 1},
-        {"pergunta": "Para que serve um termômetro?", "alternativas": ["Medir comprimento", "Medir velocidade", "Medir temperatura"], "correta": 2},
-        {"pergunta": "Para que serve um estetoscópio?", "alternativas": ["Ouvir sons internos do corpo", "Medir altura", "Ver estrelas"], "correta": 0},
-        {"pergunta": "Para que serve um telescópio?", "alternativas": ["Medir peso", "Observar objetos distantes no céu", "Cortar madeira"], "correta": 1},
-        {"pergunta": "Para que serve um microscópio?", "alternativas": ["Medir vento", "Ouvir música", "Observar estruturas muito pequenas"], "correta": 2},
+    "Tradições Estranhas ao Redor do Mundo": [
+        {
+            "pergunta": "Em qual país acontece a famosa batalha de tomates La Tomatina?",
+            "alternativas": [
+                "Espanha",
+                "Itália",
+                "México"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual festival indiano é conhecido por lançar pós coloridos?",
+            "alternativas": [
+                "Diwali",
+                "Holi",
+                "Onam"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Em qual país ocorre a famosa corrida atrás de um queijo em Cooper's Hill?",
+            "alternativas": [
+                "Inglaterra",
+                "França",
+                "Suíça"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual país é famoso por campeonatos de carregar a esposa?",
+            "alternativas": [
+                "Portugal",
+                "Finlândia",
+                "Canadá"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Em qual país acontece o festival de lama de Boryeong?",
+            "alternativas": [
+                "Japão",
+                "Tailândia",
+                "Coreia do Sul"
+            ],
+            "correta": 2
+        }
     ],
-
+    "Festivais Mais Diferentes do Mundo": [
+        {
+            "pergunta": "Qual festival espanhol transforma uma cidade em uma batalha de tomates?",
+            "alternativas": [
+                "La Tomatina",
+                "Oktoberfest",
+                "Sanremo"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual festival indiano é conhecido como Festival das Cores?",
+            "alternativas": [
+                "Holi",
+                "Vesak",
+                "Diwali"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual evento japonês é famoso por enormes esculturas de neve?",
+            "alternativas": [
+                "Festival de Neve de Sapporo",
+                "Gion Matsuri",
+                "Awa Odori"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual festival escocês termina tradicionalmente com a queima de uma réplica de navio viking?",
+            "alternativas": [
+                "Burning Man",
+                "Glastonbury",
+                "Up Helly Aa"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual festival sul-coreano é centrado em muita lama?",
+            "alternativas": [
+                "Lantern Festival",
+                "Chuseok",
+                "Boryeong Mud Festival"
+            ],
+            "correta": 2
+        }
+    ],
+    "Bastidores de Grandes Festivais de Música": [
+        {
+            "pergunta": "Em que tipo de propriedade acontece o Glastonbury Festival?",
+            "alternativas": [
+                "Um navio",
+                "Um estádio coberto",
+                "Uma fazenda"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Em qual região dos EUA acontece o Coachella?",
+            "alternativas": [
+                "Alasca",
+                "Deserto da Califórnia",
+                "Flórida"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Como é conhecido o espaço do Rock in Rio onde o festival é montado?",
+            "alternativas": [
+                "Cidade do Rock",
+                "Vila da Música",
+                "Parque do Rock"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Em qual país nasceu o Tomorrowland?",
+            "alternativas": [
+                "Bélgica",
+                "Espanha",
+                "Canadá"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual festival de 1969 se tornou símbolo da contracultura?",
+            "alternativas": [
+                "Lollapalooza",
+                "Woodstock",
+                "Primavera Sound"
+            ],
+            "correta": 1
+        }
+    ],
+    "Shows que Entraram para a História": [
+        {
+            "pergunta": "Qual banda teve uma apresentação lendária no Live Aid de 1985?",
+            "alternativas": [
+                "Queen",
+                "Coldplay",
+                "Oasis"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual banda tocou no telhado da Apple Corps em 1969?",
+            "alternativas": [
+                "Rolling Stones",
+                "The Beatles",
+                "The Who"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual banda gravou um dos MTV Unplugged mais famosos em 1993?",
+            "alternativas": [
+                "Nirvana",
+                "Pearl Jam",
+                "U2"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual cantora teve sua apresentação no Coachella de 2018 apelidada de 'Beychella'?",
+            "alternativas": [
+                "Rihanna",
+                "Adele",
+                "Beyoncé"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual artista fez um megashow gratuito em Copacabana em 2024?",
+            "alternativas": [
+                "Madonna",
+                "Cher",
+                "Lady Gaga"
+            ],
+            "correta": 0
+        }
+    ],
+    "Artistas que Começaram Cantando em Lugares Inusitados": [
+        {
+            "pergunta": "Qual cantor britânico ficou conhecido por tocar nas ruas antes da fama?",
+            "alternativas": [
+                "Sam Smith",
+                "Harry Styles",
+                "Ed Sheeran"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual artista foi descoberto após vídeos caseiros publicados no YouTube?",
+            "alternativas": [
+                "Bruno Mars",
+                "Justin Bieber",
+                "Shawn Mendes"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cantora britânico-albanesa publicava covers no YouTube ainda adolescente?",
+            "alternativas": [
+                "Dua Lipa",
+                "Adele",
+                "Rita Ora"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual artista australiana ganhou atenção enquanto fazia apresentações de rua em Byron Bay?",
+            "alternativas": [
+                "Sia",
+                "Kylie Minogue",
+                "Tones and I"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cantor canadense ganhou seguidores no Vine antes do sucesso mundial?",
+            "alternativas": [
+                "Drake",
+                "The Weeknd",
+                "Shawn Mendes"
+            ],
+            "correta": 2
+        }
+    ],
+    "Erros e Gafes em Shows Ao Vivo": [
+        {
+            "pergunta": "Qual cantora reiniciou sua homenagem a George Michael no Grammy de 2017 após errar o começo?",
+            "alternativas": [
+                "Beyoncé",
+                "Adele",
+                "Pink"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual artista teve o cabelo preso em um ventilador durante um show em Montreal e continuou cantando?",
+            "alternativas": [
+                "Katy Perry",
+                "Rihanna",
+                "Beyoncé"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual vocalista quebrou a perna no palco em 2015 e voltou para terminar o show?",
+            "alternativas": [
+                "Chris Martin",
+                "Dave Grohl",
+                "Bono"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual vocalista do Metallica sofreu queimaduras com efeitos pirotécnicos em 1992?",
+            "alternativas": [
+                "James Hetfield",
+                "Kirk Hammett",
+                "Lars Ulrich"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual cantora teve um problema de playback no Saturday Night Live em 2004 e saiu do palco após uma dança improvisada?",
+            "alternativas": [
+                "Kelly Clarkson",
+                "Avril Lavigne",
+                "Ashlee Simpson"
+            ],
+            "correta": 2
+        }
+    ],
+    "Objetos Estranhos Levados por Artistas em Turnês": [
+        {
+            "pergunta": "Qual vocalista do Foo Fighters fez shows sentado em um trono especialmente criado após quebrar a perna?",
+            "alternativas": [
+                "Dave Grohl",
+                "Axl Rose",
+                "Bono"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual banda usou um enorme limão espelhado como elemento de palco na turnê PopMart?",
+            "alternativas": [
+                "Queen",
+                "Muse",
+                "U2"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual banda ficou famosa por usar um porco inflável gigante em apresentações?",
+            "alternativas": [
+                "Kiss",
+                "Pink Floyd",
+                "The Who"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cantora usa tecidos e estruturas aéreas em várias turnês para fazer acrobacias sobre o público?",
+            "alternativas": [
+                "Lorde",
+                "Pink",
+                "Adele"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual banda é conhecida por levar enormes sinos e canhões cenográficos ao palco?",
+            "alternativas": [
+                "Maroon 5",
+                "AC/DC",
+                "Coldplay"
+            ],
+            "correta": 1
+        }
+    ],
+    "Exigências Curiosas de Camarins de Famosos": [
+        {
+            "pergunta": "Como é chamado o documento com exigências técnicas e de hospitalidade de um artista?",
+            "alternativas": [
+                "Release",
+                "Rider",
+                "Setlist"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual banda ficou famosa pela cláusula pedindo M&M's sem os marrons?",
+            "alternativas": [
+                "Aerosmith",
+                "Bon Jovi",
+                "Van Halen"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Por que a cláusula dos M&M's do Van Halen era útil?",
+            "alternativas": [
+                "Para decorar o camarim",
+                "Para escolher sabores",
+                "Para testar se o contrato havia sido lido com atenção"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual músico teve um rider que incluía uma receita de guacamole?",
+            "alternativas": [
+                "Jack White",
+                "Sting",
+                "Ed Sheeran"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual parte de um rider trata de palco, som, luz e energia?",
+            "alternativas": [
+                "Rider técnico",
+                "Lista de convidados",
+                "Hospitalidade"
+            ],
+            "correta": 0
+        }
+    ],
+    "Famosos que Têm Talentos Inesperados": [
+        {
+            "pergunta": "Qual ator e comediante é também um premiado tocador de banjo?",
+            "alternativas": [
+                "Ben Stiller",
+                "Jim Carrey",
+                "Steve Martin"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual atriz chegou a competir seriamente no tiro com arco?",
+            "alternativas": [
+                "Geena Davis",
+                "Julia Roberts",
+                "Sandra Bullock"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual ator treinou como engolidor de fogo antes da fama?",
+            "alternativas": [
+                "Hugh Jackman",
+                "George Clooney",
+                "Pierce Brosnan"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual ator de ação também é conhecido por tocar flauta?",
+            "alternativas": [
+                "Vin Diesel",
+                "Jason Statham",
+                "Terry Crews"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual ator é também mágico e já presidiu a Academy of Magical Arts?",
+            "alternativas": [
+                "Tom Hanks",
+                "Neil Patrick Harris",
+                "Ryan Reynolds"
+            ],
+            "correta": 1
+        }
+    ],
+    "Celebridades com Profissões Antes da Fama": [
+        {
+            "pergunta": "Qual ator trabalhou como carpinteiro antes de virar astro de Hollywood?",
+            "alternativas": [
+                "Harrison Ford",
+                "Brad Pitt",
+                "Tom Cruise"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual ator também teve carreira profissional no futebol americano antes da fama?",
+            "alternativas": [
+                "Tyler James Williams",
+                "Terry Crews",
+                "Chris Rock"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual ator de 'The Hangover' era médico antes de se dedicar à comédia?",
+            "alternativas": [
+                "Bradley Cooper",
+                "Ken Jeong",
+                "Zach Galifianakis"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual ator de 'Pulp Fiction' trabalhou como bombeiro em Nova York antes da fama?",
+            "alternativas": [
+                "Samuel L. Jackson",
+                "John Travolta",
+                "Steve Buscemi"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual ator de 'Taxi' chegou a trabalhar como cabeleireiro antes da carreira artística?",
+            "alternativas": [
+                "Danny DeVito",
+                "Robert De Niro",
+                "Al Pacino"
+            ],
+            "correta": 0
+        }
+    ],
+    "Nomes Verdadeiros de Famosos": [
+        {
+            "pergunta": "Qual é o nome de nascimento de Bruno Mars?",
+            "alternativas": [
+                "Brandon Cole",
+                "Peter Hernandez",
+                "Michael Smith"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual é o primeiro nome de Lady Gaga?",
+            "alternativas": [
+                "Giovanna",
+                "Stefani",
+                "Francesca"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual é o nome de nascimento de The Weeknd?",
+            "alternativas": [
+                "Drake Graham",
+                "Abel Tesfaye",
+                "Shawn Carter"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual é o nome de nascimento da cantora Anitta?",
+            "alternativas": [
+                "Priscilla Alcantara",
+                "Larissa de Macedo Machado",
+                "Marina Sena"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Katy Perry nasceu com qual sobrenome?",
+            "alternativas": [
+                "Stefani",
+                "Johnson",
+                "Hudson"
+            ],
+            "correta": 2
+        }
+    ],
+    "Famosos que Mudaram Completamente de Visual": [
+        {
+            "pergunta": "Qual artista assumiu o cabelo vermelho intenso na fase de Ziggy Stardust?",
+            "alternativas": [
+                "David Bowie",
+                "Freddie Mercury",
+                "Elton John"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual cantora surpreendeu ao cortar o cabelo bem curto e platinado em 2012?",
+            "alternativas": [
+                "Selena Gomez",
+                "Miley Cyrus",
+                "Ariana Grande"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cantora trocou as raízes verde-neon por um visual loiro em 2021?",
+            "alternativas": [
+                "Halsey",
+                "Lorde",
+                "Billie Eilish"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cantor cortou seus famosos dreadlocks antes da era 'Starboy'?",
+            "alternativas": [
+                "Drake",
+                "Post Malone",
+                "The Weeknd"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cantora raspou o cabelo e as sobrancelhas publicamente em 2022?",
+            "alternativas": [
+                "Doja Cat",
+                "Dua Lipa",
+                "SZA"
+            ],
+            "correta": 0
+        }
+    ],
+    "Encontros Inesperados entre Celebridades": [
+        {
+            "pergunta": "Qual dupla improvável se conheceu no programa de TV de Martha Stewart em 2008?",
+            "alternativas": [
+                "Cher e Drake",
+                "Adele e Eminem",
+                "Martha Stewart e Snoop Dogg"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual rapper cantou 'Stan' ao lado de Elton John no Grammy de 2001?",
+            "alternativas": [
+                "Eminem",
+                "Jay-Z",
+                "Kanye West"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual cantora encontrou a rainha Elizabeth II após uma apresentação no Royal Variety Performance de 2009?",
+            "alternativas": [
+                "Rihanna",
+                "Beyoncé",
+                "Lady Gaga"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual quarteto britânico posou em uma famosa sessão de fotos com Muhammad Ali em 1964?",
+            "alternativas": [
+                "Queen",
+                "The Beatles",
+                "The Rolling Stones"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cantora participou de 'FourFiveSeconds' com Paul McCartney e Kanye West?",
+            "alternativas": [
+                "Rihanna",
+                "Adele",
+                "Beyoncé"
+            ],
+            "correta": 0
+        }
+    ],
+    "Amizades Improváveis entre Famosos": [
+        {
+            "pergunta": "Qual apresentadora e empresária tornou-se grande amiga de Snoop Dogg?",
+            "alternativas": [
+                "Oprah Winfrey",
+                "Martha Stewart",
+                "Ellen DeGeneres"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual atriz de 'Friends' é amiga de Ed Sheeran e já o hospedou em sua casa?",
+            "alternativas": [
+                "Lisa Kudrow",
+                "Jennifer Aniston",
+                "Courteney Cox"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual rapper desenvolveu uma amizade pública com Elton John?",
+            "alternativas": [
+                "Drake",
+                "50 Cent",
+                "Eminem"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cantora faz parte do trio de 'Only Murders in the Building' com Steve Martin e Martin Short?",
+            "alternativas": [
+                "Demi Lovato",
+                "Selena Gomez",
+                "Miley Cyrus"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual ex-jogador inglês mantém amizade de longa data com Snoop Dogg?",
+            "alternativas": [
+                "Wayne Rooney",
+                "David Beckham",
+                "Frank Lampard"
+            ],
+            "correta": 1
+        }
+    ],
+    "Curiosidades sobre Tapetes Vermelhos": [
+        {
+            "pergunta": "Qual evento de moda acontece tradicionalmente na primeira segunda-feira de maio?",
+            "alternativas": [
+                "Oscar",
+                "Met Gala",
+                "Grammy"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Em qual cidade francesa acontece o famoso tapete vermelho do Festival de Cannes?",
+            "alternativas": [
+                "Paris",
+                "Nice",
+                "Cannes"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual premiação trocou temporariamente o tradicional tapete vermelho por um tom champanhe em 2023?",
+            "alternativas": [
+                "Emmy",
+                "Grammy",
+                "Oscar"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual museu recebe o Met Gala?",
+            "alternativas": [
+                "Metropolitan Museum of Art",
+                "MoMA PS1",
+                "Louvre"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual peça de roupa é frequentemente associada ao código 'black tie' masculino?",
+            "alternativas": [
+                "Bermuda",
+                "Smoking",
+                "Macacão esportivo"
+            ],
+            "correta": 1
+        }
+    ],
+    "Premiações que Tiveram Momentos Inusitados": [
+        {
+            "pergunta": "Em 2017, qual filme foi anunciado por engano como vencedor de Melhor Filme antes da correção para 'Moonlight'?",
+            "alternativas": [
+                "Arrival",
+                "La La Land",
+                "Lion"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem interrompeu o discurso de Taylor Swift no VMA de 2009?",
+            "alternativas": [
+                "Kanye West",
+                "Jay-Z",
+                "Drake"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual ator protagonizou um tapa em Chris Rock durante o Oscar de 2022?",
+            "alternativas": [
+                "Denzel Washington",
+                "Jamie Foxx",
+                "Will Smith"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual atriz tropeçou ao subir as escadas para receber o Oscar em 2013?",
+            "alternativas": [
+                "Anne Hathaway",
+                "Jennifer Lawrence",
+                "Emma Stone"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual ator chamou Idina Menzel de um nome errado no Oscar de 2014?",
+            "alternativas": [
+                "John Travolta",
+                "Ben Affleck",
+                "Nicolas Cage"
+            ],
+            "correta": 0
+        }
+    ],
+    "Bastidores de Videoclipes Famosos": [
+        {
+            "pergunta": "Quem dirigiu o videoclipe de 'Thriller', de Michael Jackson?",
+            "alternativas": [
+                "John Landis",
+                "Spike Lee",
+                "Steven Spielberg"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual técnica de animação marcou o clipe de 'Take on Me', do a-ha?",
+            "alternativas": [
+                "Claymation",
+                "Rotoscopia",
+                "Stop motion"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem dança no famoso clipe de 'Chandelier', de Sia?",
+            "alternativas": [
+                "Maddie Ziegler",
+                "Millie Bobby Brown",
+                "JoJo Siwa"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem dirigiu o clipe de 'This Is America', de Childish Gambino?",
+            "alternativas": [
+                "David Fincher",
+                "Hiro Murai",
+                "Michel Gondry"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual clipe de Beyoncé ficou famoso pelo cenário minimalista e coreografia com duas dançarinas?",
+            "alternativas": [
+                "Formation",
+                "Halo",
+                "Single Ladies"
+            ],
+            "correta": 2
+        }
+    ],
+    "Músicas que Quase Tiveram Outro Nome": [
+        {
+            "pergunta": "Qual música dos Beatles teve o título provisório 'Scrambled Eggs'?",
+            "alternativas": [
+                "Let It Be",
+                "Help!",
+                "Yesterday"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual música de Paul McCartney começou como 'Hey Jules'?",
+            "alternativas": [
+                "Hey Jude",
+                "Penny Lane",
+                "Let It Be"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual música de John Lennon tinha inicialmente o título 'Maharishi'?",
+            "alternativas": [
+                "Dear Prudence",
+                "Julia",
+                "Sexy Sadie"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual música dos Beatles teve o título de trabalho 'Bad Finger Boogie'?",
+            "alternativas": [
+                "Come Together",
+                "Something",
+                "With a Little Help from My Friends"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual música de George Harrison teve o título provisório 'Granny Smith'?",
+            "alternativas": [
+                "Taxman",
+                "Here Comes the Sun",
+                "Love You To"
+            ],
+            "correta": 2
+        }
+    ],
+    "Artistas que Recusaram Grandes Sucessos": [
+        {
+            "pergunta": "Qual hit de Rihanna foi oferecido anteriormente à equipe de Britney Spears?",
+            "alternativas": [
+                "Work",
+                "Diamonds",
+                "Umbrella"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual música de Britney Spears havia sido oferecida antes ao TLC?",
+            "alternativas": [
+                "Toxic",
+                "...Baby One More Time",
+                "Oops!... I Did It Again"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual hit gravado por Britney Spears foi inicialmente oferecido a Kylie Minogue?",
+            "alternativas": [
+                "Circus",
+                "Toxic",
+                "Womanizer"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual música Lady Gaga escreveu inicialmente para Britney Spears, que não a lançou?",
+            "alternativas": [
+                "Alejandro",
+                "Poker Face",
+                "Telephone"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual hit de Sia foi escrito pensando em Rihanna antes de Sia gravá-lo?",
+            "alternativas": [
+                "Elastic Heart",
+                "Chandelier",
+                "Cheap Thrills"
+            ],
+            "correta": 2
+        }
+    ],
+    "Covers que Ficaram Mais Famosos que o Original": [
+        {
+            "pergunta": "Quem gravou originalmente 'I Will Always Love You' antes da versão de Whitney Houston?",
+            "alternativas": [
+                "Cher",
+                "Dolly Parton",
+                "Celine Dion"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem popularizou mundialmente 'Nothing Compares 2 U' em 1990?",
+            "alternativas": [
+                "Annie Lennox",
+                "Sinéad O'Connor",
+                "Madonna"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual banda gravou originalmente 'Torn' antes do sucesso de Natalie Imbruglia?",
+            "alternativas": [
+                "The Cranberries",
+                "Ednaswap",
+                "Garbage"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quem transformou 'Girls Just Want to Have Fun' em um grande hit nos anos 1980?",
+            "alternativas": [
+                "Debbie Harry",
+                "Pat Benatar",
+                "Cyndi Lauper"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual cantor lançou uma versão marcante de 'Hurt', originalmente do Nine Inch Nails?",
+            "alternativas": [
+                "Johnny Cash",
+                "Willie Nelson",
+                "Bob Dylan"
+            ],
+            "correta": 0
+        }
+    ],
+    "Histórias Engraçadas por Trás de Músicas Famosas": [
+        {
+            "pergunta": "Qual música nasceu de uma melodia que Paul McCartney disse ter sonhado?",
+            "alternativas": [
+                "Help!",
+                "Yesterday",
+                "Yellow Submarine"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "O riff inicial de qual música do Guns N' Roses começou como um exercício/brincadeira de guitarra de Slash?",
+            "alternativas": [
+                "November Rain",
+                "Patience",
+                "Sweet Child o' Mine"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual música do Blur manteve como título final o simples nome provisório usado no estúdio?",
+            "alternativas": [
+                "Song 2",
+                "Parklife",
+                "Coffee & TV"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual hit de Lou Bega reaproveita a base de uma composição instrumental de Pérez Prado?",
+            "alternativas": [
+                "Mambo No. 5",
+                "Macarena",
+                "Blue"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual hit do Hanson tem um título formado por sílabas sem significado literal específico?",
+            "alternativas": [
+                "MMMBop",
+                "This Time Around",
+                "Where's the Love"
+            ],
+            "correta": 0
+        }
+    ],
+    "Curiosidades sobre Fãs e Fandoms Famosos": [
+        {
+            "pergunta": "Como são conhecidos os fãs de Taylor Swift?",
+            "alternativas": [
+                "Beliebers",
+                "Swifties",
+                "Little Monsters"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual nome é usado para os fãs de Justin Bieber?",
+            "alternativas": [
+                "Beliebers",
+                "Directioners",
+                "Arianators"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "Como é conhecido o fandom do BTS?",
+            "alternativas": [
+                "MOA",
+                "STAY",
+                "ARMY"
+            ],
+            "correta": 2
+        },
+        {
+            "pergunta": "Qual é o nome do fandom de Lady Gaga?",
+            "alternativas": [
+                "Selenators",
+                "Little Monsters",
+                "Lovatics"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Como são conhecidos os fãs de Beyoncé?",
+            "alternativas": [
+                "BeyHive",
+                "Lambs",
+                "Barbz"
+            ],
+            "correta": 0
+        }
+    ]
 }
+
 
 # ============================================================
 # UTILITÁRIOS
