@@ -222,15 +222,33 @@ QUIZZES = {
         {"pergunta": "Qual documento eleitoral identifica a inscrição do eleitor?", "alternativas": ["Passaporte diplomático", "Carteira de vacinação", "Título de eleitor"], "correta": 2},
     ],
 
-    "Sistema Solar": [
-        {"pergunta": "Qual planeta é o mais próximo do Sol?", "alternativas": ["Vênus", "Marte", "Mercúrio"], "correta": 2},
-        {"pergunta": "Qual planeta completa mais rapidamente uma volta ao redor do Sol?",
- "alternativas": ["Mercúrio", "Terra", "Netuno"],
- "correta": 0},
-        {"pergunta": "Qual planeta é conhecido como Planeta Vermelho?", "alternativas": ["Netuno", "Marte", "Urano"], "correta": 1},
-        {"pergunta": "Qual astro está no centro do Sistema Solar?", "alternativas": ["Lua", "Júpiter", "Sol"], "correta": 2},
-        {"pergunta": "Qual planeta possui anéis muito visíveis?", "alternativas": ["Saturno", "Mercúrio", "Vênus"], "correta": 0},
-    ],
+  "Sistema Solar": [
+    {
+        "pergunta": "Qual planeta completa mais rapidamente uma volta ao redor do Sol?",
+        "alternativas": ["Mercúrio", "Terra", "Netuno"],
+        "correta": 0
+    },
+    {
+        "pergunta": "Qual planeta possui a Grande Mancha Vermelha?",
+        "alternativas": ["Saturno", "Júpiter", "Marte"],
+        "correta": 1
+    },
+    {
+        "pergunta": "Qual planeta é chamado de planeta vermelho por causa do óxido de ferro em sua superfície?",
+        "alternativas": ["Netuno", "Marte", "Urano"],
+        "correta": 1
+    },
+    {
+        "pergunta": "Qual astro está no centro do Sistema Solar?",
+        "alternativas": ["Lua", "Júpiter", "Sol"],
+        "correta": 2
+    },
+    {
+        "pergunta": "Qual planeta possui anéis muito visíveis?",
+        "alternativas": ["Saturno", "Mercúrio", "Vênus"],
+        "correta": 0
+    },
+],
 
     "Corpo Humano": [
         {"pergunta": "Qual órgão bombeia sangue pelo corpo?", "alternativas": ["Coração", "Pulmão", "Rim"], "correta": 0},
