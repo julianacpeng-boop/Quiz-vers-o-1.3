@@ -160,7 +160,15 @@ QUIZZES = {
 
     "Independência do Brasil": [
         {"pergunta": "Em que ano foi proclamada a Independência do Brasil?", "alternativas": ["1889", "1822", "1808"], "correta": 1},
-        {"pergunta": "Quem proclamou a Independência do Brasil?", "alternativas": ["Dom Pedro II", "Getúlio Vargas", "Dom Pedro I"], "correta": 2},
+        {
+    "pergunta": "Qual título Dom Pedro I recebeu após a Independência do Brasil?",
+    "alternativas": [
+        "Imperador do Brasil",
+        "Presidente da República",
+        "Regente de Portugal"
+    ],
+    "correta": 0
+},
         {"pergunta": "Qual data é celebrada como Independência do Brasil?", "alternativas": ["7 de setembro", "15 de novembro", "21 de abril"], "correta": 0},
         {"pergunta": "Em que local ocorreu o episódio tradicionalmente associado ao grito da Independência?", "alternativas": ["Na Praia de Copacabana", "Às margens do riacho Ipiranga", "No Pelourinho"], "correta": 1},
         {"pergunta": "Qual país colonizava o Brasil antes da independência?", "alternativas": ["Espanha", "França", "Portugal"], "correta": 2},
