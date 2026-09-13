@@ -224,7 +224,9 @@ QUIZZES = {
 
     "Sistema Solar": [
         {"pergunta": "Qual planeta é o mais próximo do Sol?", "alternativas": ["Vênus", "Marte", "Mercúrio"], "correta": 2},
-        {"pergunta": "Qual é o maior planeta do Sistema Solar?", "alternativas": ["Júpiter", "Saturno", "Terra"], "correta": 0},
+        {"pergunta": "Qual planeta completa mais rapidamente uma volta ao redor do Sol?",
+ "alternativas": ["Mercúrio", "Terra", "Netuno"],
+ "correta": 0},
         {"pergunta": "Qual planeta é conhecido como Planeta Vermelho?", "alternativas": ["Netuno", "Marte", "Urano"], "correta": 1},
         {"pergunta": "Qual astro está no centro do Sistema Solar?", "alternativas": ["Lua", "Júpiter", "Sol"], "correta": 2},
         {"pergunta": "Qual planeta possui anéis muito visíveis?", "alternativas": ["Saturno", "Mercúrio", "Vênus"], "correta": 0},
