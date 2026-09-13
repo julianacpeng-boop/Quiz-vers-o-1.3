@@ -53,2121 +53,366 @@ PASTA_SAIDA = PASTA_RAIZ / DATA_DO_DIA
 # Respostas corretas variando entre A/B/C.
 
 QUIZZES = {
-    "Fatos Engraçados sobre a História das Eleições": [
-        {
-            "pergunta": "Qual animal virou símbolo de voto de protesto em São Paulo em 1959?",
-            "alternativas": [
-                "Um cavalo",
-                "Um papagaio",
-                "Uma rinoceronte"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual primata ficou famoso como candidato de protesto no Rio em 1988?",
-            "alternativas": [
-                "Macaco Tião",
-                "Gorila Zico",
-                "Mico-leão"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual objeto virou símbolo da campanha presidencial de Jânio Quadros?",
-            "alternativas": [
-                "Vassoura",
-                "Chapéu",
-                "Panela"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Em que década a urna eletrônica começou a ser usada em eleições brasileiras?",
-            "alternativas": [
-                "Década de 1970",
-                "Década de 2010",
-                "Década de 1990"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual foi o primeiro presidente civil eleito diretamente após a Proclamação da República?",
-            "alternativas": [
-                "Prudente de Morais",
-                "Getúlio Vargas",
-                "Deodoro da Fonseca"
-            ],
-            "correta": 0
-        }
+
+    "Menstruação": [
+        {"pergunta": "Em média, qual evento marca o primeiro dia de um novo ciclo menstrual?", "alternativas": ["O início do sangramento menstrual", "O fim da ovulação", "O aumento da temperatura corporal"], "correta": 0},
+        {"pergunta": "Qual hormônio tende a aumentar antes da ovulação?", "alternativas": ["Insulina", "LH", "Melatonina"], "correta": 1},
+        {"pergunta": "Qual estrutura do útero é eliminada em parte durante a menstruação?", "alternativas": ["Miocárdio", "Pleura", "Endométrio"], "correta": 2},
+        {"pergunta": "Qual sintoma pode ocorrer antes ou durante a menstruação?", "alternativas": ["Cólica", "Perda permanente da visão", "Fratura óssea"], "correta": 0},
+        {"pergunta": "Qual profissional pode avaliar alterações menstruais persistentes?", "alternativas": ["Oftalmologista", "Ginecologista", "Ortopedista"], "correta": 1},
     ],
-    "Eleições 2026": [
-        {
-            "pergunta": "Em que data acontece o primeiro turno das Eleições 2026?",
-            "alternativas": [
-                "4 de outubro",
-                "25 de outubro",
-                "11 de outubro"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quando está previsto o segundo turno, quando necessário?",
-            "alternativas": [
-                "25 de outubro",
-                "18 de outubro",
-                "1º de novembro"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quantas escolhas o eleitor faz na urna no primeiro turno de 2026?",
-            "alternativas": [
-                "Cinco",
-                "Quatro",
-                "Seis"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cargo aparece primeiro na ordem de votação de 2026?",
-            "alternativas": [
-                "Deputado federal",
-                "Governador",
-                "Presidente"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quantas vagas para o Senado estão em disputa nas Eleições 2026?",
-            "alternativas": [
-                "81",
-                "54",
-                "27"
-            ],
-            "correta": 1
-        }
+
+    "Quiz Bíblico": [
+        {"pergunta": "Quem construiu a arca segundo o livro de Gênesis?", "alternativas": ["Moisés", "Noé", "Davi"], "correta": 1},
+        {"pergunta": "Quem recebeu os Dez Mandamentos no monte Sinai?", "alternativas": ["Salomão", "Pedro", "Moisés"], "correta": 2},
+        {"pergunta": "Qual personagem bíblico derrotou Golias?", "alternativas": ["Davi", "José", "Isaías"], "correta": 0},
+        {"pergunta": "Quantos Evangelhos há no Novo Testamento?", "alternativas": ["Dois", "Quatro", "Sete"], "correta": 1},
+        {"pergunta": "Qual é o último livro do Novo Testamento?", "alternativas": ["Atos", "Romanos", "Apocalipse"], "correta": 2},
     ],
-    "Fatos Engraçados do Rock in Rio 2026": [
-        {
-            "pergunta": "Qual atração de 2026 tem um número escrito no próprio nome?",
-            "alternativas": [
-                "Foo Fighters",
-                "Twenty One Pilots",
-                "Halsey"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual grupo de 2026 tem fãs conhecidos como STAYs?",
-            "alternativas": [
-                "Maroon 5",
-                "Black Eyed Peas",
-                "Stray Kids"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual artista do Palco Mundo de 2026 tem 'John' no nome artístico?",
-            "alternativas": [
-                "J Balvin",
-                "Elton John",
-                "Jon Batiste"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual banda retorna ao Rock in Rio em 2026 sete anos depois de sua apresentação anterior?",
-            "alternativas": [
-                "The Hives",
-                "Sepultura",
-                "Foo Fighters"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual atração de 2026 tem a palavra 'Eyes' no nome?",
-            "alternativas": [
-                "Black Eyed Peas",
-                "Nova Twins",
-                "Twenty One Pilots"
-            ],
-            "correta": 0
-        }
+
+    "Leis de Trânsito": [
+        {"pergunta": "Segundo o Código de Trânsito Brasileiro, o uso do cinto de segurança é obrigatório para quem?", "alternativas": ["Apenas o condutor", "Apenas quem está no banco da frente", "Condutor e passageiros"], "correta": 2},
+        {"pergunta": "Dirigir segurando ou manuseando telefone celular é o quê?", "alternativas": ["Infração de trânsito", "Conduta sempre permitida", "Obrigação do condutor"], "correta": 0},
+        {"pergunta": "Em regra, o pedestre que já iniciou a travessia deve receber o quê dos condutores?", "alternativas": ["Buzina obrigatória", "Prioridade de passagem", "Sinal de luz alta"], "correta": 1},
+        {"pergunta": "A sinalização e as regras de trânsito têm como objetivo principal o quê?", "alternativas": ["Aumentar o consumo de combustível", "Reduzir o número de pedestres", "Segurança e organização da circulação"], "correta": 2},
+        {"pergunta": "Conduzir veículo após consumir álcool pode gerar o quê?", "alternativas": ["Sanções administrativas e, em certos casos, crime", "Apenas advertência verbal", "Nenhuma consequência"], "correta": 0},
     ],
-    "Famosos no Rock in Rio 2026": [
-        {
-            "pergunta": "Quem é o headliner do Palco Mundo em 4 de setembro de 2026?",
-            "alternativas": [
-                "Maroon 5",
-                "Stray Kids",
-                "Foo Fighters"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Quem lidera o Palco Mundo em 7 de setembro de 2026?",
-            "alternativas": [
-                "Avenged Sevenfold",
-                "Calvin Harris",
-                "Elton John"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual grupo de K-pop é headliner em 11 de setembro de 2026?",
-            "alternativas": [
-                "NEXZ",
-                "HWASA",
-                "Stray Kids"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual banda é headliner em 12 de setembro de 2026?",
-            "alternativas": [
-                "Foo Fighters",
-                "Maroon 5",
-                "Twenty One Pilots"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual artista brasileira está no Palco Mundo em 13 de setembro de 2026?",
-            "alternativas": [
-                "Ivete Sangalo",
-                "Anitta",
-                "Luísa Sonza"
-            ],
-            "correta": 0
-        }
+
+    "Complete a Frase da Sua Mãe": [
+        {"pergunta": "Complete: Na volta a gente...", "alternativas": ["compra", "esquece", "vende"], "correta": 0},
+        {"pergunta": "Complete: Você não é todo...", "alternativas": ["bairro", "mundo", "colégio"], "correta": 1},
+        {"pergunta": "Complete: Enquanto você morar debaixo do meu...", "alternativas": ["carro", "sapato", "teto"], "correta": 2},
+        {"pergunta": "Complete: Eu não sou sua...", "alternativas": ["empregada", "vizinha", "professora"], "correta": 0},
+        {"pergunta": "Complete: Se eu achar, você vai...", "alternativas": ["dormir", "ver", "estudar"], "correta": 1},
     ],
-    "Curiosidades dos Presidentes do Brasil": [
-        {
-            "pergunta": "Quem foi o primeiro presidente do Brasil?",
-            "alternativas": [
-                "Floriano Peixoto",
-                "Deodoro da Fonseca",
-                "Prudente de Morais"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual presidente ficou conhecido pelo plano de '50 anos em 5'?",
-            "alternativas": [
-                "Jânio Quadros",
-                "Juscelino Kubitschek",
-                "João Goulart"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual presidente tinha o sobrenome curioso 'Café Filho'?",
-            "alternativas": [
-                "João Café Filho",
-                "Itamar Franco",
-                "Tancredo Neves"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quem governava o Brasil na inauguração de Brasília em 1960?",
-            "alternativas": [
-                "Eurico Gaspar Dutra",
-                "Juscelino Kubitschek",
-                "Getúlio Vargas"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual presidente renunciou ao cargo em 1961 poucos meses após tomar posse?",
-            "alternativas": [
-                "José Sarney",
-                "Jânio Quadros",
-                "João Goulart"
-            ],
-            "correta": 1
-        }
+
+    "Genética": [
+        {"pergunta": "Qual molécula armazena a maior parte da informação genética nas células humanas?", "alternativas": ["Glicose", "DNA", "Colesterol"], "correta": 1},
+        {"pergunta": "Como se chama uma versão alternativa de um gene?", "alternativas": ["Neurônio", "Antígeno", "Alelo"], "correta": 2},
+        {"pergunta": "Quantos cromossomos há normalmente nas células somáticas humanas?", "alternativas": ["46", "23", "92"], "correta": 0},
+        {"pergunta": "Qual processo produz gametas com metade do número de cromossomos?", "alternativas": ["Mitose", "Meiose", "Tradução"], "correta": 1},
+        {"pergunta": "Como se chama a característica observável resultante da interação entre genes e ambiente?", "alternativas": ["Genótipo", "Cariótipo", "Fenótipo"], "correta": 2},
     ],
-    "Campanhas Eleitorais que Viraram Memória Popular": [
-        {
-            "pergunta": "A vassoura ficou associada à campanha de qual político?",
-            "alternativas": [
-                "Juscelino Kubitschek",
-                "Jânio Quadros",
-                "Ulysses Guimarães"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual recurso musical é criado para fixar o nome de um candidato na memória?",
-            "alternativas": [
-                "Vinheta de cinema",
-                "Trilha instrumental",
-                "Jingle eleitoral"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual frase ficou associada ao projeto desenvolvimentista de Juscelino Kubitschek?",
-            "alternativas": [
-                "Diretas Já",
-                "50 anos em 5",
-                "Brasil, ame-o"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Em qual eleição presidencial a televisão teve papel marcante nos debates entre candidatos?",
-            "alternativas": [
-                "1945",
-                "1930",
-                "1989"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual movimento popular dos anos 1980 defendia eleições diretas para presidente?",
-            "alternativas": [
-                "Diretas Já",
-                "Queremismo",
-                "Tenentismo"
-            ],
-            "correta": 0
-        }
+
+    "Métodos Contraceptivos": [
+        {"pergunta": "Qual método também ajuda a reduzir o risco de infecções sexualmente transmissíveis?", "alternativas": ["Pílula anticoncepcional", "DIU de cobre", "Preservativo"], "correta": 2},
+        {"pergunta": "Qual método é colocado dentro do útero por profissional de saúde?", "alternativas": ["DIU", "Adesivo contraceptivo", "Preservativo externo"], "correta": 0},
+        {"pergunta": "A pílula anticoncepcional protege contra infecções sexualmente transmissíveis?", "alternativas": ["Sim, sempre", "Não", "Somente aos fins de semana"], "correta": 1},
+        {"pergunta": "Qual método é usado após uma relação sexual desprotegida para reduzir o risco de gravidez?", "alternativas": ["Vacina", "Antibiótico", "Contracepção de emergência"], "correta": 2},
+        {"pergunta": "Qual atitude é mais adequada ao escolher um método contraceptivo?", "alternativas": ["Buscar orientação profissional e considerar necessidades individuais", "Copiar o método de outra pessoa sem avaliação", "Interromper qualquer método sem motivo ou orientação"], "correta": 0},
     ],
-    "Urnas Eletrônicas e Curiosidades da Votação": [
-        {
-            "pergunta": "Em qual década a urna eletrônica estreou no Brasil?",
-            "alternativas": [
-                "Década de 2010",
-                "Década de 1960",
-                "Década de 1990"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "O que o eleitor digita principalmente para escolher uma candidatura na urna?",
-            "alternativas": [
-                "CEP",
-                "CPF",
-                "Número do candidato ou legenda"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual tecla normalmente confirma o voto?",
-            "alternativas": [
-                "Branco",
-                "Confirma",
-                "Corrige"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual recurso ajuda a identificar visualmente a candidatura na tela?",
-            "alternativas": [
-                "Brasão do estado",
-                "Mapa da cidade",
-                "Foto do candidato"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Em 2000, a votação eletrônica passou a alcançar o quê?",
-            "alternativas": [
-                "Todo o eleitorado do país",
-                "Somente cidades com mais de 1 milhão",
-                "Somente capitais"
-            ],
-            "correta": 0
-        }
+
+    "Datas Importantes de Setembro": [
+        {"pergunta": "Qual data marca a Independência do Brasil?", "alternativas": ["7 de setembro", "15 de setembro", "30 de setembro"], "correta": 0},
+        {"pergunta": "No Brasil, o Dia da Árvore é lembrado em qual data?", "alternativas": ["1 de setembro", "21 de setembro", "12 de setembro"], "correta": 1},
+        {"pergunta": "O Dia Mundial de Prevenção do Suicídio é lembrado em qual data?", "alternativas": ["20 de setembro", "29 de setembro", "10 de setembro"], "correta": 2},
+        {"pergunta": "Qual mês é associado à campanha Setembro Amarelo no Brasil?", "alternativas": ["Setembro", "Março", "Julho"], "correta": 0},
+        {"pergunta": "Qual estação do ano começa por volta de setembro no Hemisfério Sul?", "alternativas": ["Inverno", "Primavera", "Outono"], "correta": 1},
     ],
-    "Símbolos e Curiosidades da Democracia": [
-        {
-            "pergunta": "Qual objeto representa de forma direta o ato de escolher representantes?",
-            "alternativas": [
-                "Ampulheta",
-                "Bússola",
-                "Urna"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual documento reúne as regras fundamentais de um país?",
-            "alternativas": [
-                "Constituição",
-                "Dicionário",
-                "Atlas"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quais são os três Poderes da República no Brasil?",
-            "alternativas": [
-                "Câmara, Senado e STF",
-                "União, estados e municípios",
-                "Executivo, Legislativo e Judiciário"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual palavra descreve a participação da população na escolha de representantes?",
-            "alternativas": [
-                "Censo",
-                "Voto",
-                "Inventário"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual princípio significa que diferentes opiniões podem coexistir na democracia?",
-            "alternativas": [
-                "Herança",
-                "Pluralismo",
-                "Monarquia"
-            ],
-            "correta": 1
-        }
+
+    "Primeira Vez": [
+        {"pergunta": "Antes de uma relação sexual, o que deve existir entre as pessoas envolvidas?", "alternativas": ["Pressão para agradar", "Consentimento livre e claro", "Medo de dizer não"], "correta": 1},
+        {"pergunta": "Qual método de barreira ajuda a reduzir o risco de gravidez e de infecções sexualmente transmissíveis?", "alternativas": ["Antibiótico", "Analgésico", "Preservativo"], "correta": 2},
+        {"pergunta": "É possível ocorrer gravidez na primeira relação sexual com penetração vaginal sem contracepção?", "alternativas": ["Sim", "Não, nunca", "Somente depois dos 30 anos"], "correta": 0},
+        {"pergunta": "Se alguém muda de ideia durante uma relação, o que deve acontecer?", "alternativas": ["A pessoa deve ser convencida", "A atividade deve parar", "Nada muda"], "correta": 1},
+        {"pergunta": "Qual atitude ajuda a tornar uma primeira experiência mais segura?", "alternativas": ["Evitar qualquer conversa", "Confiar apenas em mitos", "Conversar sobre limites, proteção e consentimento"], "correta": 2},
     ],
-    "Como Funcionam as Eleições no Brasil": [
-        {
-            "pergunta": "Qual órgão organiza e regulamenta as eleições brasileiras em âmbito nacional?",
-            "alternativas": [
-                "IBGE",
-                "Banco Central",
-                "TSE"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual sistema é usado para eleger deputados no Brasil?",
-            "alternativas": [
-                "Sorteio",
-                "Sistema proporcional",
-                "Rodízio"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual cargo pode ter segundo turno quando ninguém alcança a maioria exigida?",
-            "alternativas": [
-                "Presidente",
-                "Senador",
-                "Deputado federal"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "De quanto em quanto tempo ocorrem as eleições gerais para presidente?",
-            "alternativas": [
-                "Dois anos",
-                "Quatro anos",
-                "Seis anos"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual aplicativo oficial permite consultar dados eleitorais do próprio eleitor?",
-            "alternativas": [
-                "Meu INSS",
-                "Carteira de Trabalho",
-                "e-Título"
-            ],
-            "correta": 2
-        }
+
+    "Voto de Cabresto": [
+        {"pergunta": "O voto de cabresto ficou associado principalmente a qual período da história brasileira?", "alternativas": ["Brasil Colônia inicial", "Nova República após 1988", "República Velha"], "correta": 2},
+        {"pergunta": "O voto de cabresto estava ligado ao poder de quem nas comunidades locais?", "alternativas": ["Coronéis e chefes políticos", "Astronautas", "Diplomatas estrangeiros"], "correta": 0},
+        {"pergunta": "Qual característica favorecia o controle do voto naquele período?", "alternativas": ["Voto eletrônico", "Ausência de voto secreto efetivo", "Biometria digital"], "correta": 1},
+        {"pergunta": "O coronelismo estava relacionado principalmente a quê?", "alternativas": ["Exploração espacial", "Industrialização japonesa", "Poder político local e relações de dependência"], "correta": 2},
+        {"pergunta": "Qual mudança ajudou a reduzir práticas de controle direto do voto?", "alternativas": ["Adoção do voto secreto", "Fim das eleições", "Proibição de partidos"], "correta": 0},
     ],
-    "Curiosidades sobre Prefeitos, Governadores e Presidentes": [
-        {
-            "pergunta": "Quem chefia o Poder Executivo de um município?",
-            "alternativas": [
-                "Prefeito",
-                "Governador",
-                "Senador"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quem chefia o Poder Executivo de um estado?",
-            "alternativas": [
-                "Deputado federal",
-                "Governador",
-                "Vereador"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem chefia o Poder Executivo federal?",
-            "alternativas": [
-                "Presidente da Câmara",
-                "Presidente do STF",
-                "Presidente da República"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual desses cargos tem mandato de quatro anos?",
-            "alternativas": [
-                "Prefeito",
-                "Senador",
-                "Ministro do STF"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual cargo possui vice para substituir o titular quando necessário?",
-            "alternativas": [
-                "Deputado estadual",
-                "Governador",
-                "Vereador"
-            ],
-            "correta": 1
-        }
+
+    "Primeira Guerra Mundial": [
+        {"pergunta": "Em que ano começou a Primeira Guerra Mundial?", "alternativas": ["1914", "1905", "1939"], "correta": 0},
+        {"pergunta": "Qual acontecimento é apontado como estopim da guerra?", "alternativas": ["Queda do Muro de Berlim", "Assassinato do arquiduque Francisco Ferdinando", "Ataque a Pearl Harbor"], "correta": 1},
+        {"pergunta": "Qual conjunto de países formava a Tríplice Entente no início do conflito?", "alternativas": ["Alemanha, Itália e Japão", "Brasil, Argentina e Chile", "França, Reino Unido e Rússia"], "correta": 2},
+        {"pergunta": "Qual tipo de combate marcou fortemente a Frente Ocidental?", "alternativas": ["Guerra de trincheiras", "Guerra espacial", "Guerra nuclear"], "correta": 0},
+        {"pergunta": "Em que ano terminou a Primeira Guerra Mundial?", "alternativas": ["1929", "1918", "1945"], "correta": 1},
     ],
-    "Momentos Inusitados da Política Brasileira": [
-        {
-            "pergunta": "Qual presidente eleito em 1985 morreu antes de tomar posse?",
-            "alternativas": [
-                "Itamar Franco",
-                "José Sarney",
-                "Tancredo Neves"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual presidente renunciou em 1961 após poucos meses no cargo?",
-            "alternativas": [
-                "Jânio Quadros",
-                "Eurico Dutra",
-                "Café Filho"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual presidente ficou apenas poucos dias no cargo em novembro de 1955?",
-            "alternativas": [
-                "Nereu Ramos",
-                "Carlos Luz",
-                "Café Filho"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem assumiu a Presidência em 1985 no lugar de Tancredo Neves?",
-            "alternativas": [
-                "Itamar Franco",
-                "Fernando Collor",
-                "José Sarney"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual presidente brasileiro ficou conhecido pela campanha com uma vassoura?",
-            "alternativas": [
-                "Juscelino Kubitschek",
-                "Getúlio Vargas",
-                "Jânio Quadros"
-            ],
-            "correta": 2
-        }
+
+    "Guerra Fria": [
+        {"pergunta": "Quais foram as duas principais potências rivais da Guerra Fria?", "alternativas": ["Brasil e Argentina", "Estados Unidos e União Soviética", "França e Espanha"], "correta": 1},
+        {"pergunta": "Qual muro se tornou símbolo da divisão entre os blocos durante a Guerra Fria?", "alternativas": ["Muralha da China", "Muro de Adriano", "Muro de Berlim"], "correta": 2},
+        {"pergunta": "Qual disputa tecnológica levou humanos à Lua?", "alternativas": ["Corrida Espacial", "Revolução Industrial", "Primavera dos Povos"], "correta": 0},
+        {"pergunta": "Qual aliança militar reuniu países do bloco ocidental?", "alternativas": ["Mercosul", "OTAN", "OPEP"], "correta": 1},
+        {"pergunta": "Em que ano caiu o Muro de Berlim?", "alternativas": ["1961", "2001", "1989"], "correta": 2},
     ],
-    "Frases Históricas da Política Brasileira": [
-        {
-            "pergunta": "A frase 'Saio da vida para entrar na História' aparece na carta-testamento de quem?",
-            "alternativas": [
-                "Getúlio Vargas",
-                "Jânio Quadros",
-                "Tancredo Neves"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual slogan ficou associado ao governo de Juscelino Kubitschek?",
-            "alternativas": [
-                "Ordem e Progresso",
-                "O petróleo é nosso",
-                "50 anos em 5"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual expressão marcou o movimento por eleições presidenciais diretas nos anos 1980?",
-            "alternativas": [
-                "Diretas Já",
-                "Queremos votar",
-                "Brasil Novo"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual frase ficou ligada à campanha nacionalista em defesa da exploração brasileira do petróleo?",
-            "alternativas": [
-                "Açúcar é energia",
-                "Brasil em marcha",
-                "O petróleo é nosso"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual jingle começava com a ideia de 'varrer' a corrupção?",
-            "alternativas": [
-                "Varre, varre, vassourinha",
-                "Lula Lá",
-                "Pra Frente Brasil"
-            ],
-            "correta": 0
-        }
+
+    "Segunda Guerra Mundial": [
+        {"pergunta": "Em que ano começou a Segunda Guerra Mundial na Europa?", "alternativas": ["1914", "1948", "1939"], "correta": 2},
+        {"pergunta": "Qual país foi invadido pela Alemanha em setembro de 1939?", "alternativas": ["Polônia", "Canadá", "México"], "correta": 0},
+        {"pergunta": "Qual ataque levou os Estados Unidos a entrar diretamente na guerra?", "alternativas": ["Batalha de Waterloo", "Pearl Harbor", "Queda de Roma"], "correta": 1},
+        {"pergunta": "Em que ano terminou a Segunda Guerra Mundial?", "alternativas": ["1936", "1955", "1945"], "correta": 2},
+        {"pergunta": "Qual organização internacional foi criada em 1945 com foco em cooperação e paz?", "alternativas": ["ONU", "OTAN", "União Europeia"], "correta": 0},
     ],
-    "Curiosidades sobre o Congresso Nacional": [
-        {
-            "pergunta": "O Congresso Nacional brasileiro é formado por quais duas Casas?",
-            "alternativas": [
-                "STF e Senado",
-                "Câmara Municipal e Senado",
-                "Câmara dos Deputados e Senado Federal"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Quantos senadores compõem o Senado Federal?",
-            "alternativas": [
-                "54",
-                "81",
-                "100"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quantos deputados federais compõem a Câmara dos Deputados?",
-            "alternativas": [
-                "400",
-                "513",
-                "300"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quanto dura o mandato de um deputado federal?",
-            "alternativas": [
-                "Seis anos",
-                "Quatro anos",
-                "Oito anos"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quanto dura o mandato de um senador?",
-            "alternativas": [
-                "Oito anos",
-                "Dez anos",
-                "Quatro anos"
-            ],
-            "correta": 0
-        }
+
+    "Revolução Francesa": [
+        {"pergunta": "Em que ano começou a Revolução Francesa?", "alternativas": ["1789", "1815", "1917"], "correta": 0},
+        {"pergunta": "Qual prisão foi tomada em 14 de julho de 1789?", "alternativas": ["Alcatraz", "Bastilha", "Torre de Londres"], "correta": 1},
+        {"pergunta": "Qual lema ficou associado à Revolução Francesa?", "alternativas": ["Ordem e progresso", "Paz e terra", "Liberdade, igualdade e fraternidade"], "correta": 2},
+        {"pergunta": "Quem era o rei da França no início da Revolução?", "alternativas": ["Luís XVI", "Napoleão III", "Carlos Magno"], "correta": 0},
+        {"pergunta": "Qual documento de 1789 proclamou direitos e liberdades fundamentais?", "alternativas": ["Magna Carta", "Declaração dos Direitos do Homem e do Cidadão", "Tratado de Versalhes"], "correta": 1},
     ],
-    "Brasília e os Bastidores do Poder": [
-        {
-            "pergunta": "Em que ano Brasília foi inaugurada como capital do Brasil?",
-            "alternativas": [
-                "1950",
-                "1960",
-                "1970"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem foi o principal arquiteto dos edifícios monumentais de Brasília?",
-            "alternativas": [
-                "Oscar Niemeyer",
-                "Lúcio Costa",
-                "Burle Marx"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual palácio é a residência oficial da Presidência da República?",
-            "alternativas": [
-                "Palácio do Planalto",
-                "Palácio Itamaraty",
-                "Palácio da Alvorada"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual edifício é a sede de trabalho da Presidência da República?",
-            "alternativas": [
-                "Congresso Nacional",
-                "Palácio do Planalto",
-                "Palácio da Alvorada"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem elaborou o plano urbanístico vencedor de Brasília?",
-            "alternativas": [
-                "Affonso Reidy",
-                "Lúcio Costa",
-                "Oscar Niemeyer"
-            ],
-            "correta": 1
-        }
+
+    "Independência do Brasil": [
+        {"pergunta": "Em que ano foi proclamada a Independência do Brasil?", "alternativas": ["1889", "1822", "1808"], "correta": 1},
+        {"pergunta": "Quem proclamou a Independência do Brasil?", "alternativas": ["Dom Pedro II", "Getúlio Vargas", "Dom Pedro I"], "correta": 2},
+        {"pergunta": "Qual data é celebrada como Independência do Brasil?", "alternativas": ["7 de setembro", "15 de novembro", "21 de abril"], "correta": 0},
+        {"pergunta": "Em que local ocorreu o episódio tradicionalmente associado ao grito da Independência?", "alternativas": ["Na Praia de Copacabana", "Às margens do riacho Ipiranga", "No Pelourinho"], "correta": 1},
+        {"pergunta": "Qual país colonizava o Brasil antes da independência?", "alternativas": ["Espanha", "França", "Portugal"], "correta": 2},
     ],
-    "Leis Brasileiras que Parecem Inventadas": [
-        {
-            "pergunta": "O cartório pode recusar um prenome que exponha a pessoa ao ridículo?",
-            "alternativas": [
-                "Só depois dos 18 anos",
-                "Não",
-                "Sim"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Para compras feitas pela internet, qual prazo básico de arrependimento é previsto no CDC?",
-            "alternativas": [
-                "3 dias",
-                "30 dias",
-                "7 dias"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Pelo Código de Trânsito, dirigir usando calçado que não se firme nos pés pode resultar em quê?",
-            "alternativas": [
-                "Crime hediondo",
-                "Nada",
-                "Infração de trânsito"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "A partir de qual idade o voto é facultativo no Brasil?",
-            "alternativas": [
-                "14 anos",
-                "16 anos",
-                "21 anos"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Para maiores de 70 anos, o voto no Brasil é o quê?",
-            "alternativas": [
-                "Obrigatório",
-                "Proibido",
-                "Facultativo"
-            ],
-            "correta": 2
-        }
+
+    "Brasil Império": [
+        {"pergunta": "Quem foi o primeiro imperador do Brasil?", "alternativas": ["Dom João VI", "Dom Pedro II", "Dom Pedro I"], "correta": 2},
+        {"pergunta": "Quem foi o segundo e último imperador do Brasil?", "alternativas": ["Dom Pedro II", "Deodoro da Fonseca", "José Bonifácio"], "correta": 0},
+        {"pergunta": "Em que ano foi abolida legalmente a escravidão no Brasil?", "alternativas": ["1822", "1888", "1930"], "correta": 1},
+        {"pergunta": "Qual lei aboliu legalmente a escravidão no Brasil?", "alternativas": ["Lei do Ventre Livre apenas", "Lei de Terras", "Lei Áurea"], "correta": 2},
+        {"pergunta": "Em que ano terminou o período imperial brasileiro?", "alternativas": ["1889", "1840", "1894"], "correta": 0},
     ],
-    "Curiosidades sobre a Constituição Brasileira": [
-        {
-            "pergunta": "Em que ano foi promulgada a atual Constituição brasileira?",
-            "alternativas": [
-                "1988",
-                "2002",
-                "1964"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Como ficou conhecida a Constituição de 1988?",
-            "alternativas": [
-                "Carta Trabalhista",
-                "Constituição Cidadã",
-                "Carta Imperial"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem presidiu a Assembleia Nacional Constituinte de 1987-1988?",
-            "alternativas": [
-                "Ulysses Guimarães",
-                "Tancredo Neves",
-                "José Sarney"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Em que mês a Constituição de 1988 foi promulgada?",
-            "alternativas": [
-                "Outubro",
-                "Janeiro",
-                "Julho"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual princípio aparece como fundamento da República no artigo 1º?",
-            "alternativas": [
-                "Censura prévia",
-                "Dignidade da pessoa humana",
-                "Monarquia"
-            ],
-            "correta": 1
-        }
+
+    "República Velha": [
+        {"pergunta": "Qual período brasileiro é chamado de República Velha ou Primeira República?", "alternativas": ["1889 a 1930", "1822 a 1889", "1930 a 1945"], "correta": 0},
+        {"pergunta": "Qual política marcou a influência das elites de São Paulo e Minas Gerais?", "alternativas": ["Plano Real", "Política do café com leite", "Regência Trina"], "correta": 1},
+        {"pergunta": "Qual fenômeno político local marcou esse período?", "alternativas": ["Apartheid", "Parlamentarismo europeu", "Coronelismo"], "correta": 2},
+        {"pergunta": "Qual revolta ocorreu no Rio de Janeiro em 1904?", "alternativas": ["Revolta da Vacina", "Sabinada", "Balaiada"], "correta": 0},
+        {"pergunta": "Qual evento encerrou a República Velha?", "alternativas": ["Independência do Brasil", "Revolução de 1930", "Proclamação da República"], "correta": 1},
     ],
-    "Coisas que Já Foram Proibidas no Brasil": [
-        {
-            "pergunta": "Qual prática foi criminalizada pelo Código Penal de 1890?",
-            "alternativas": [
-                "Xadrez",
-                "Natação",
-                "Capoeira"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual atividade esportiva feminina sofreu proibição oficial por décadas no século XX?",
-            "alternativas": [
-                "Tênis",
-                "Futebol",
-                "Vôlei"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual atividade foi proibida no país em 1946 e levou ao fechamento de estabelecimentos famosos?",
-            "alternativas": [
-                "Cassinos",
-                "Cinema",
-                "Teatro"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Durante parte do século XX, o Brasil restringiu fortemente a importação de quê?",
-            "alternativas": [
-                "Medicamentos",
-                "Automóveis",
-                "Livros"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual jogo de azar ficou associado à proibição dos cassinos?",
-            "alternativas": [
-                "Xadrez",
-                "Dominó",
-                "Roleta"
-            ],
-            "correta": 2
-        }
+
+    "Era Vargas": [
+        {"pergunta": "Em que ano Getúlio Vargas chegou ao poder pela Revolução de 1930?", "alternativas": ["1889", "1930", "1964"], "correta": 1},
+        {"pergunta": "Como se chamou o regime autoritário instaurado por Vargas em 1937?", "alternativas": ["República da Espada", "Regência Trina", "Estado Novo"], "correta": 2},
+        {"pergunta": "Qual legislação trabalhista foi consolidada em 1943?", "alternativas": ["CLT", "Lei Áurea", "Código Civil de 2002"], "correta": 0},
+        {"pergunta": "Qual empresa estatal de petróleo foi criada no segundo governo Vargas?", "alternativas": ["Embraer", "Petrobras", "Correios"], "correta": 1},
+        {"pergunta": "Em que ano Getúlio Vargas morreu?", "alternativas": ["1945", "1960", "1954"], "correta": 2},
     ],
-    "Costumes Antigos que Hoje Parecem Estranhos": [
-        {
-            "pergunta": "Na Europa dos séculos XVII e XVIII, qual item de moda podia ser enorme e empoadíssimo?",
-            "alternativas": [
-                "Sapato esportivo",
-                "Peruca",
-                "Relógio"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual prática médica antiga usava pequenos animais para retirar sangue?",
-            "alternativas": [
-                "Acupuntura",
-                "Inalação",
-                "Sangria com sanguessugas"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Antes do despertador popular, quem podia bater nas janelas para acordar trabalhadores?",
-            "alternativas": [
-                "Carteiro",
-                "Vendedor de leite",
-                "Knocker-up"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual objeto era usado para iluminar ruas antes da eletricidade?",
-            "alternativas": [
-                "Televisão",
-                "Farol de carro",
-                "Lampião a gás"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Em muitas casas antigas, qual cômodo nem sempre existia dentro da residência?",
-            "alternativas": [
-                "Quarto",
-                "Cozinha",
-                "Banheiro"
-            ],
-            "correta": 2
-        }
+
+    "Ditadura Militar no Brasil": [
+        {"pergunta": "Em que ano ocorreu o golpe que iniciou a ditadura militar no Brasil?", "alternativas": ["1954", "1985", "1964"], "correta": 2},
+        {"pergunta": "Qual ato institucional de 1968 ampliou a repressão e suspendeu garantias?", "alternativas": ["AI-5", "AI-1 de 1988", "Ato Colonial"], "correta": 0},
+        {"pergunta": "Como ficou conhecido o processo de retorno gradual à democracia?", "alternativas": ["Estado Novo", "Abertura política", "Regência"], "correta": 1},
+        {"pergunta": "Qual movimento de 1984 defendia eleições diretas para presidente?", "alternativas": ["Tenentismo", "Canudos", "Diretas Já"], "correta": 2},
+        {"pergunta": "Em que ano terminou o regime militar no Brasil?", "alternativas": ["1985", "1970", "1994"], "correta": 0},
     ],
-    "Profissões Estranhas que Já Existiram": [
-        {
-            "pergunta": "Qual profissional britânico acordava pessoas batendo nas janelas?",
-            "alternativas": [
-                "Coveiro",
-                "Knocker-up",
-                "Ferreiro"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem acendia manualmente os lampiões das ruas?",
-            "alternativas": [
-                "Relojoeiro",
-                "Tipógrafo",
-                "Acendedor de lampiões"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual profissão envolvia capturar roedores em cidades antigas?",
-            "alternativas": [
-                "Leitor público",
-                "Caçador de ratos",
-                "Guardador de pontes"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem cortava grandes blocos de gelo antes das geladeiras modernas?",
-            "alternativas": [
-                "Cortador de gelo",
-                "Sapateiro",
-                "Alfaiate"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quem lia textos em voz alta para operários de algumas fábricas de charutos?",
-            "alternativas": [
-                "Cobrador",
-                "Porteiro",
-                "Leitor de fábrica"
-            ],
-            "correta": 2
-        }
+
+    "Constituição Brasileira": [
+        {"pergunta": "Em que ano foi promulgada a atual Constituição Federal do Brasil?", "alternativas": ["1988", "1964", "2002"], "correta": 0},
+        {"pergunta": "Como a Constituição de 1988 ficou conhecida?", "alternativas": ["Carta do Café", "Constituição Cidadã", "Lei de Ouro"], "correta": 1},
+        {"pergunta": "Qual poder tem como função típica elaborar leis em âmbito federal?", "alternativas": ["Poder Executivo", "Poder Judiciário", "Poder Legislativo"], "correta": 2},
+        {"pergunta": "Qual princípio afirma que todos são iguais perante a lei?", "alternativas": ["Igualdade", "Hereditariedade", "Censitário"], "correta": 0},
+        {"pergunta": "Quantos poderes independentes e harmônicos são previstos na Constituição?", "alternativas": ["Dois", "Três", "Cinco"], "correta": 1},
     ],
-    "Invenções que Surgiram por Acidente": [
-        {
-            "pergunta": "Qual aparelho ganhou impulso quando Percy Spencer percebeu que uma barra de chocolate derreteu perto de um magnetron?",
-            "alternativas": [
-                "Forno de micro-ondas",
-                "Aspirador",
-                "Liquidificador"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual adesivo nasceu de uma cola que inicialmente parecia fraca demais?",
-            "alternativas": [
-                "Fita isolante",
-                "Supercola",
-                "Post-it"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual material antiaderente foi descoberto quando um gás se transformou inesperadamente em um sólido?",
-            "alternativas": [
-                "Náilon",
-                "PVC",
-                "Teflon"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual sobremesa gelada é ligada à história de uma bebida deixada ao frio com um palito?",
-            "alternativas": [
-                "Gelatina",
-                "Sorvete italiano",
-                "Picolé"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual medicamento foi descoberto após Alexander Fleming observar contaminação por mofo?",
-            "alternativas": [
-                "Aspirina",
-                "Penicilina",
-                "Insulina"
-            ],
-            "correta": 1
-        }
+
+    "Eleições no Brasil": [
+        {"pergunta": "Qual órgão organiza as eleições em âmbito nacional no Brasil?", "alternativas": ["Banco Central", "Tribunal Superior Eleitoral", "Supremo Tribunal Militar"], "correta": 1},
+        {"pergunta": "Para brasileiros alfabetizados com mais de 18 e menos de 70 anos, o voto é como?", "alternativas": ["Proibido", "Facultativo", "Obrigatório"], "correta": 2},
+        {"pergunta": "Para jovens de 16 e 17 anos, o voto é como?", "alternativas": ["Facultativo", "Obrigatório", "Proibido"], "correta": 0},
+        {"pergunta": "Qual sistema é usado no Brasil para registrar a maior parte dos votos presenciais?", "alternativas": ["Cédula manuscrita obrigatória em todo o país", "Urna eletrônica", "Aplicativo particular"], "correta": 1},
+        {"pergunta": "Qual documento eleitoral identifica a inscrição do eleitor?", "alternativas": ["Passaporte diplomático", "Carteira de vacinação", "Título de eleitor"], "correta": 2},
     ],
-    "Erros que Viraram Grandes Descobertas": [
-        {
-            "pergunta": "Qual descoberta de Fleming começou com uma placa de cultura contaminada por mofo?",
-            "alternativas": [
-                "Vacina da gripe",
-                "Penicilina",
-                "Anestesia"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual radiação Wilhelm Röntgen percebeu durante experimentos com tubos de raios catódicos?",
-            "alternativas": [
-                "Ultravioleta",
-                "Infravermelho",
-                "Raios X"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual corante sintético surgiu quando William Perkin tentava produzir quinina?",
-            "alternativas": [
-                "Anil",
-                "Carmim",
-                "Malva"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual adesivo muito forte foi inicialmente considerado inadequado para miras ópticas por colar demais?",
-            "alternativas": [
-                "Cola escolar",
-                "Cola quente",
-                "Supercola"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual adoçante foi descoberto no século XIX após um pesquisador notar sabor doce relacionado ao trabalho de laboratório?",
-            "alternativas": [
-                "Sacarina",
-                "Aspartame",
-                "Stevia"
-            ],
-            "correta": 0
-        }
+
+    "Sistema Solar": [
+        {"pergunta": "Qual planeta é o mais próximo do Sol?", "alternativas": ["Vênus", "Marte", "Mercúrio"], "correta": 2},
+        {"pergunta": "Qual é o maior planeta do Sistema Solar?", "alternativas": ["Júpiter", "Saturno", "Terra"], "correta": 0},
+        {"pergunta": "Qual planeta é conhecido como Planeta Vermelho?", "alternativas": ["Netuno", "Marte", "Urano"], "correta": 1},
+        {"pergunta": "Qual astro está no centro do Sistema Solar?", "alternativas": ["Lua", "Júpiter", "Sol"], "correta": 2},
+        {"pergunta": "Qual planeta possui anéis muito visíveis?", "alternativas": ["Saturno", "Mercúrio", "Vênus"], "correta": 0},
     ],
-    "Coincidências Históricas Impressionantes": [
-        {
-            "pergunta": "Quais dois ex-presidentes dos EUA morreram em 4 de julho de 1826?",
-            "alternativas": [
-                "John Adams e Thomas Jefferson",
-                "Washington e Madison",
-                "Lincoln e Grant"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quem nasceu no mesmo dia, 12 de fevereiro de 1809, que Abraham Lincoln?",
-            "alternativas": [
-                "Isaac Newton",
-                "Albert Einstein",
-                "Charles Darwin"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual escritor nasceu em 1835, ano da passagem do cometa Halley, e morreu em 1910, na passagem seguinte?",
-            "alternativas": [
-                "Mark Twain",
-                "Charles Dickens",
-                "Jules Verne"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Além de John F. Kennedy, qual escritor morreu em 22 de novembro de 1963?",
-            "alternativas": [
-                "Aldous Huxley",
-                "George Orwell",
-                "Ernest Hemingway"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual outro escritor também morreu em 22 de novembro de 1963?",
-            "alternativas": [
-                "C. S. Lewis",
-                "J. R. R. Tolkien",
-                "Agatha Christie"
-            ],
-            "correta": 0
-        }
+
+    "Corpo Humano": [
+        {"pergunta": "Qual órgão bombeia sangue pelo corpo?", "alternativas": ["Coração", "Pulmão", "Rim"], "correta": 0},
+        {"pergunta": "Qual órgão é responsável principalmente pelas trocas gasosas?", "alternativas": ["Estômago", "Pulmões", "Pâncreas"], "correta": 1},
+        {"pergunta": "Qual órgão produz bile?", "alternativas": ["Baço", "Bexiga", "Fígado"], "correta": 2},
+        {"pergunta": "Qual sistema é responsável pela comunicação rápida por impulsos elétricos no corpo?", "alternativas": ["Sistema nervoso", "Sistema digestório", "Sistema linfático"], "correta": 0},
+        {"pergunta": "Qual osso protege grande parte do cérebro?", "alternativas": ["Fêmur", "Crânio", "Úmero"], "correta": 1},
     ],
-    "Reis e Rainhas com Hábitos Estranhos": [
-        {
-            "pergunta": "Qual czar russo criou um imposto sobre barbas para incentivar costumes ocidentais?",
-            "alternativas": [
-                "Pedro, o Grande",
-                "Nicolau II",
-                "Ivan III"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual rei francês ficou famoso por usar saltos altos como símbolo de status?",
-            "alternativas": [
-                "Luís XVI",
-                "Luís XIV",
-                "Carlos X"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual rainha francesa ficou conhecida por visuais muito elaborados e maquiagem muito clara no século XVIII?",
-            "alternativas": [
-                "Catarina de Médici",
-                "Maria de Médici",
-                "Maria Antonieta"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual rei francês sofreu episódios da chamada 'ilusão de vidro', acreditando que podia quebrar?",
-            "alternativas": [
-                "Luís XIII",
-                "Francisco I",
-                "Carlos VI"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual rainha britânica passou décadas usando luto após a morte do príncipe Albert?",
-            "alternativas": [
-                "Rainha Vitória",
-                "Ana",
-                "Elizabeth I"
-            ],
-            "correta": 0
-        }
+
+    "Hormônios": [
+        {"pergunta": "Qual glândula produz insulina?", "alternativas": ["Tireoide", "Pâncreas", "Hipófise"], "correta": 1},
+        {"pergunta": "Qual hormônio ajuda a reduzir a glicose no sangue?", "alternativas": ["Adrenalina", "Melatonina", "Insulina"], "correta": 2},
+        {"pergunta": "Qual hormônio está relacionado ao ciclo sono-vigília?", "alternativas": ["Melatonina", "Testosterona", "Insulina"], "correta": 0},
+        {"pergunta": "Qual glândula produz os hormônios T3 e T4?", "alternativas": ["Pâncreas", "Tireoide", "Suprarrenal"], "correta": 1},
+        {"pergunta": "Qual hormônio aumenta rapidamente em situações de estresse agudo?", "alternativas": ["Progesterona", "Calcitonina", "Adrenalina"], "correta": 2},
     ],
-    "Tradições Estranhas ao Redor do Mundo": [
-        {
-            "pergunta": "Em qual país acontece a famosa batalha de tomates La Tomatina?",
-            "alternativas": [
-                "Espanha",
-                "Itália",
-                "México"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual festival indiano é conhecido por lançar pós coloridos?",
-            "alternativas": [
-                "Diwali",
-                "Holi",
-                "Onam"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Em qual país ocorre a famosa corrida atrás de um queijo em Cooper's Hill?",
-            "alternativas": [
-                "Inglaterra",
-                "França",
-                "Suíça"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual país é famoso por campeonatos de carregar a esposa?",
-            "alternativas": [
-                "Portugal",
-                "Finlândia",
-                "Canadá"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Em qual país acontece o festival de lama de Boryeong?",
-            "alternativas": [
-                "Japão",
-                "Tailândia",
-                "Coreia do Sul"
-            ],
-            "correta": 2
-        }
+
+    "Tipos Sanguíneos": [
+        {"pergunta": "Quais sistemas são mais usados para classificar tipos sanguíneos em transfusões?", "alternativas": ["DNA e RNA", "T3 e T4", "ABO e Rh"], "correta": 2},
+        {"pergunta": "Uma pessoa do grupo O possui quais antígenos A ou B nas hemácias?", "alternativas": ["Nenhum dos dois", "Apenas A", "Apenas B"], "correta": 0},
+        {"pergunta": "Qual grupo possui antígenos A e B nas hemácias?", "alternativas": ["O", "AB", "A apenas"], "correta": 1},
+        {"pergunta": "O fator Rh é indicado normalmente por qual sinal junto ao tipo sanguíneo?", "alternativas": ["Alto ou baixo", "Quente ou frio", "Positivo ou negativo"], "correta": 2},
+        {"pergunta": "Antes de uma transfusão, o que é essencial verificar?", "alternativas": ["Compatibilidade sanguínea", "Cor dos olhos", "Altura do paciente"], "correta": 0},
     ],
-    "Festivais Mais Diferentes do Mundo": [
-        {
-            "pergunta": "Qual festival espanhol transforma uma cidade em uma batalha de tomates?",
-            "alternativas": [
-                "La Tomatina",
-                "Oktoberfest",
-                "Sanremo"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual festival indiano é conhecido como Festival das Cores?",
-            "alternativas": [
-                "Holi",
-                "Vesak",
-                "Diwali"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual evento japonês é famoso por enormes esculturas de neve?",
-            "alternativas": [
-                "Festival de Neve de Sapporo",
-                "Gion Matsuri",
-                "Awa Odori"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual festival escocês termina tradicionalmente com a queima de uma réplica de navio viking?",
-            "alternativas": [
-                "Burning Man",
-                "Glastonbury",
-                "Up Helly Aa"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual festival sul-coreano é centrado em muita lama?",
-            "alternativas": [
-                "Lantern Festival",
-                "Chuseok",
-                "Boryeong Mud Festival"
-            ],
-            "correta": 2
-        }
+
+    "DNA e RNA": [
+        {"pergunta": "Qual base nitrogenada aparece no DNA, mas não no RNA?", "alternativas": ["Timina", "Uracila", "Ribose"], "correta": 0},
+        {"pergunta": "Qual base aparece no RNA no lugar da timina?", "alternativas": ["Guanina", "Uracila", "Citosina"], "correta": 1},
+        {"pergunta": "Qual açúcar está presente no DNA?", "alternativas": ["Ribose", "Glicose", "Desoxirribose"], "correta": 2},
+        {"pergunta": "Qual processo produz RNA a partir de uma sequência de DNA?", "alternativas": ["Transcrição", "Tradução", "Replicação proteica"], "correta": 0},
+        {"pergunta": "Qual molécula leva a informação do DNA aos ribossomos para síntese proteica?", "alternativas": ["Lipídio", "RNA mensageiro", "Glicogênio"], "correta": 1},
     ],
-    "Bastidores de Grandes Festivais de Música": [
-        {
-            "pergunta": "Em que tipo de propriedade acontece o Glastonbury Festival?",
-            "alternativas": [
-                "Um navio",
-                "Um estádio coberto",
-                "Uma fazenda"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Em qual região dos EUA acontece o Coachella?",
-            "alternativas": [
-                "Alasca",
-                "Deserto da Califórnia",
-                "Flórida"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Como é conhecido o espaço do Rock in Rio onde o festival é montado?",
-            "alternativas": [
-                "Cidade do Rock",
-                "Vila da Música",
-                "Parque do Rock"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Em qual país nasceu o Tomorrowland?",
-            "alternativas": [
-                "Bélgica",
-                "Espanha",
-                "Canadá"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual festival de 1969 se tornou símbolo da contracultura?",
-            "alternativas": [
-                "Lollapalooza",
-                "Woodstock",
-                "Primavera Sound"
-            ],
-            "correta": 1
-        }
+
+    "Puberdade": [
+        {"pergunta": "Qual fase da vida envolve mudanças físicas e hormonais que levam à maturação sexual?", "alternativas": ["Velhice", "Puberdade", "Gestação"], "correta": 1},
+        {"pergunta": "Qual hormônio sexual aumenta bastante nos meninos durante a puberdade?", "alternativas": ["Insulina", "Melatonina", "Testosterona"], "correta": 2},
+        {"pergunta": "Qual mudança pode ocorrer em ambos os sexos durante a puberdade?", "alternativas": ["Crescimento de pelos", "Perda de todos os dentes permanentes", "Redução completa da altura"], "correta": 0},
+        {"pergunta": "Nas meninas, qual evento pode ocorrer durante a puberdade?", "alternativas": ["Menopausa", "Menarca", "Catarata"], "correta": 1},
+        {"pergunta": "Por que a idade de início da puberdade varia entre pessoas?", "alternativas": ["Porque todos começam no mesmo dia", "Somente pela cor dos olhos", "Por fatores genéticos e ambientais"], "correta": 2},
     ],
-    "Shows que Entraram para a História": [
-        {
-            "pergunta": "Qual banda teve uma apresentação lendária no Live Aid de 1985?",
-            "alternativas": [
-                "Queen",
-                "Coldplay",
-                "Oasis"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual banda tocou no telhado da Apple Corps em 1969?",
-            "alternativas": [
-                "Rolling Stones",
-                "The Beatles",
-                "The Who"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual banda gravou um dos MTV Unplugged mais famosos em 1993?",
-            "alternativas": [
-                "Nirvana",
-                "Pearl Jam",
-                "U2"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual cantora teve sua apresentação no Coachella de 2018 apelidada de 'Beychella'?",
-            "alternativas": [
-                "Rihanna",
-                "Adele",
-                "Beyoncé"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual artista fez um megashow gratuito em Copacabana em 2024?",
-            "alternativas": [
-                "Madonna",
-                "Cher",
-                "Lady Gaga"
-            ],
-            "correta": 0
-        }
+
+    "Ovulação e Fertilidade": [
+        {"pergunta": "O que é ovulação?", "alternativas": ["Início obrigatório da menstruação", "Implantação do embrião", "Liberação de um óvulo pelo ovário"], "correta": 2},
+        {"pergunta": "Qual hormônio apresenta um pico que desencadeia a ovulação?", "alternativas": ["LH", "Insulina", "Cortisol"], "correta": 0},
+        {"pergunta": "A ovulação ocorre sempre exatamente no 14º dia em todas as pessoas?", "alternativas": ["Sim", "Não", "Somente em anos bissextos"], "correta": 1},
+        {"pergunta": "Qual estrutura capta o óvulo após a ovulação?", "alternativas": ["Uretra", "Vesícula biliar", "Tuba uterina"], "correta": 2},
+        {"pergunta": "Qual fator pode influenciar a regularidade da ovulação?", "alternativas": ["Alterações hormonais", "Tipo sanguíneo apenas", "Cor do cabelo"], "correta": 0},
     ],
-    "Artistas que Começaram Cantando em Lugares Inusitados": [
-        {
-            "pergunta": "Qual cantor britânico ficou conhecido por tocar nas ruas antes da fama?",
-            "alternativas": [
-                "Sam Smith",
-                "Harry Styles",
-                "Ed Sheeran"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual artista foi descoberto após vídeos caseiros publicados no YouTube?",
-            "alternativas": [
-                "Bruno Mars",
-                "Justin Bieber",
-                "Shawn Mendes"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual cantora britânico-albanesa publicava covers no YouTube ainda adolescente?",
-            "alternativas": [
-                "Dua Lipa",
-                "Adele",
-                "Rita Ora"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual artista australiana ganhou atenção enquanto fazia apresentações de rua em Byron Bay?",
-            "alternativas": [
-                "Sia",
-                "Kylie Minogue",
-                "Tones and I"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cantor canadense ganhou seguidores no Vine antes do sucesso mundial?",
-            "alternativas": [
-                "Drake",
-                "The Weeknd",
-                "Shawn Mendes"
-            ],
-            "correta": 2
-        }
+
+    "Infecções Sexualmente Transmissíveis": [
+        {"pergunta": "Qual método de barreira ajuda a reduzir o risco de muitas infecções sexualmente transmissíveis?", "alternativas": ["Preservativo", "Pílula anticoncepcional", "DIU"], "correta": 0},
+        {"pergunta": "O HIV pode ser transmitido por abraço ou aperto de mão?", "alternativas": ["Sim", "Não", "Sempre"], "correta": 1},
+        {"pergunta": "Qual infecção sexualmente transmissível pode ser prevenida por vacinação?", "alternativas": ["Sífilis", "Gonorreia", "HPV"], "correta": 2},
+        {"pergunta": "Uma pessoa pode ter uma infecção sexualmente transmissível sem sintomas?", "alternativas": ["Sim", "Não, nunca", "Somente após 60 anos"], "correta": 0},
+        {"pergunta": "Ao suspeitar de uma infecção sexualmente transmissível, qual atitude é adequada?", "alternativas": ["Tomar qualquer antibiótico por conta própria", "Buscar avaliação de saúde", "Ignorar os sintomas"], "correta": 1},
     ],
-    "Erros e Gafes em Shows Ao Vivo": [
-        {
-            "pergunta": "Qual cantora reiniciou sua homenagem a George Michael no Grammy de 2017 após errar o começo?",
-            "alternativas": [
-                "Beyoncé",
-                "Adele",
-                "Pink"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual artista teve o cabelo preso em um ventilador durante um show em Montreal e continuou cantando?",
-            "alternativas": [
-                "Katy Perry",
-                "Rihanna",
-                "Beyoncé"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual vocalista quebrou a perna no palco em 2015 e voltou para terminar o show?",
-            "alternativas": [
-                "Chris Martin",
-                "Dave Grohl",
-                "Bono"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual vocalista do Metallica sofreu queimaduras com efeitos pirotécnicos em 1992?",
-            "alternativas": [
-                "James Hetfield",
-                "Kirk Hammett",
-                "Lars Ulrich"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual cantora teve um problema de playback no Saturday Night Live em 2004 e saiu do palco após uma dança improvisada?",
-            "alternativas": [
-                "Kelly Clarkson",
-                "Avril Lavigne",
-                "Ashlee Simpson"
-            ],
-            "correta": 2
-        }
+
+    "Gravidez": [
+        {"pergunta": "Onde normalmente ocorre a implantação do embrião?", "alternativas": ["Ovário", "Útero", "Bexiga"], "correta": 1},
+        {"pergunta": "Qual hormônio é detectado pelos testes de gravidez?", "alternativas": ["Insulina", "Adrenalina", "hCG"], "correta": 2},
+        {"pergunta": "Qual órgão faz trocas de nutrientes e gases entre gestante e feto?", "alternativas": ["Placenta", "Pâncreas", "Tireoide"], "correta": 0},
+        {"pergunta": "Quantos trimestres compõem uma gestação?", "alternativas": ["Dois", "Três", "Cinco"], "correta": 1},
+        {"pergunta": "Qual profissional pode acompanhar o pré-natal?", "alternativas": ["Oftalmologista apenas", "Dentista apenas", "Obstetra ou equipe de pré-natal"], "correta": 2},
     ],
-    "Objetos Estranhos Levados por Artistas em Turnês": [
-        {
-            "pergunta": "Qual vocalista do Foo Fighters fez shows sentado em um trono especialmente criado após quebrar a perna?",
-            "alternativas": [
-                "Dave Grohl",
-                "Axl Rose",
-                "Bono"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual banda usou um enorme limão espelhado como elemento de palco na turnê PopMart?",
-            "alternativas": [
-                "Queen",
-                "Muse",
-                "U2"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual banda ficou famosa por usar um porco inflável gigante em apresentações?",
-            "alternativas": [
-                "Kiss",
-                "Pink Floyd",
-                "The Who"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual cantora usa tecidos e estruturas aéreas em várias turnês para fazer acrobacias sobre o público?",
-            "alternativas": [
-                "Lorde",
-                "Pink",
-                "Adele"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual banda é conhecida por levar enormes sinos e canhões cenográficos ao palco?",
-            "alternativas": [
-                "Maroon 5",
-                "AC/DC",
-                "Coldplay"
-            ],
-            "correta": 1
-        }
+
+    "Saúde Íntima Feminina": [
+        {"pergunta": "Qual órgão faz parte do sistema reprodutor feminino?", "alternativas": ["Próstata", "Traqueia", "Útero"], "correta": 2},
+        {"pergunta": "Qual profissional costuma avaliar a saúde ginecológica?", "alternativas": ["Ginecologista", "Neurologista", "Ortopedista"], "correta": 0},
+        {"pergunta": "Quando há alteração persistente no corrimento vaginal, o ideal é o quê?", "alternativas": ["Usar qualquer medicamento sem orientação", "Buscar avaliação de saúde", "Ignorar sempre"], "correta": 1},
+        {"pergunta": "Qual exame pode ser usado na avaliação do colo do útero conforme orientação de saúde?", "alternativas": ["Eletrocardiograma", "Espirometria", "Papanicolau"], "correta": 2},
+        {"pergunta": "Qual atitude ajuda a saúde íntima?", "alternativas": ["Evitar duchas vaginais sem indicação", "Usar produtos irritantes internamente", "Compartilhar medicamentos"], "correta": 0},
     ],
-    "Exigências Curiosas de Camarins de Famosos": [
-        {
-            "pergunta": "Como é chamado o documento com exigências técnicas e de hospitalidade de um artista?",
-            "alternativas": [
-                "Release",
-                "Rider",
-                "Setlist"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual banda ficou famosa pela cláusula pedindo M&M's sem os marrons?",
-            "alternativas": [
-                "Aerosmith",
-                "Bon Jovi",
-                "Van Halen"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Por que a cláusula dos M&M's do Van Halen era útil?",
-            "alternativas": [
-                "Para decorar o camarim",
-                "Para escolher sabores",
-                "Para testar se o contrato havia sido lido com atenção"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual músico teve um rider que incluía uma receita de guacamole?",
-            "alternativas": [
-                "Jack White",
-                "Sting",
-                "Ed Sheeran"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual parte de um rider trata de palco, som, luz e energia?",
-            "alternativas": [
-                "Rider técnico",
-                "Lista de convidados",
-                "Hospitalidade"
-            ],
-            "correta": 0
-        }
+
+    "Saúde Íntima Masculina": [
+        {"pergunta": "Qual órgão produz espermatozoides?", "alternativas": ["Testículos", "Próstata", "Bexiga"], "correta": 0},
+        {"pergunta": "Qual glândula contribui com líquido para o sêmen?", "alternativas": ["Tireoide", "Próstata", "Hipófise"], "correta": 1},
+        {"pergunta": "Qual profissional pode avaliar problemas do sistema urinário e reprodutor masculino?", "alternativas": ["Oftalmologista", "Dermatologista apenas", "Urologista"], "correta": 2},
+        {"pergunta": "Dor testicular súbita e intensa deve ser tratada como o quê?", "alternativas": ["Situação que requer avaliação médica urgente", "Algo para ignorar por vários dias", "Sinal certo de gripe"], "correta": 0},
+        {"pergunta": "O preservativo ajuda a reduzir o risco de quê?", "alternativas": ["Miopia", "Infecções sexualmente transmissíveis e gravidez", "Cárie"], "correta": 1},
     ],
-    "Famosos que Têm Talentos Inesperados": [
-        {
-            "pergunta": "Qual ator e comediante é também um premiado tocador de banjo?",
-            "alternativas": [
-                "Ben Stiller",
-                "Jim Carrey",
-                "Steve Martin"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual atriz chegou a competir seriamente no tiro com arco?",
-            "alternativas": [
-                "Geena Davis",
-                "Julia Roberts",
-                "Sandra Bullock"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual ator treinou como engolidor de fogo antes da fama?",
-            "alternativas": [
-                "Hugh Jackman",
-                "George Clooney",
-                "Pierce Brosnan"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual ator de ação também é conhecido por tocar flauta?",
-            "alternativas": [
-                "Vin Diesel",
-                "Jason Statham",
-                "Terry Crews"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual ator é também mágico e já presidiu a Academy of Magical Arts?",
-            "alternativas": [
-                "Tom Hanks",
-                "Neil Patrick Harris",
-                "Ryan Reynolds"
-            ],
-            "correta": 1
-        }
+
+    "Sono e Sonhos": [
+        {"pergunta": "Qual hormônio está associado ao início do sono em resposta à escuridão?", "alternativas": ["Insulina", "Melatonina", "Adrenalina"], "correta": 1},
+        {"pergunta": "Qual fase do sono está muito associada a sonhos vívidos?", "alternativas": ["Estado de vigília", "Sono profundo apenas", "Sono REM"], "correta": 2},
+        {"pergunta": "O que é higiene do sono?", "alternativas": ["Hábitos que favorecem sono regular e de qualidade", "Limpeza do quarto apenas", "Uso obrigatório de medicamentos"], "correta": 0},
+        {"pergunta": "Qual hábito pode atrapalhar o sono se feito perto do horário de dormir?", "alternativas": ["Reduzir luz intensa", "Consumir muita cafeína", "Manter horário regular"], "correta": 1},
+        {"pergunta": "Adultos passam por vários ciclos de sono durante a noite?", "alternativas": ["Não", "Somente uma vez por mês", "Sim"], "correta": 2},
     ],
-    "Celebridades com Profissões Antes da Fama": [
-        {
-            "pergunta": "Qual ator trabalhou como carpinteiro antes de virar astro de Hollywood?",
-            "alternativas": [
-                "Harrison Ford",
-                "Brad Pitt",
-                "Tom Cruise"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual ator também teve carreira profissional no futebol americano antes da fama?",
-            "alternativas": [
-                "Tyler James Williams",
-                "Terry Crews",
-                "Chris Rock"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual ator de 'The Hangover' era médico antes de se dedicar à comédia?",
-            "alternativas": [
-                "Bradley Cooper",
-                "Ken Jeong",
-                "Zach Galifianakis"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual ator de 'Pulp Fiction' trabalhou como bombeiro em Nova York antes da fama?",
-            "alternativas": [
-                "Samuel L. Jackson",
-                "John Travolta",
-                "Steve Buscemi"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual ator de 'Taxi' chegou a trabalhar como cabeleireiro antes da carreira artística?",
-            "alternativas": [
-                "Danny DeVito",
-                "Robert De Niro",
-                "Al Pacino"
-            ],
-            "correta": 0
-        }
+
+    "Cérebro Humano": [
+        {"pergunta": "Qual parte do cérebro está muito envolvida com equilíbrio e coordenação motora?", "alternativas": ["Hipófise", "Medula óssea", "Cerebelo"], "correta": 2},
+        {"pergunta": "Qual lobo cerebral está associado principalmente ao processamento visual?", "alternativas": ["Occipital", "Frontal", "Temporal"], "correta": 0},
+        {"pergunta": "Qual estrutura conecta os dois hemisférios cerebrais?", "alternativas": ["Fêmur", "Corpo caloso", "Diafragma"], "correta": 1},
+        {"pergunta": "Qual célula é especializada em transmitir impulsos nervosos?", "alternativas": ["Hemácia", "Osteócito", "Neurônio"], "correta": 2},
+        {"pergunta": "Qual neurotransmissor está envolvido em recompensa e motivação?", "alternativas": ["Dopamina", "Hemoglobina", "Colágeno"], "correta": 0},
     ],
-    "Nomes Verdadeiros de Famosos": [
-        {
-            "pergunta": "Qual é o nome de nascimento de Bruno Mars?",
-            "alternativas": [
-                "Brandon Cole",
-                "Peter Hernandez",
-                "Michael Smith"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual é o primeiro nome de Lady Gaga?",
-            "alternativas": [
-                "Giovanna",
-                "Stefani",
-                "Francesca"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual é o nome de nascimento de The Weeknd?",
-            "alternativas": [
-                "Drake Graham",
-                "Abel Tesfaye",
-                "Shawn Carter"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual é o nome de nascimento da cantora Anitta?",
-            "alternativas": [
-                "Priscilla Alcantara",
-                "Larissa de Macedo Machado",
-                "Marina Sena"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Katy Perry nasceu com qual sobrenome?",
-            "alternativas": [
-                "Stefani",
-                "Johnson",
-                "Hudson"
-            ],
-            "correta": 2
-        }
+
+    "Vacinas e Imunidade": [
+        {"pergunta": "Qual é a função principal de uma vacina?", "alternativas": ["Treinar o sistema imune para reconhecer um agente ou parte dele", "Curar qualquer doença instantaneamente", "Substituir alimentação saudável"], "correta": 0},
+        {"pergunta": "Qual tipo de célula participa da defesa imunológica?", "alternativas": ["Hemácia apenas", "Leucócito", "Adipócito apenas"], "correta": 1},
+        {"pergunta": "O que é memória imunológica?", "alternativas": ["Esquecimento total de infecções", "Perda de anticorpos em minutos", "Capacidade de responder mais rapidamente a um agente já reconhecido"], "correta": 2},
+        {"pergunta": "Vacinas podem ajudar a reduzir a circulação de doenças em uma população?", "alternativas": ["Sim", "Não", "Somente em animais"], "correta": 0},
+        {"pergunta": "Onde devem ser verificadas informações confiáveis sobre vacinação no Brasil?", "alternativas": ["Correntes de mensagens", "Ministério da Saúde e serviços de saúde", "Perfis sem fonte"], "correta": 1},
     ],
-    "Famosos que Mudaram Completamente de Visual": [
-        {
-            "pergunta": "Qual artista assumiu o cabelo vermelho intenso na fase de Ziggy Stardust?",
-            "alternativas": [
-                "David Bowie",
-                "Freddie Mercury",
-                "Elton John"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual cantora surpreendeu ao cortar o cabelo bem curto e platinado em 2012?",
-            "alternativas": [
-                "Selena Gomez",
-                "Miley Cyrus",
-                "Ariana Grande"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual cantora trocou as raízes verde-neon por um visual loiro em 2021?",
-            "alternativas": [
-                "Halsey",
-                "Lorde",
-                "Billie Eilish"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cantor cortou seus famosos dreadlocks antes da era 'Starboy'?",
-            "alternativas": [
-                "Drake",
-                "Post Malone",
-                "The Weeknd"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cantora raspou o cabelo e as sobrancelhas publicamente em 2022?",
-            "alternativas": [
-                "Doja Cat",
-                "Dua Lipa",
-                "SZA"
-            ],
-            "correta": 0
-        }
+
+    "Alimentação e Nutrientes": [
+        {"pergunta": "Qual nutriente é uma importante fonte de energia?", "alternativas": ["Água apenas", "Carboidrato", "Mineral apenas"], "correta": 1},
+        {"pergunta": "Qual nutriente é fundamental para construção e reparo de tecidos?", "alternativas": ["Vitamina C apenas", "Água", "Proteína"], "correta": 2},
+        {"pergunta": "Qual vitamina está associada à absorção de cálcio e saúde óssea?", "alternativas": ["Vitamina D", "Vitamina K apenas", "Vitamina B12 apenas"], "correta": 0},
+        {"pergunta": "Qual mineral é componente da hemoglobina?", "alternativas": ["Sódio", "Ferro", "Iodo"], "correta": 1},
+        {"pergunta": "Qual alimento é fonte de fibras?", "alternativas": ["Açúcar refinado", "Óleo puro", "Feijão"], "correta": 2},
     ],
-    "Encontros Inesperados entre Celebridades": [
-        {
-            "pergunta": "Qual dupla improvável se conheceu no programa de TV de Martha Stewart em 2008?",
-            "alternativas": [
-                "Cher e Drake",
-                "Adele e Eminem",
-                "Martha Stewart e Snoop Dogg"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual rapper cantou 'Stan' ao lado de Elton John no Grammy de 2001?",
-            "alternativas": [
-                "Eminem",
-                "Jay-Z",
-                "Kanye West"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual cantora encontrou a rainha Elizabeth II após uma apresentação no Royal Variety Performance de 2009?",
-            "alternativas": [
-                "Rihanna",
-                "Beyoncé",
-                "Lady Gaga"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual quarteto britânico posou em uma famosa sessão de fotos com Muhammad Ali em 1964?",
-            "alternativas": [
-                "Queen",
-                "The Beatles",
-                "The Rolling Stones"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual cantora participou de 'FourFiveSeconds' com Paul McCartney e Kanye West?",
-            "alternativas": [
-                "Rihanna",
-                "Adele",
-                "Beyoncé"
-            ],
-            "correta": 0
-        }
+
+    "Primeiros Socorros": [
+        {"pergunta": "Ao encontrar uma pessoa inconsciente, qual é uma das primeiras atitudes?", "alternativas": ["Oferecer comida imediatamente", "Colocar a pessoa de pé", "Verificar segurança do local e responsividade"], "correta": 2},
+        {"pergunta": "Em uma emergência, qual número aciona o SAMU no Brasil?", "alternativas": ["192", "190", "193"], "correta": 0},
+        {"pergunta": "Em caso de sangramento externo importante, o que pode ajudar enquanto chega socorro?", "alternativas": ["Aplicar café em pó", "Compressão direta com material limpo", "Colocar terra sobre o ferimento"], "correta": 1},
+        {"pergunta": "Em uma queimadura térmica leve, qual cuidado inicial é recomendado?", "alternativas": ["Aplicar pasta de dente", "Estourar bolhas", "Resfriar com água corrente"], "correta": 2},
+        {"pergunta": "Se houver suspeita de lesão na coluna após trauma, o ideal é o quê?", "alternativas": ["Evitar movimentação desnecessária e chamar socorro", "Sentar a pessoa rapidamente", "Puxar pelos braços"], "correta": 0},
     ],
-    "Amizades Improváveis entre Famosos": [
-        {
-            "pergunta": "Qual apresentadora e empresária tornou-se grande amiga de Snoop Dogg?",
-            "alternativas": [
-                "Oprah Winfrey",
-                "Martha Stewart",
-                "Ellen DeGeneres"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual atriz de 'Friends' é amiga de Ed Sheeran e já o hospedou em sua casa?",
-            "alternativas": [
-                "Lisa Kudrow",
-                "Jennifer Aniston",
-                "Courteney Cox"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual rapper desenvolveu uma amizade pública com Elton John?",
-            "alternativas": [
-                "Drake",
-                "50 Cent",
-                "Eminem"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cantora faz parte do trio de 'Only Murders in the Building' com Steve Martin e Martin Short?",
-            "alternativas": [
-                "Demi Lovato",
-                "Selena Gomez",
-                "Miley Cyrus"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual ex-jogador inglês mantém amizade de longa data com Snoop Dogg?",
-            "alternativas": [
-                "Wayne Rooney",
-                "David Beckham",
-                "Frank Lampard"
-            ],
-            "correta": 1
-        }
+
+    "Segurança no Trânsito": [
+        {"pergunta": "Qual atitude reduz distrações ao dirigir?", "alternativas": ["Guardar o celular e evitar manuseá-lo", "Responder mensagens enquanto conduz", "Assistir vídeos no painel"], "correta": 0},
+        {"pergunta": "O cinto de segurança deve ser usado por quem?", "alternativas": ["Somente o motorista", "Todos os ocupantes", "Somente crianças"], "correta": 1},
+        {"pergunta": "Antes de mudar de faixa, o condutor deve fazer o quê?", "alternativas": ["Mudar sem olhar", "Acelerar sem sinalizar", "Sinalizar e verificar se a manobra é segura"], "correta": 2},
+        {"pergunta": "Em pista molhada, qual atitude é mais segura?", "alternativas": ["Reduzir a velocidade e aumentar a distância", "Aumentar a velocidade", "Frear bruscamente o tempo todo"], "correta": 0},
+        {"pergunta": "Qual atitude é adequada diante de pedestre atravessando em local apropriado?", "alternativas": ["Acelerar", "Reduzir e respeitar a prioridade quando aplicável", "Buzinar continuamente"], "correta": 1},
     ],
-    "Curiosidades sobre Tapetes Vermelhos": [
-        {
-            "pergunta": "Qual evento de moda acontece tradicionalmente na primeira segunda-feira de maio?",
-            "alternativas": [
-                "Oscar",
-                "Met Gala",
-                "Grammy"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Em qual cidade francesa acontece o famoso tapete vermelho do Festival de Cannes?",
-            "alternativas": [
-                "Paris",
-                "Nice",
-                "Cannes"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual premiação trocou temporariamente o tradicional tapete vermelho por um tom champanhe em 2023?",
-            "alternativas": [
-                "Emmy",
-                "Grammy",
-                "Oscar"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual museu recebe o Met Gala?",
-            "alternativas": [
-                "Metropolitan Museum of Art",
-                "MoMA PS1",
-                "Louvre"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual peça de roupa é frequentemente associada ao código 'black tie' masculino?",
-            "alternativas": [
-                "Bermuda",
-                "Smoking",
-                "Macacão esportivo"
-            ],
-            "correta": 1
-        }
+
+    "Prova Teórica da CNH": [
+        {"pergunta": "Qual documento reúne as principais regras de trânsito no Brasil?", "alternativas": ["Código Penal apenas", "Código de Trânsito Brasileiro", "Constituição Estadual apenas"], "correta": 1},
+        {"pergunta": "Qual equipamento de segurança é obrigatório para ocupantes de automóveis?", "alternativas": ["Capacete dentro do carro", "Colete refletivo para todos", "Cinto de segurança"], "correta": 2},
+        {"pergunta": "Dirigir sob influência de álcool é permitido?", "alternativas": ["Não", "Sim, sempre", "Somente à noite"], "correta": 0},
+        {"pergunta": "O que deve ser feito antes de iniciar uma ultrapassagem?", "alternativas": ["Acelerar sem observar", "Verificar se é permitida e segura", "Usar o celular"], "correta": 1},
+        {"pergunta": "Qual é a principal finalidade da sinalização de trânsito?", "alternativas": ["Decorar as vias", "Aumentar o ruído", "Orientar, advertir e regulamentar a circulação"], "correta": 2},
     ],
-    "Premiações que Tiveram Momentos Inusitados": [
-        {
-            "pergunta": "Em 2017, qual filme foi anunciado por engano como vencedor de Melhor Filme antes da correção para 'Moonlight'?",
-            "alternativas": [
-                "Arrival",
-                "La La Land",
-                "Lion"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem interrompeu o discurso de Taylor Swift no VMA de 2009?",
-            "alternativas": [
-                "Kanye West",
-                "Jay-Z",
-                "Drake"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual ator protagonizou um tapa em Chris Rock durante o Oscar de 2022?",
-            "alternativas": [
-                "Denzel Washington",
-                "Jamie Foxx",
-                "Will Smith"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual atriz tropeçou ao subir as escadas para receber o Oscar em 2013?",
-            "alternativas": [
-                "Anne Hathaway",
-                "Jennifer Lawrence",
-                "Emma Stone"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual ator chamou Idina Menzel de um nome errado no Oscar de 2014?",
-            "alternativas": [
-                "John Travolta",
-                "Ben Affleck",
-                "Nicolas Cage"
-            ],
-            "correta": 0
-        }
+
+    "Pedestres e Ciclistas no Trânsito": [
+        {"pergunta": "Quando houver calçada em boas condições, o pedestre deve preferencialmente utilizá-la para quê?", "alternativas": ["Estacionar bicicleta", "Parar automóveis", "Circular fora da pista de veículos"], "correta": 2},
+        {"pergunta": "Ao atravessar uma via, o pedestre deve procurar o quê?", "alternativas": ["Local seguro e, quando houver, faixa de pedestres", "O ponto de maior velocidade dos carros", "A curva sem visibilidade"], "correta": 0},
+        {"pergunta": "O ciclista deve respeitar as regras de circulação e sinalização?", "alternativas": ["Não", "Sim", "Somente em rodovias"], "correta": 1},
+        {"pergunta": "Ao ultrapassar uma bicicleta, o motorista deve agir como?", "alternativas": ["Passando o mais perto possível", "Buzinando sem parar", "Com cuidado e distância lateral segura"], "correta": 2},
+        {"pergunta": "Qual item melhora a visibilidade do ciclista à noite?", "alternativas": ["Iluminação e elementos refletivos", "Roupa totalmente escura sem luz", "Fone de ouvido com volume máximo"], "correta": 0},
     ],
-    "Bastidores de Videoclipes Famosos": [
-        {
-            "pergunta": "Quem dirigiu o videoclipe de 'Thriller', de Michael Jackson?",
-            "alternativas": [
-                "John Landis",
-                "Spike Lee",
-                "Steven Spielberg"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual técnica de animação marcou o clipe de 'Take on Me', do a-ha?",
-            "alternativas": [
-                "Claymation",
-                "Rotoscopia",
-                "Stop motion"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem dança no famoso clipe de 'Chandelier', de Sia?",
-            "alternativas": [
-                "Maddie Ziegler",
-                "Millie Bobby Brown",
-                "JoJo Siwa"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Quem dirigiu o clipe de 'This Is America', de Childish Gambino?",
-            "alternativas": [
-                "David Fincher",
-                "Hiro Murai",
-                "Michel Gondry"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual clipe de Beyoncé ficou famoso pelo cenário minimalista e coreografia com duas dançarinas?",
-            "alternativas": [
-                "Formation",
-                "Halo",
-                "Single Ladies"
-            ],
-            "correta": 2
-        }
+
+    "Geografia do Brasil": [
+        {"pergunta": "Qual é a maior região brasileira em área territorial?", "alternativas": ["Norte", "Sul", "Sudeste"], "correta": 0},
+        {"pergunta": "Qual é o maior estado brasileiro em área?", "alternativas": ["Bahia", "Amazonas", "São Paulo"], "correta": 1},
+        {"pergunta": "Qual rio possui a maior bacia hidrográfica do mundo?", "alternativas": ["São Francisco", "Paraná", "Amazonas"], "correta": 2},
+        {"pergunta": "Qual bioma predomina em grande parte da região Norte?", "alternativas": ["Amazônia", "Pampa", "Caatinga"], "correta": 0},
+        {"pergunta": "Qual é a capital do Brasil?", "alternativas": ["Rio de Janeiro", "Brasília", "São Paulo"], "correta": 1},
     ],
-    "Músicas que Quase Tiveram Outro Nome": [
-        {
-            "pergunta": "Qual música dos Beatles teve o título provisório 'Scrambled Eggs'?",
-            "alternativas": [
-                "Let It Be",
-                "Help!",
-                "Yesterday"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual música de Paul McCartney começou como 'Hey Jules'?",
-            "alternativas": [
-                "Hey Jude",
-                "Penny Lane",
-                "Let It Be"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual música de John Lennon tinha inicialmente o título 'Maharishi'?",
-            "alternativas": [
-                "Dear Prudence",
-                "Julia",
-                "Sexy Sadie"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual música dos Beatles teve o título de trabalho 'Bad Finger Boogie'?",
-            "alternativas": [
-                "Come Together",
-                "Something",
-                "With a Little Help from My Friends"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual música de George Harrison teve o título provisório 'Granny Smith'?",
-            "alternativas": [
-                "Taxman",
-                "Here Comes the Sun",
-                "Love You To"
-            ],
-            "correta": 2
-        }
+
+    "Capitais do Brasil": [
+        {"pergunta": "Qual é a capital da Paraíba?", "alternativas": ["Recife", "João Pessoa", "Natal"], "correta": 1},
+        {"pergunta": "Qual é a capital de Pernambuco?", "alternativas": ["Maceió", "Fortaleza", "Recife"], "correta": 2},
+        {"pergunta": "Qual é a capital da Bahia?", "alternativas": ["Salvador", "Aracaju", "Vitória"], "correta": 0},
+        {"pergunta": "Qual é a capital do Ceará?", "alternativas": ["Teresina", "Fortaleza", "São Luís"], "correta": 1},
+        {"pergunta": "Qual é a capital do Amazonas?", "alternativas": ["Belém", "Porto Velho", "Manaus"], "correta": 2},
     ],
-    "Artistas que Recusaram Grandes Sucessos": [
-        {
-            "pergunta": "Qual hit de Rihanna foi oferecido anteriormente à equipe de Britney Spears?",
-            "alternativas": [
-                "Work",
-                "Diamonds",
-                "Umbrella"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual música de Britney Spears havia sido oferecida antes ao TLC?",
-            "alternativas": [
-                "Toxic",
-                "...Baby One More Time",
-                "Oops!... I Did It Again"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual hit gravado por Britney Spears foi inicialmente oferecido a Kylie Minogue?",
-            "alternativas": [
-                "Circus",
-                "Toxic",
-                "Womanizer"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual música Lady Gaga escreveu inicialmente para Britney Spears, que não a lançou?",
-            "alternativas": [
-                "Alejandro",
-                "Poker Face",
-                "Telephone"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual hit de Sia foi escrito pensando em Rihanna antes de Sia gravá-lo?",
-            "alternativas": [
-                "Elastic Heart",
-                "Chandelier",
-                "Cheap Thrills"
-            ],
-            "correta": 2
-        }
+
+    "Língua Portuguesa": [
+        {"pergunta": "Qual palavra é um substantivo?", "alternativas": ["Correr", "Bonito", "Casa"], "correta": 2},
+        {"pergunta": "Qual palavra é um verbo?", "alternativas": ["Cantar", "Azul", "Mesa"], "correta": 0},
+        {"pergunta": "Qual palavra está escrita corretamente?", "alternativas": ["Excessão", "Exceção", "Eceção"], "correta": 1},
+        {"pergunta": "Qual é o plural de cidadão?", "alternativas": ["Cidadões", "Cidadães", "Cidadãos"], "correta": 2},
+        {"pergunta": "Qual palavra é sinônimo de rápido?", "alternativas": ["Veloz", "Lento", "Parado"], "correta": 0},
     ],
-    "Covers que Ficaram Mais Famosos que o Original": [
-        {
-            "pergunta": "Quem gravou originalmente 'I Will Always Love You' antes da versão de Whitney Houston?",
-            "alternativas": [
-                "Cher",
-                "Dolly Parton",
-                "Celine Dion"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem popularizou mundialmente 'Nothing Compares 2 U' em 1990?",
-            "alternativas": [
-                "Annie Lennox",
-                "Sinéad O'Connor",
-                "Madonna"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual banda gravou originalmente 'Torn' antes do sucesso de Natalie Imbruglia?",
-            "alternativas": [
-                "The Cranberries",
-                "Ednaswap",
-                "Garbage"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Quem transformou 'Girls Just Want to Have Fun' em um grande hit nos anos 1980?",
-            "alternativas": [
-                "Debbie Harry",
-                "Pat Benatar",
-                "Cyndi Lauper"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual cantor lançou uma versão marcante de 'Hurt', originalmente do Nine Inch Nails?",
-            "alternativas": [
-                "Johnny Cash",
-                "Willie Nelson",
-                "Bob Dylan"
-            ],
-            "correta": 0
-        }
+
+    "Matemática Rápida": [
+        {"pergunta": "Quanto é 7 vezes 8?", "alternativas": ["56", "54", "64"], "correta": 0},
+        {"pergunta": "Quanto é 144 dividido por 12?", "alternativas": ["14", "12", "10"], "correta": 1},
+        {"pergunta": "Quanto é 15 por cento de 200?", "alternativas": ["20", "40", "30"], "correta": 2},
+        {"pergunta": "Qual é a raiz quadrada de 81?", "alternativas": ["9", "8", "7"], "correta": 0},
+        {"pergunta": "Quanto é 25 mais 37?", "alternativas": ["52", "62", "72"], "correta": 1},
     ],
-    "Histórias Engraçadas por Trás de Músicas Famosas": [
-        {
-            "pergunta": "Qual música nasceu de uma melodia que Paul McCartney disse ter sonhado?",
-            "alternativas": [
-                "Help!",
-                "Yesterday",
-                "Yellow Submarine"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "O riff inicial de qual música do Guns N' Roses começou como um exercício/brincadeira de guitarra de Slash?",
-            "alternativas": [
-                "November Rain",
-                "Patience",
-                "Sweet Child o' Mine"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual música do Blur manteve como título final o simples nome provisório usado no estúdio?",
-            "alternativas": [
-                "Song 2",
-                "Parklife",
-                "Coffee & TV"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual hit de Lou Bega reaproveita a base de uma composição instrumental de Pérez Prado?",
-            "alternativas": [
-                "Mambo No. 5",
-                "Macarena",
-                "Blue"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Qual hit do Hanson tem um título formado por sílabas sem significado literal específico?",
-            "alternativas": [
-                "MMMBop",
-                "This Time Around",
-                "Where's the Love"
-            ],
-            "correta": 0
-        }
+
+    "Mitos e Verdades do Dia a Dia": [
+        {"pergunta": "Engolir chiclete faz ele ficar sete anos no estômago?", "alternativas": ["Sim", "Não", "Somente em crianças"], "correta": 1},
+        {"pergunta": "Raspar o pelo faz ele crescer mais grosso de verdade?", "alternativas": ["Sim, sempre", "Somente no inverno", "Não"], "correta": 2},
+        {"pergunta": "Ler com pouca luz estraga permanentemente a visão?", "alternativas": ["Não, mas pode causar desconforto temporário", "Sim, sempre causa cegueira", "Só se o livro for digital"], "correta": 0},
+        {"pergunta": "Estalar os dedos causa artrite automaticamente?", "alternativas": ["Sim, sempre", "Não há evidência de que cause artrite automaticamente", "Somente na mão esquerda"], "correta": 1},
+        {"pergunta": "Tomar água ajuda a manter o corpo hidratado?", "alternativas": ["Não", "Somente durante o verão", "Sim"], "correta": 2},
     ],
-    "Curiosidades sobre Fãs e Fandoms Famosos": [
-        {
-            "pergunta": "Como são conhecidos os fãs de Taylor Swift?",
-            "alternativas": [
-                "Beliebers",
-                "Swifties",
-                "Little Monsters"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Qual nome é usado para os fãs de Justin Bieber?",
-            "alternativas": [
-                "Beliebers",
-                "Directioners",
-                "Arianators"
-            ],
-            "correta": 0
-        },
-        {
-            "pergunta": "Como é conhecido o fandom do BTS?",
-            "alternativas": [
-                "MOA",
-                "STAY",
-                "ARMY"
-            ],
-            "correta": 2
-        },
-        {
-            "pergunta": "Qual é o nome do fandom de Lady Gaga?",
-            "alternativas": [
-                "Selenators",
-                "Little Monsters",
-                "Lovatics"
-            ],
-            "correta": 1
-        },
-        {
-            "pergunta": "Como são conhecidos os fãs de Beyoncé?",
-            "alternativas": [
-                "BeyHive",
-                "Lambs",
-                "Barbz"
-            ],
-            "correta": 0
-        }
-    ]
+
+    "Frases que Todo Professor Já Falou": [
+        {"pergunta": "Complete: A prova vai ser baseada no que foi...", "alternativas": ["dito no recreio", "postado no grupo da família", "dado em sala"], "correta": 2},
+        {"pergunta": "Complete: Pode guardar o material, agora é...", "alternativas": ["prova", "intervalo eterno", "hora de ir embora"], "correta": 0},
+        {"pergunta": "Complete: Quem terminou pode ficar em...", "alternativas": ["pé", "silêncio", "casa"], "correta": 1},
+        {"pergunta": "Complete: Eu vou esperar todo mundo ficar em...", "alternativas": ["fila do lanche", "casa", "silêncio"], "correta": 2},
+        {"pergunta": "Complete: Essa conversa eu quero ver na hora da...", "alternativas": ["prova", "merenda", "saída"], "correta": 0},
+    ],
 }
 
 
