@@ -19,8 +19,8 @@ from PIL import Image, ImageDraw, ImageFont
 # 4) narra SOMENTE o texto da resposta correta
 # ============================================================
 
-QUANTIDADE_VIDEOS = 45
-PERGUNTAS_POR_VIDEO = 5
+QUANTIDADE_VIDEOS = 30
+PERGUNTAS_POR_VIDEO = 3
 TEMPO_ESCOLHA = 3
 
 # Mesma voz e velocidade do outro gerador
@@ -54,393 +54,546 @@ PASTA_SAIDA = PASTA_RAIZ / DATA_DO_DIA
 
 QUIZZES = {
 
-    "Menstruação": [
-        {"pergunta": "Em média, qual evento marca o primeiro dia de um novo ciclo menstrual?", "alternativas": ["O início do sangramento menstrual", "O fim da ovulação", "O aumento da temperatura corporal"], "correta": 0},
-        {"pergunta": "Qual hormônio tende a aumentar antes da ovulação?", "alternativas": ["Insulina", "LH", "Melatonina"], "correta": 1},
-        {"pergunta": "Qual estrutura do útero é eliminada em parte durante a menstruação?", "alternativas": ["Miocárdio", "Pleura", "Endométrio"], "correta": 2},
-        {"pergunta": "Qual sintoma pode ocorrer antes ou durante a menstruação?", "alternativas": ["Cólica", "Perda permanente da visão", "Fratura óssea"], "correta": 0},
-        {"pergunta": "Qual profissional pode avaliar alterações menstruais persistentes?", "alternativas": ["Oftalmologista", "Ginecologista", "Ortopedista"], "correta": 1},
-    ],
-
-    "Quiz Bíblico": [
-        {"pergunta": "Quem construiu a arca segundo o livro de Gênesis?", "alternativas": ["Moisés", "Noé", "Davi"], "correta": 1},
-        {"pergunta": "Quem recebeu os Dez Mandamentos no monte Sinai?", "alternativas": ["Salomão", "Pedro", "Moisés"], "correta": 2},
-        {"pergunta": "Qual personagem bíblico derrotou Golias?", "alternativas": ["Davi", "José", "Isaías"], "correta": 0},
-        {"pergunta": "Quantos Evangelhos há no Novo Testamento?", "alternativas": ["Dois", "Quatro", "Sete"], "correta": 1},
-        {"pergunta": "Qual é o último livro do Novo Testamento?", "alternativas": ["Atos", "Romanos", "Apocalipse"], "correta": 2},
-    ],
-
-    "Leis de Trânsito": [
-        {"pergunta": "Segundo o Código de Trânsito Brasileiro, o uso do cinto de segurança é obrigatório para quem?", "alternativas": ["Apenas o condutor", "Apenas quem está no banco da frente", "Condutor e passageiros"], "correta": 2},
-        {"pergunta": "Dirigir segurando ou manuseando telefone celular é o quê?", "alternativas": ["Infração de trânsito", "Conduta sempre permitida", "Obrigação do condutor"], "correta": 0},
-        {"pergunta": "Em regra, o pedestre que já iniciou a travessia deve receber o quê dos condutores?", "alternativas": ["Buzina obrigatória", "Prioridade de passagem", "Sinal de luz alta"], "correta": 1},
-        {"pergunta": "A sinalização e as regras de trânsito têm como objetivo principal o quê?", "alternativas": ["Aumentar o consumo de combustível", "Reduzir o número de pedestres", "Segurança e organização da circulação"], "correta": 2},
-        {"pergunta": "Conduzir veículo após consumir álcool pode gerar o quê?", "alternativas": ["Sanções administrativas e, em certos casos, crime", "Apenas advertência verbal", "Nenhuma consequência"], "correta": 0},
-    ],
-
-    "Complete a Frase da Sua Mãe": [
-        {"pergunta": "Complete: Na volta a gente...", "alternativas": ["compra", "esquece", "vende"], "correta": 0},
-        {"pergunta": "Complete: Você não é todo...", "alternativas": ["bairro", "mundo", "colégio"], "correta": 1},
-        {"pergunta": "Complete: Enquanto você morar debaixo do meu...", "alternativas": ["carro", "sapato", "teto"], "correta": 2},
-        {"pergunta": "Complete: Eu não sou sua...", "alternativas": ["empregada", "vizinha", "professora"], "correta": 0},
-        {"pergunta": "Complete: Se eu achar, você vai...", "alternativas": ["dormir", "ver", "estudar"], "correta": 1},
-    ],
-
-    "Genética": [
-        {"pergunta": "Qual molécula armazena a maior parte da informação genética nas células humanas?", "alternativas": ["Glicose", "DNA", "Colesterol"], "correta": 1},
-        {"pergunta": "Como se chama uma versão alternativa de um gene?", "alternativas": ["Neurônio", "Antígeno", "Alelo"], "correta": 2},
-        {"pergunta": "Quantos cromossomos há normalmente nas células somáticas humanas?", "alternativas": ["46", "23", "92"], "correta": 0},
-        {"pergunta": "Qual processo produz gametas com metade do número de cromossomos?", "alternativas": ["Mitose", "Meiose", "Tradução"], "correta": 1},
-        {"pergunta": "Como se chama a característica observável resultante da interação entre genes e ambiente?", "alternativas": ["Genótipo", "Cariótipo", "Fenótipo"], "correta": 2},
-    ],
-
-    "Métodos Contraceptivos": [
-        {"pergunta": "Qual método também ajuda a reduzir o risco de infecções sexualmente transmissíveis?", "alternativas": ["Pílula anticoncepcional", "DIU de cobre", "Preservativo"], "correta": 2},
-        {"pergunta": "Qual método é colocado dentro do útero por profissional de saúde?", "alternativas": ["DIU", "Adesivo contraceptivo", "Preservativo externo"], "correta": 0},
-        {"pergunta": "A pílula anticoncepcional protege contra infecções sexualmente transmissíveis?", "alternativas": ["Sim, sempre", "Não", "Somente aos fins de semana"], "correta": 1},
-        {"pergunta": "Qual método é usado após uma relação sexual desprotegida para reduzir o risco de gravidez?", "alternativas": ["Vacina", "Antibiótico", "Contracepção de emergência"], "correta": 2},
-        {"pergunta": "Qual atitude é mais adequada ao escolher um método contraceptivo?", "alternativas": ["Buscar orientação profissional e considerar necessidades individuais", "Copiar o método de outra pessoa sem avaliação", "Interromper qualquer método sem motivo ou orientação"], "correta": 0},
-    ],
-
-    "Datas Importantes de Setembro": [
-        {"pergunta": "Qual data marca a Independência do Brasil?", "alternativas": ["7 de setembro", "15 de setembro", "30 de setembro"], "correta": 0},
-        {"pergunta": "No Brasil, o Dia da Árvore é lembrado em qual data?", "alternativas": ["1 de setembro", "21 de setembro", "12 de setembro"], "correta": 1},
-        {"pergunta": "O Dia Mundial de Prevenção do Suicídio é lembrado em qual data?", "alternativas": ["20 de setembro", "29 de setembro", "10 de setembro"], "correta": 2},
-        {"pergunta": "Qual mês é associado à campanha Setembro Amarelo no Brasil?", "alternativas": ["Setembro", "Março", "Julho"], "correta": 0},
-        {"pergunta": "Qual estação do ano começa por volta de setembro no Hemisfério Sul?", "alternativas": ["Inverno", "Primavera", "Outono"], "correta": 1},
-    ],
-
-    "Primeira Vez": [
-        {"pergunta": "Antes de uma relação sexual, o que deve existir entre as pessoas envolvidas?", "alternativas": ["Pressão para agradar", "Consentimento livre e claro", "Medo de dizer não"], "correta": 1},
-        {"pergunta": "Qual método de barreira ajuda a reduzir o risco de gravidez e de infecções sexualmente transmissíveis?", "alternativas": ["Antibiótico", "Analgésico", "Preservativo"], "correta": 2},
-        {"pergunta": "É possível ocorrer gravidez na primeira relação sexual com penetração vaginal sem contracepção?", "alternativas": ["Sim", "Não, nunca", "Somente depois dos 30 anos"], "correta": 0},
-        {"pergunta": "Se alguém muda de ideia durante uma relação, o que deve acontecer?", "alternativas": ["A pessoa deve ser convencida", "A atividade deve parar", "Nada muda"], "correta": 1},
-        {"pergunta": "Qual atitude ajuda a tornar uma primeira experiência mais segura?", "alternativas": ["Evitar qualquer conversa", "Confiar apenas em mitos", "Conversar sobre limites, proteção e consentimento"], "correta": 2},
-    ],
-
-    "Voto de Cabresto": [
-        {"pergunta": "O voto de cabresto ficou associado principalmente a qual período da história brasileira?", "alternativas": ["Brasil Colônia inicial", "Nova República após 1988", "República Velha"], "correta": 2},
-        {"pergunta": "O voto de cabresto estava ligado ao poder de quem nas comunidades locais?", "alternativas": ["Coronéis e chefes políticos", "Astronautas", "Diplomatas estrangeiros"], "correta": 0},
-        {"pergunta": "Qual característica favorecia o controle do voto naquele período?", "alternativas": ["Voto eletrônico", "Ausência de voto secreto efetivo", "Biometria digital"], "correta": 1},
-        {"pergunta": "O coronelismo estava relacionado principalmente a quê?", "alternativas": ["Exploração espacial", "Industrialização japonesa", "Poder político local e relações de dependência"], "correta": 2},
-        {"pergunta": "Qual mudança ajudou a reduzir práticas de controle direto do voto?", "alternativas": ["Adoção do voto secreto", "Fim das eleições", "Proibição de partidos"], "correta": 0},
-    ],
-
-    "Primeira Guerra Mundial": [
-        {"pergunta": "Em que ano começou a Primeira Guerra Mundial?", "alternativas": ["1914", "1905", "1939"], "correta": 0},
-        {"pergunta": "Qual acontecimento é apontado como estopim da guerra?", "alternativas": ["Queda do Muro de Berlim", "Assassinato do arquiduque Francisco Ferdinando", "Ataque a Pearl Harbor"], "correta": 1},
-        {"pergunta": "Qual conjunto de países formava a Tríplice Entente no início do conflito?", "alternativas": ["Alemanha, Itália e Japão", "Brasil, Argentina e Chile", "França, Reino Unido e Rússia"], "correta": 2},
-        {"pergunta": "Qual tipo de combate marcou fortemente a Frente Ocidental?", "alternativas": ["Guerra de trincheiras", "Guerra espacial", "Guerra nuclear"], "correta": 0},
-        {"pergunta": "Em que ano terminou a Primeira Guerra Mundial?", "alternativas": ["1929", "1918", "1945"], "correta": 1},
-    ],
-
-    "Guerra Fria": [
-        {"pergunta": "Quais foram as duas principais potências rivais da Guerra Fria?", "alternativas": ["Brasil e Argentina", "Estados Unidos e União Soviética", "França e Espanha"], "correta": 1},
-        {"pergunta": "Qual muro se tornou símbolo da divisão entre os blocos durante a Guerra Fria?", "alternativas": ["Muralha da China", "Muro de Adriano", "Muro de Berlim"], "correta": 2},
-        {"pergunta": "Qual disputa tecnológica levou humanos à Lua?", "alternativas": ["Corrida Espacial", "Revolução Industrial", "Primavera dos Povos"], "correta": 0},
-        {"pergunta": "Qual aliança militar reuniu países do bloco ocidental?", "alternativas": ["Mercosul", "OTAN", "OPEP"], "correta": 1},
-        {"pergunta": "Em que ano caiu o Muro de Berlim?", "alternativas": ["1961", "2001", "1989"], "correta": 2},
-    ],
-
-    "Segunda Guerra Mundial": [
-        {"pergunta": "Em que ano começou a Segunda Guerra Mundial na Europa?", "alternativas": ["1914", "1948", "1939"], "correta": 2},
-        {"pergunta": "Qual país foi invadido pela Alemanha em setembro de 1939?", "alternativas": ["Polônia", "Canadá", "México"], "correta": 0},
-        {"pergunta": "Qual ataque levou os Estados Unidos a entrar diretamente na guerra?", "alternativas": ["Batalha de Waterloo", "Pearl Harbor", "Queda de Roma"], "correta": 1},
-        {"pergunta": "Em que ano terminou a Segunda Guerra Mundial?", "alternativas": ["1936", "1955", "1945"], "correta": 2},
-        {"pergunta": "Qual organização internacional foi criada em 1945 com foco em cooperação e paz?", "alternativas": ["ONU", "OTAN", "União Europeia"], "correta": 0},
-    ],
-
-    "Revolução Francesa": [
-        {"pergunta": "Em que ano começou a Revolução Francesa?", "alternativas": ["1789", "1815", "1917"], "correta": 0},
-        {"pergunta": "Qual prisão foi tomada em 14 de julho de 1789?", "alternativas": ["Alcatraz", "Bastilha", "Torre de Londres"], "correta": 1},
-        {"pergunta": "Qual lema ficou associado à Revolução Francesa?", "alternativas": ["Ordem e progresso", "Paz e terra", "Liberdade, igualdade e fraternidade"], "correta": 2},
-        {"pergunta": "Quem era o rei da França no início da Revolução?", "alternativas": ["Luís XVI", "Napoleão III", "Carlos Magno"], "correta": 0},
-        {"pergunta": "Qual documento de 1789 proclamou direitos e liberdades fundamentais?", "alternativas": ["Magna Carta", "Declaração dos Direitos do Homem e do Cidadão", "Tratado de Versalhes"], "correta": 1},
-    ],
-
-    "Independência do Brasil": [
-        {"pergunta": "Em que ano foi proclamada a Independência do Brasil?", "alternativas": ["1889", "1822", "1808"], "correta": 1},
+    "História dos Semáforos": [
         {
-    "pergunta": "Qual título Dom Pedro I recebeu após a Independência do Brasil?",
-    "alternativas": [
-        "Imperador do Brasil",
-        "Presidente da República",
-        "Regente de Portugal"
-    ],
-    "correta": 0
-},
-        {"pergunta": "Qual data é celebrada como Independência do Brasil?", "alternativas": ["7 de setembro", "15 de novembro", "21 de abril"], "correta": 0},
-        {"pergunta": "Em que local ocorreu o episódio tradicionalmente associado ao grito da Independência?", "alternativas": ["Na Praia de Copacabana", "Às margens do riacho Ipiranga", "No Pelourinho"], "correta": 1},
-        {"pergunta": "Qual país colonizava o Brasil antes da independência?", "alternativas": ["Espanha", "França", "Portugal"], "correta": 2},
-    ],
-
-    "Brasil Império": [
-        {"pergunta": "Quem foi o primeiro imperador do Brasil?", "alternativas": ["Dom João VI", "Dom Pedro II", "Dom Pedro I"], "correta": 2},
-        {"pergunta": "Quem foi o segundo e último imperador do Brasil?", "alternativas": ["Dom Pedro II", "Deodoro da Fonseca", "José Bonifácio"], "correta": 0},
-        {"pergunta": "Em que ano foi abolida legalmente a escravidão no Brasil?", "alternativas": ["1822", "1888", "1930"], "correta": 1},
-        {"pergunta": "Qual lei aboliu legalmente a escravidão no Brasil?", "alternativas": ["Lei do Ventre Livre apenas", "Lei de Terras", "Lei Áurea"], "correta": 2},
-        {"pergunta": "Em que ano terminou o período imperial brasileiro?", "alternativas": ["1889", "1840", "1894"], "correta": 0},
+            "pergunta": "Em qual cidade foi instalado um dos primeiros semáforos de trânsito do mundo?",
+            "alternativas": ["Londres", "Paris", "Roma"],
+            "correta": 0
+        },
+        {
+            "pergunta": "O primeiro semáforo instalado em Londres em 1868 funcionava principalmente com quê?",
+            "alternativas": ["Eletricidade", "Gás", "Energia solar"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual cor do semáforo indica que o veículo deve parar?",
+            "alternativas": ["Verde", "Amarelo", "Vermelho"],
+            "correta": 2
+        },
     ],
 
-    "República Velha": [
-        {"pergunta": "Qual período brasileiro é chamado de República Velha ou Primeira República?", "alternativas": ["1889 a 1930", "1822 a 1889", "1930 a 1945"], "correta": 0},
-        {"pergunta": "Qual política marcou a influência das elites de São Paulo e Minas Gerais?", "alternativas": ["Plano Real", "Política do café com leite", "Regência Trina"], "correta": 1},
-        {"pergunta": "Qual fenômeno político local marcou esse período?", "alternativas": ["Apartheid", "Parlamentarismo europeu", "Coronelismo"], "correta": 2},
-        {"pergunta": "Qual revolta ocorreu no Rio de Janeiro em 1904?", "alternativas": ["Revolta da Vacina", "Sabinada", "Balaiada"], "correta": 0},
-        {"pergunta": "Qual evento encerrou a República Velha?", "alternativas": ["Independência do Brasil", "Revolução de 1930", "Proclamação da República"], "correta": 1},
+    "Curiosidades sobre Elevadores": [
+        {
+            "pergunta": "Qual invenção ajudou a tornar os elevadores mais seguros no século XIX?",
+            "alternativas": ["Freio de segurança", "Motor a jato", "Painel solar"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quem ficou famoso por demonstrar um sistema de segurança para elevadores?",
+            "alternativas": ["Thomas Edison", "Elisha Otis", "Alexander Bell"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual componente ajuda a equilibrar muitos elevadores de tração?",
+            "alternativas": ["Ventoinha", "Bateria", "Contrapeso"],
+            "correta": 2
+        },
     ],
 
-    "Era Vargas": [
-        {"pergunta": "Em que ano Getúlio Vargas chegou ao poder pela Revolução de 1930?", "alternativas": ["1889", "1930", "1964"], "correta": 1},
-        {"pergunta": "Como se chamou o regime autoritário instaurado por Vargas em 1937?", "alternativas": ["República da Espada", "Regência Trina", "Estado Novo"], "correta": 2},
-        {"pergunta": "Qual legislação trabalhista foi consolidada em 1943?", "alternativas": ["CLT", "Lei Áurea", "Código Civil de 2002"], "correta": 0},
-        {"pergunta": "Qual empresa estatal de petróleo foi criada no segundo governo Vargas?", "alternativas": ["Embraer", "Petrobras", "Correios"], "correta": 1},
-        {"pergunta": "Em que ano Getúlio Vargas morreu?", "alternativas": ["1945", "1960", "1954"], "correta": 2},
+    "Como Surgiram os Cartões de Crédito": [
+        {
+            "pergunta": "Qual cartão lançado em 1950 ficou famoso como um dos primeiros cartões de uso amplo?",
+            "alternativas": ["Diners Club", "PayPal Card", "Pix Card"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Os primeiros cartões Diners Club eram usados principalmente em quê?",
+            "alternativas": ["Postos de gasolina", "Restaurantes", "Hospitais"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual tecnologia permite pagamento aproximando alguns cartões da máquina?",
+            "alternativas": ["GPS", "Bluetooth obrigatório", "NFC"],
+            "correta": 2
+        },
     ],
 
-    "Ditadura Militar no Brasil": [
-        {"pergunta": "Em que ano ocorreu o golpe que iniciou a ditadura militar no Brasil?", "alternativas": ["1954", "1985", "1964"], "correta": 2},
-        {"pergunta": "Qual ato institucional de 1968 ampliou a repressão e suspendeu garantias?", "alternativas": ["AI-5", "AI-1 de 1988", "Ato Colonial"], "correta": 0},
-        {"pergunta": "Como ficou conhecido o processo de retorno gradual à democracia?", "alternativas": ["Estado Novo", "Abertura política", "Regência"], "correta": 1},
-        {"pergunta": "Qual movimento de 1984 defendia eleições diretas para presidente?", "alternativas": ["Tenentismo", "Canudos", "Diretas Já"], "correta": 2},
-        {"pergunta": "Em que ano terminou o regime militar no Brasil?", "alternativas": ["1985", "1970", "1994"], "correta": 0},
+    "Como Surgiram os CEPs e Códigos Postais": [
+        {
+            "pergunta": "Para que servem principalmente os códigos postais?",
+            "alternativas": ["Facilitar a organização e entrega de correspondências", "Indicar a idade das casas", "Medir distâncias"],
+            "correta": 0
+        },
+        {
+            "pergunta": "No Brasil, a sigla CEP significa o quê?",
+            "alternativas": ["Código Estadual Postal", "Código de Endereçamento Postal", "Cadastro Eletrônico de Pessoas"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Quantos dígitos possui atualmente um CEP brasileiro?",
+            "alternativas": ["Cinco", "Seis", "Oito"],
+            "correta": 2
+        },
     ],
 
-    "Constituição Brasileira": [
-        {"pergunta": "Em que ano foi promulgada a atual Constituição Federal do Brasil?", "alternativas": ["1988", "1964", "2002"], "correta": 0},
-        {"pergunta": "Como a Constituição de 1988 ficou conhecida?", "alternativas": ["Carta do Café", "Constituição Cidadã", "Lei de Ouro"], "correta": 1},
-        {"pergunta": "Qual poder tem como função típica elaborar leis em âmbito federal?", "alternativas": ["Poder Executivo", "Poder Judiciário", "Poder Legislativo"], "correta": 2},
-        {"pergunta": "Qual princípio afirma que todos são iguais perante a lei?", "alternativas": ["Igualdade", "Hereditariedade", "Censitário"], "correta": 0},
-        {"pergunta": "Quantos poderes independentes e harmônicos são previstos na Constituição?", "alternativas": ["Dois", "Três", "Cinco"], "correta": 1},
+    "Relógios e a Medição do Tempo": [
+        {
+            "pergunta": "Qual instrumento antigo utilizava a sombra do Sol para indicar as horas?",
+            "alternativas": ["Relógio de sol", "Cronômetro", "Ampulheta elétrica"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual objeto mede a passagem do tempo usando areia?",
+            "alternativas": ["Bússola", "Ampulheta", "Barômetro"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual tipo de relógio é usado como referência de altíssima precisão?",
+            "alternativas": ["Relógio de parede", "Relógio de bolso", "Relógio atômico"],
+            "correta": 2
+        },
     ],
 
-    "Eleições no Brasil": [
-        {"pergunta": "Qual órgão organiza as eleições em âmbito nacional no Brasil?", "alternativas": ["Banco Central", "Tribunal Superior Eleitoral", "Supremo Tribunal Militar"], "correta": 1},
-        {"pergunta": "Para brasileiros alfabetizados com mais de 18 e menos de 70 anos, o voto é como?", "alternativas": ["Proibido", "Facultativo", "Obrigatório"], "correta": 2},
-        {"pergunta": "Para jovens de 16 e 17 anos, o voto é como?", "alternativas": ["Facultativo", "Obrigatório", "Proibido"], "correta": 0},
-        {"pergunta": "Qual sistema é usado no Brasil para registrar a maior parte dos votos presenciais?", "alternativas": ["Cédula manuscrita obrigatória em todo o país", "Urna eletrônica", "Aplicativo particular"], "correta": 1},
-        {"pergunta": "Qual documento eleitoral identifica a inscrição do eleitor?", "alternativas": ["Passaporte diplomático", "Carteira de vacinação", "Título de eleitor"], "correta": 2},
+    "Por que os Mapas-Múndi Distorcem os Países?": [
+        {
+            "pergunta": "Por que um mapa plano inevitavelmente apresenta alguma distorção?",
+            "alternativas": ["Porque representa uma superfície curva em uma superfície plana", "Porque os países mudam de tamanho diariamente", "Porque os oceanos não podem ser desenhados"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual projeção é muito conhecida por aumentar visualmente áreas próximas aos polos?",
+            "alternativas": ["Projeção lunar", "Projeção de Mercator", "Projeção submarina"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Em um globo terrestre, as proporções dos continentes tendem a ser representadas como?",
+            "alternativas": ["Sempre quadradas", "Sem oceanos", "Mais próximas da realidade"],
+            "correta": 2
+        },
     ],
 
-  "Sistema Solar": [
-    {
-        "pergunta": "Qual planeta completa mais rapidamente uma volta ao redor do Sol?",
-        "alternativas": ["Mercúrio", "Terra", "Netuno"],
-        "correta": 0
-    },
-    {
-        "pergunta": "Qual planeta possui a Grande Mancha Vermelha?",
-        "alternativas": ["Saturno", "Júpiter", "Marte"],
-        "correta": 1
-    },
-    {
-        "pergunta": "Qual planeta é chamado de planeta vermelho por causa do óxido de ferro em sua superfície?",
-        "alternativas": ["Netuno", "Marte", "Urano"],
-        "correta": 1
-    },
-    {
-        "pergunta": "Qual astro está no centro do Sistema Solar?",
-        "alternativas": ["Lua", "Júpiter", "Sol"],
-        "correta": 2
-    },
-    {
-        "pergunta": "Qual planeta possui anéis muito visíveis?",
-        "alternativas": ["Saturno", "Mercúrio", "Vênus"],
-        "correta": 0
-    },
-],
-
-    "Corpo Humano": [
-        {"pergunta": "Qual órgão bombeia sangue pelo corpo?", "alternativas": ["Coração", "Pulmão", "Rim"], "correta": 0},
-        {"pergunta": "Qual órgão é responsável principalmente pelas trocas gasosas?", "alternativas": ["Estômago", "Pulmões", "Pâncreas"], "correta": 1},
-        {"pergunta": "Qual órgão produz bile?", "alternativas": ["Baço", "Bexiga", "Fígado"], "correta": 2},
-        {"pergunta": "Qual sistema é responsável pela comunicação rápida por impulsos elétricos no corpo?", "alternativas": ["Sistema nervoso", "Sistema digestório", "Sistema linfático"], "correta": 0},
-        {"pergunta": "Qual osso protege grande parte do cérebro?", "alternativas": ["Fêmur", "Crânio", "Úmero"], "correta": 1},
+    "Ilhas Artificiais pelo Mundo": [
+        {
+            "pergunta": "Ilhas artificiais são áreas de terra criadas principalmente por quê?",
+            "alternativas": ["Intervenção humana", "Erupções obrigatoriamente", "Quedas de meteoritos"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Palm Jumeirah, famosa ilha artificial, fica em qual cidade?",
+            "alternativas": ["Tóquio", "Dubai", "Lisboa"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual formato tornou Palm Jumeirah especialmente famosa?",
+            "alternativas": ["Estrela", "Coração", "Palmeira"],
+            "correta": 2
+        },
     ],
 
-    "Hormônios": [
-        {"pergunta": "Qual glândula produz insulina?", "alternativas": ["Tireoide", "Pâncreas", "Hipófise"], "correta": 1},
-        {"pergunta": "Qual hormônio ajuda a reduzir a glicose no sangue?", "alternativas": ["Adrenalina", "Melatonina", "Insulina"], "correta": 2},
-        {"pergunta": "Qual hormônio está relacionado ao ciclo sono-vigília?", "alternativas": ["Melatonina", "Testosterona", "Insulina"], "correta": 0},
-        {"pergunta": "Qual glândula produz os hormônios T3 e T4?", "alternativas": ["Pâncreas", "Tireoide", "Suprarrenal"], "correta": 1},
-        {"pergunta": "Qual hormônio aumenta rapidamente em situações de estresse agudo?", "alternativas": ["Progesterona", "Calcitonina", "Adrenalina"], "correta": 2},
+    "Cidades Subterrâneas": [
+        {
+            "pergunta": "Derinkuyu, famosa cidade subterrânea histórica, fica em qual país?",
+            "alternativas": ["Turquia", "Canadá", "Brasil"],
+            "correta": 0
+        },
+        {
+            "pergunta": "As cidades subterrâneas da Capadócia foram usadas, entre outras funções, como quê?",
+            "alternativas": ["Aeroportos", "Abrigos", "Estádios"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual recurso era essencial para permitir permanência prolongada nessas cidades?",
+            "alternativas": ["Elevadores elétricos", "Ar-condicionado", "Poços de ventilação"],
+            "correta": 2
+        },
     ],
 
-    "Tipos Sanguíneos": [
-        {"pergunta": "Quais sistemas são mais usados para classificar tipos sanguíneos em transfusões?", "alternativas": ["DNA e RNA", "T3 e T4", "ABO e Rh"], "correta": 2},
-        {"pergunta": "Uma pessoa do grupo O possui quais antígenos A ou B nas hemácias?", "alternativas": ["Nenhum dos dois", "Apenas A", "Apenas B"], "correta": 0},
-        {"pergunta": "Qual grupo possui antígenos A e B nas hemácias?", "alternativas": ["O", "AB", "A apenas"], "correta": 1},
-        {"pergunta": "O fator Rh é indicado normalmente por qual sinal junto ao tipo sanguíneo?", "alternativas": ["Alto ou baixo", "Quente ou frio", "Positivo ou negativo"], "correta": 2},
-        {"pergunta": "Antes de uma transfusão, o que é essencial verificar?", "alternativas": ["Compatibilidade sanguínea", "Cor dos olhos", "Altura do paciente"], "correta": 0},
+    "Ruínas Submersas": [
+        {
+            "pergunta": "Ruínas podem ficar submersas devido a mudanças em quê?",
+            "alternativas": ["Nível da água", "Cor das pedras", "Fases da Lua apenas"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Pavlopetri, conhecida por suas ruínas submersas, fica próxima a qual país?",
+            "alternativas": ["Austrália", "Grécia", "Canadá"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual profissional pode estudar vestígios humanos encontrados debaixo d'água?",
+            "alternativas": ["Astrônomo", "Meteorologista", "Arqueólogo subaquático"],
+            "correta": 2
+        },
     ],
 
-    "DNA e RNA": [
-        {"pergunta": "Qual base nitrogenada aparece no DNA, mas não no RNA?", "alternativas": ["Timina", "Uracila", "Ribose"], "correta": 0},
-        {"pergunta": "Qual base aparece no RNA no lugar da timina?", "alternativas": ["Guanina", "Uracila", "Citosina"], "correta": 1},
-        {"pergunta": "Qual açúcar está presente no DNA?", "alternativas": ["Ribose", "Glicose", "Desoxirribose"], "correta": 2},
-        {"pergunta": "Qual processo produz RNA a partir de uma sequência de DNA?", "alternativas": ["Transcrição", "Tradução", "Replicação proteica"], "correta": 0},
-        {"pergunta": "Qual molécula leva a informação do DNA aos ribossomos para síntese proteica?", "alternativas": ["Lipídio", "RNA mensageiro", "Glicogênio"], "correta": 1},
+    "História dos Parques de Diversão": [
+        {
+            "pergunta": "Qual atração é considerada símbolo clássico dos parques de diversão?",
+            "alternativas": ["Roda-gigante", "Semáforo", "Elevador residencial"],
+            "correta": 0
+        },
+        {
+            "pergunta": "A primeira roda-gigante famosa foi construída para qual evento de 1893?",
+            "alternativas": ["Olimpíadas", "Exposição Mundial de Chicago", "Copa do Mundo"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Como se chama o brinquedo que percorre trilhos com subidas e descidas rápidas?",
+            "alternativas": ["Carrossel", "Teleférico", "Montanha-russa"],
+            "correta": 2
+        },
     ],
 
-    "Puberdade": [
-        {"pergunta": "Qual fase da vida envolve mudanças físicas e hormonais que levam à maturação sexual?", "alternativas": ["Velhice", "Puberdade", "Gestação"], "correta": 1},
-        {"pergunta": "Qual hormônio sexual aumenta bastante nos meninos durante a puberdade?", "alternativas": ["Insulina", "Melatonina", "Testosterona"], "correta": 2},
-        {"pergunta": "Qual mudança pode ocorrer em ambos os sexos durante a puberdade?", "alternativas": ["Crescimento de pelos", "Perda de todos os dentes permanentes", "Redução completa da altura"], "correta": 0},
-        {"pergunta": "Nas meninas, qual evento pode ocorrer durante a puberdade?", "alternativas": ["Menopausa", "Menarca", "Catarata"], "correta": 1},
-        {"pergunta": "Por que a idade de início da puberdade varia entre pessoas?", "alternativas": ["Porque todos começam no mesmo dia", "Somente pela cor dos olhos", "Por fatores genéticos e ambientais"], "correta": 2},
+    "A Física dos Brinquedos de Parque": [
+        {
+            "pergunta": "Em uma montanha-russa, qual energia aumenta quando o carrinho sobe?",
+            "alternativas": ["Energia potencial gravitacional", "Energia nuclear", "Energia química da pista"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Quando o carrinho desce rapidamente, a energia potencial é convertida principalmente em quê?",
+            "alternativas": ["Luz", "Energia cinética", "Magnetismo"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual força mantém um objeto seguindo uma trajetória circular?",
+            "alternativas": ["Força térmica", "Força sonora", "Força centrípeta"],
+            "correta": 2
+        },
     ],
 
-    "Ovulação e Fertilidade": [
-        {"pergunta": "O que é ovulação?", "alternativas": ["Início obrigatório da menstruação", "Implantação do embrião", "Liberação de um óvulo pelo ovário"], "correta": 2},
-        {"pergunta": "Qual hormônio apresenta um pico que desencadeia a ovulação?", "alternativas": ["LH", "Insulina", "Cortisol"], "correta": 0},
-        {"pergunta": "A ovulação ocorre sempre exatamente no 14º dia em todas as pessoas?", "alternativas": ["Sim", "Não", "Somente em anos bissextos"], "correta": 1},
-        {"pergunta": "Qual estrutura capta o óvulo após a ovulação?", "alternativas": ["Uretra", "Vesícula biliar", "Tuba uterina"], "correta": 2},
-        {"pergunta": "Qual fator pode influenciar a regularidade da ovulação?", "alternativas": ["Alterações hormonais", "Tipo sanguíneo apenas", "Cor do cabelo"], "correta": 0},
+    "Como São Feitos os Efeitos Sonoros dos Filmes": [
+        {
+            "pergunta": "Como são chamados os sons criados em estúdio para acompanhar ações dos personagens?",
+            "alternativas": ["Foley", "Pixel", "Codec"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Para imitar passos em um filme, o artista pode usar diferentes tipos de quê?",
+            "alternativas": ["Microfones sem áudio", "Superfícies e calçados", "Luzes coloridas"],
+            "correta": 1
+        },
+        {
+            "pergunta": "O som de ossos quebrando em filmes pode ser simulado usando, por exemplo, qual alimento?",
+            "alternativas": ["Gelatina líquida", "Algodão", "Vegetais crocantes"],
+            "correta": 2
+        },
     ],
 
-    "Infecções Sexualmente Transmissíveis": [
-        {"pergunta": "Qual método de barreira ajuda a reduzir o risco de muitas infecções sexualmente transmissíveis?", "alternativas": ["Preservativo", "Pílula anticoncepcional", "DIU"], "correta": 0},
-        {"pergunta": "O HIV pode ser transmitido por abraço ou aperto de mão?", "alternativas": ["Sim", "Não", "Sempre"], "correta": 1},
-        {"pergunta": "Qual infecção sexualmente transmissível pode ser prevenida por vacinação?", "alternativas": ["Sífilis", "Gonorreia", "HPV"], "correta": 2},
-        {"pergunta": "Uma pessoa pode ter uma infecção sexualmente transmissível sem sintomas?", "alternativas": ["Sim", "Não, nunca", "Somente após 60 anos"], "correta": 0},
-        {"pergunta": "Ao suspeitar de uma infecção sexualmente transmissível, qual atitude é adequada?", "alternativas": ["Tomar qualquer antibiótico por conta própria", "Buscar avaliação de saúde", "Ignorar os sintomas"], "correta": 1},
+    "A Arte do Foley no Cinema": [
+        {
+            "pergunta": "Qual é a principal função de um artista de Foley?",
+            "alternativas": ["Recriar sons sincronizados com a imagem", "Escrever legendas", "Operar a câmera"],
+            "correta": 0
+        },
+        {
+            "pergunta": "O nome Foley homenageia qual profissional pioneiro da técnica?",
+            "alternativas": ["George Lucas", "Jack Foley", "Walt Disney"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual destes sons pode ser produzido por Foley?",
+            "alternativas": ["Apenas música", "Somente diálogos", "Passos"],
+            "correta": 2
+        },
     ],
 
-    "Gravidez": [
-        {"pergunta": "Onde normalmente ocorre a implantação do embrião?", "alternativas": ["Ovário", "Útero", "Bexiga"], "correta": 1},
-        {"pergunta": "Qual hormônio é detectado pelos testes de gravidez?", "alternativas": ["Insulina", "Adrenalina", "hCG"], "correta": 2},
-        {"pergunta": "Qual órgão faz trocas de nutrientes e gases entre gestante e feto?", "alternativas": ["Placenta", "Pâncreas", "Tireoide"], "correta": 0},
-        {"pergunta": "Quantos trimestres compõem uma gestação?", "alternativas": ["Dois", "Três", "Cinco"], "correta": 1},
-        {"pergunta": "Qual profissional pode acompanhar o pré-natal?", "alternativas": ["Oftalmologista apenas", "Dentista apenas", "Obstetra ou equipe de pré-natal"], "correta": 2},
+    "História das Senhas e PINs": [
+        {
+            "pergunta": "Qual é a função principal de uma senha?",
+            "alternativas": ["Verificar acesso a uma conta ou sistema", "Aumentar a velocidade da internet", "Carregar a bateria"],
+            "correta": 0
+        },
+        {
+            "pergunta": "A sigla PIN significa aproximadamente o quê?",
+            "alternativas": ["Programa Internacional Numérico", "Número de Identificação Pessoal", "Protocolo Interno Nacional"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual prática aumenta a segurança de uma conta?",
+            "alternativas": ["Usar 123456", "Repetir a mesma senha em tudo", "Usar autenticação em dois fatores"],
+            "correta": 2
+        },
     ],
 
-    "Saúde Íntima Feminina": [
-        {"pergunta": "Qual órgão faz parte do sistema reprodutor feminino?", "alternativas": ["Próstata", "Traqueia", "Útero"], "correta": 2},
-        {"pergunta": "Qual profissional costuma avaliar a saúde ginecológica?", "alternativas": ["Ginecologista", "Neurologista", "Ortopedista"], "correta": 0},
-        {"pergunta": "Quando há alteração persistente no corrimento vaginal, o ideal é o quê?", "alternativas": ["Usar qualquer medicamento sem orientação", "Buscar avaliação de saúde", "Ignorar sempre"], "correta": 1},
-        {"pergunta": "Qual exame pode ser usado na avaliação do colo do útero conforme orientação de saúde?", "alternativas": ["Eletrocardiograma", "Espirometria", "Papanicolau"], "correta": 2},
-        {"pergunta": "Qual atitude ajuda a saúde íntima?", "alternativas": ["Evitar duchas vaginais sem indicação", "Usar produtos irritantes internamente", "Compartilhar medicamentos"], "correta": 0},
+    "Por que Documentos Usam Hologramas?": [
+        {
+            "pergunta": "Qual é uma das principais funções de hologramas em documentos?",
+            "alternativas": ["Dificultar falsificações", "Aumentar o peso", "Reduzir o tamanho do papel"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Um holograma pode apresentar aparência diferente quando visto de quê?",
+            "alternativas": ["Apenas no escuro", "Ângulos diferentes", "Somente debaixo d'água"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Hologramas de segurança podem ser encontrados em documentos e também em quê?",
+            "alternativas": ["Alimentos frescos", "Plantas", "Cédulas e cartões"],
+            "correta": 2
+        },
     ],
 
-    "Saúde Íntima Masculina": [
-        {"pergunta": "Qual órgão produz espermatozoides?", "alternativas": ["Testículos", "Próstata", "Bexiga"], "correta": 0},
-        {"pergunta": "Qual glândula contribui com líquido para o sêmen?", "alternativas": ["Tireoide", "Próstata", "Hipófise"], "correta": 1},
-        {"pergunta": "Qual profissional pode avaliar problemas do sistema urinário e reprodutor masculino?", "alternativas": ["Oftalmologista", "Dermatologista apenas", "Urologista"], "correta": 2},
-        {"pergunta": "Dor testicular súbita e intensa deve ser tratada como o quê?", "alternativas": ["Situação que requer avaliação médica urgente", "Algo para ignorar por vários dias", "Sinal certo de gripe"], "correta": 0},
-        {"pergunta": "O preservativo ajuda a reduzir o risco de quê?", "alternativas": ["Miopia", "Infecções sexualmente transmissíveis e gravidez", "Cárie"], "correta": 1},
+    "Tecnologia dos Passaportes": [
+        {
+            "pergunta": "Qual é a principal finalidade de um passaporte?",
+            "alternativas": ["Identificar o viajante internacionalmente", "Substituir uma passagem aérea", "Reservar hotéis automaticamente"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Passaportes eletrônicos geralmente possuem o quê incorporado?",
+            "alternativas": ["GPS permanente", "Chip eletrônico", "Bateria recarregável"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual símbolo costuma indicar que um passaporte é eletrônico?",
+            "alternativas": ["Um coração", "Uma estrela azul", "Símbolo padronizado de chip biométrico"],
+            "correta": 2
+        },
     ],
 
-    "Sono e Sonhos": [
-        {"pergunta": "Qual hormônio está associado ao início do sono em resposta à escuridão?", "alternativas": ["Insulina", "Melatonina", "Adrenalina"], "correta": 1},
-        {"pergunta": "Qual fase do sono está muito associada a sonhos vívidos?", "alternativas": ["Estado de vigília", "Sono profundo apenas", "Sono REM"], "correta": 2},
-        {"pergunta": "O que é higiene do sono?", "alternativas": ["Hábitos que favorecem sono regular e de qualidade", "Limpeza do quarto apenas", "Uso obrigatório de medicamentos"], "correta": 0},
-        {"pergunta": "Qual hábito pode atrapalhar o sono se feito perto do horário de dormir?", "alternativas": ["Reduzir luz intensa", "Consumir muita cafeína", "Manter horário regular"], "correta": 1},
-        {"pergunta": "Adultos passam por vários ciclos de sono durante a noite?", "alternativas": ["Não", "Somente uma vez por mês", "Sim"], "correta": 2},
+    "Como Funciona a Caixa-Preta dos Aviões": [
+        {
+            "pergunta": "Qual é uma função dos gravadores de voo de uma aeronave?",
+            "alternativas": ["Registrar dados importantes do voo", "Controlar o combustível automaticamente", "Emitir passagens"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Apesar do nome caixa-preta, esses equipamentos geralmente têm qual cor externa?",
+            "alternativas": ["Preta", "Laranja de alta visibilidade", "Transparente"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual gravador registra conversas e sons da cabine de comando?",
+            "alternativas": ["GPS", "Radar meteorológico", "Cockpit Voice Recorder"],
+            "correta": 2
+        },
     ],
 
-    "Cérebro Humano": [
-        {"pergunta": "Qual parte do cérebro está muito envolvida com equilíbrio e coordenação motora?", "alternativas": ["Hipófise", "Medula óssea", "Cerebelo"], "correta": 2},
-        {"pergunta": "Qual lobo cerebral está associado principalmente ao processamento visual?", "alternativas": ["Occipital", "Frontal", "Temporal"], "correta": 0},
-        {"pergunta": "Qual estrutura conecta os dois hemisférios cerebrais?", "alternativas": ["Fêmur", "Corpo caloso", "Diafragma"], "correta": 1},
-        {"pergunta": "Qual célula é especializada em transmitir impulsos nervosos?", "alternativas": ["Hemácia", "Osteócito", "Neurônio"], "correta": 2},
-        {"pergunta": "Qual neurotransmissor está envolvido em recompensa e motivação?", "alternativas": ["Dopamina", "Hemoglobina", "Colágeno"], "correta": 0},
+    "Por que as Estradas Têm Linhas de Cores Diferentes?": [
+        {
+            "pergunta": "Para que servem principalmente as faixas pintadas nas vias?",
+            "alternativas": ["Organizar e orientar o trânsito", "Decorar o asfalto", "Medir a chuva"],
+            "correta": 0
+        },
+        {
+            "pergunta": "No Brasil, linhas amarelas são usadas principalmente para separar fluxos em quê?",
+            "alternativas": ["Mesmo sentido apenas", "Sentidos opostos", "Calçadas"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Linhas brancas geralmente são usadas para separar faixas de veículos seguindo em qual situação?",
+            "alternativas": ["Somente estacionados", "Somente bicicletas", "Mesmo sentido"],
+            "correta": 2
+        },
     ],
 
-    "Vacinas e Imunidade": [
-        {"pergunta": "Qual é a função principal de uma vacina?", "alternativas": ["Treinar o sistema imune para reconhecer um agente ou parte dele", "Curar qualquer doença instantaneamente", "Substituir alimentação saudável"], "correta": 0},
-        {"pergunta": "Qual tipo de célula participa da defesa imunológica?", "alternativas": ["Hemácia apenas", "Leucócito", "Adipócito apenas"], "correta": 1},
-        {"pergunta": "O que é memória imunológica?", "alternativas": ["Esquecimento total de infecções", "Perda de anticorpos em minutos", "Capacidade de responder mais rapidamente a um agente já reconhecido"], "correta": 2},
-        {"pergunta": "Vacinas podem ajudar a reduzir a circulação de doenças em uma população?", "alternativas": ["Sim", "Não", "Somente em animais"], "correta": 0},
-        {"pergunta": "Onde devem ser verificadas informações confiáveis sobre vacinação no Brasil?", "alternativas": ["Correntes de mensagens", "Ministério da Saúde e serviços de saúde", "Perfis sem fonte"], "correta": 1},
+    "Placas de Trânsito Curiosas pelo Mundo": [
+        {
+            "pergunta": "Em regiões com animais selvagens, placas podem alertar sobre a travessia de quê?",
+            "alternativas": ["Animais", "Aviões", "Navios"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Em áreas da Austrália, é comum encontrar placas alertando para qual animal?",
+            "alternativas": ["Pinguins em todo o país", "Cangurus", "Ursos-polares"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Placas de advertência servem principalmente para informar sobre quê?",
+            "alternativas": ["Preço do combustível", "Horário de restaurantes", "Possíveis perigos na via"],
+            "correta": 2
+        },
     ],
 
-    "Alimentação e Nutrientes": [
-        {"pergunta": "Qual nutriente é uma importante fonte de energia?", "alternativas": ["Água apenas", "Carboidrato", "Mineral apenas"], "correta": 1},
-        {"pergunta": "Qual nutriente é fundamental para construção e reparo de tecidos?", "alternativas": ["Vitamina C apenas", "Água", "Proteína"], "correta": 2},
-        {"pergunta": "Qual vitamina está associada à absorção de cálcio e saúde óssea?", "alternativas": ["Vitamina D", "Vitamina K apenas", "Vitamina B12 apenas"], "correta": 0},
-        {"pergunta": "Qual mineral é componente da hemoglobina?", "alternativas": ["Sódio", "Ferro", "Iodo"], "correta": 1},
-        {"pergunta": "Qual alimento é fonte de fibras?", "alternativas": ["Açúcar refinado", "Óleo puro", "Feijão"], "correta": 2},
+    "Como Surgiram os Números de Emergência": [
+        {
+            "pergunta": "Qual é a principal vantagem de existir um número curto de emergência?",
+            "alternativas": ["Ser fácil e rápido de memorizar e discar", "Aumentar contas telefônicas", "Substituir hospitais"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual número é amplamente usado para emergências nos Estados Unidos?",
+            "alternativas": ["411", "911", "123"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual número é usado para chamar o SAMU no Brasil?",
+            "alternativas": ["190", "193", "192"],
+            "correta": 2
+        },
     ],
 
-    "Primeiros Socorros": [
-        {"pergunta": "Ao encontrar uma pessoa inconsciente, qual é uma das primeiras atitudes?", "alternativas": ["Oferecer comida imediatamente", "Colocar a pessoa de pé", "Verificar segurança do local e responsividade"], "correta": 2},
-        {"pergunta": "Em uma emergência, qual número aciona o SAMU no Brasil?", "alternativas": ["192", "190", "193"], "correta": 0},
-        {"pergunta": "Em caso de sangramento externo importante, o que pode ajudar enquanto chega socorro?", "alternativas": ["Aplicar café em pó", "Compressão direta com material limpo", "Colocar terra sobre o ferimento"], "correta": 1},
-        {"pergunta": "Em uma queimadura térmica leve, qual cuidado inicial é recomendado?", "alternativas": ["Aplicar pasta de dente", "Estourar bolhas", "Resfriar com água corrente"], "correta": 2},
-        {"pergunta": "Se houver suspeita de lesão na coluna após trauma, o ideal é o quê?", "alternativas": ["Evitar movimentação desnecessária e chamar socorro", "Sentar a pessoa rapidamente", "Puxar pelos braços"], "correta": 0},
+    "Origem dos Nomes dos Dias da Semana": [
+        {
+            "pergunta": "Em português, qual dia inicia a sequência de nomes terminados em 'feira'?",
+            "alternativas": ["Segunda-feira", "Domingo", "Sábado"],
+            "correta": 0
+        },
+        {
+            "pergunta": "A palavra sábado tem origem relacionada a qual tradição?",
+            "alternativas": ["Romana militar", "Sabbath judaico", "Calendário maia"],
+            "correta": 1
+        },
+        {
+            "pergunta": "A palavra domingo está relacionada historicamente à ideia de quê?",
+            "alternativas": ["Dia da Lua", "Dia do mercado", "Dia do Senhor"],
+            "correta": 2
+        },
     ],
 
-    "Segurança no Trânsito": [
-        {"pergunta": "Qual atitude reduz distrações ao dirigir?", "alternativas": ["Guardar o celular e evitar manuseá-lo", "Responder mensagens enquanto conduz", "Assistir vídeos no painel"], "correta": 0},
-        {"pergunta": "O cinto de segurança deve ser usado por quem?", "alternativas": ["Somente o motorista", "Todos os ocupantes", "Somente crianças"], "correta": 1},
-        {"pergunta": "Antes de mudar de faixa, o condutor deve fazer o quê?", "alternativas": ["Mudar sem olhar", "Acelerar sem sinalizar", "Sinalizar e verificar se a manobra é segura"], "correta": 2},
-        {"pergunta": "Em pista molhada, qual atitude é mais segura?", "alternativas": ["Reduzir a velocidade e aumentar a distância", "Aumentar a velocidade", "Frear bruscamente o tempo todo"], "correta": 0},
-        {"pergunta": "Qual atitude é adequada diante de pedestre atravessando em local apropriado?", "alternativas": ["Acelerar", "Reduzir e respeitar a prioridade quando aplicável", "Buzinar continuamente"], "correta": 1},
+    "Origem dos Nomes dos Meses": [
+        {
+            "pergunta": "Janeiro recebeu seu nome em homenagem a qual divindade romana?",
+            "alternativas": ["Jano", "Marte", "Netuno"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Março recebeu seu nome em referência a qual deus romano?",
+            "alternativas": ["Júpiter", "Marte", "Mercúrio"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Julho recebeu esse nome em homenagem a quem?",
+            "alternativas": ["Augusto", "Rômulo", "Júlio César"],
+            "correta": 2
+        },
     ],
 
-    "Prova Teórica da CNH": [
-        {"pergunta": "Qual documento reúne as principais regras de trânsito no Brasil?", "alternativas": ["Código Penal apenas", "Código de Trânsito Brasileiro", "Constituição Estadual apenas"], "correta": 1},
-        {"pergunta": "Qual equipamento de segurança é obrigatório para ocupantes de automóveis?", "alternativas": ["Capacete dentro do carro", "Colete refletivo para todos", "Cinto de segurança"], "correta": 2},
-        {"pergunta": "Dirigir sob influência de álcool é permitido?", "alternativas": ["Não", "Sim, sempre", "Somente à noite"], "correta": 0},
-        {"pergunta": "O que deve ser feito antes de iniciar uma ultrapassagem?", "alternativas": ["Acelerar sem observar", "Verificar se é permitida e segura", "Usar o celular"], "correta": 1},
-        {"pergunta": "Qual é a principal finalidade da sinalização de trânsito?", "alternativas": ["Decorar as vias", "Aumentar o ruído", "Orientar, advertir e regulamentar a circulação"], "correta": 2},
+    "Por que Fevereiro Tem 28 Dias?": [
+        {
+            "pergunta": "Fevereiro possui normalmente quantos dias?",
+            "alternativas": ["28", "30", "31"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Em um ano bissexto, fevereiro possui quantos dias?",
+            "alternativas": ["28", "29", "30"],
+            "correta": 1
+        },
+        {
+            "pergunta": "O calendário atualmente usado em grande parte do mundo é chamado de quê?",
+            "alternativas": ["Calendário marciano", "Calendário lunar chinês exclusivamente", "Calendário gregoriano"],
+            "correta": 2
+        },
     ],
 
-    "Pedestres e Ciclistas no Trânsito": [
-        {"pergunta": "Quando houver calçada em boas condições, o pedestre deve preferencialmente utilizá-la para quê?", "alternativas": ["Estacionar bicicleta", "Parar automóveis", "Circular fora da pista de veículos"], "correta": 2},
-        {"pergunta": "Ao atravessar uma via, o pedestre deve procurar o quê?", "alternativas": ["Local seguro e, quando houver, faixa de pedestres", "O ponto de maior velocidade dos carros", "A curva sem visibilidade"], "correta": 0},
-        {"pergunta": "O ciclista deve respeitar as regras de circulação e sinalização?", "alternativas": ["Não", "Sim", "Somente em rodovias"], "correta": 1},
-        {"pergunta": "Ao ultrapassar uma bicicleta, o motorista deve agir como?", "alternativas": ["Passando o mais perto possível", "Buzinando sem parar", "Com cuidado e distância lateral segura"], "correta": 2},
-        {"pergunta": "Qual item melhora a visibilidade do ciclista à noite?", "alternativas": ["Iluminação e elementos refletivos", "Roupa totalmente escura sem luz", "Fone de ouvido com volume máximo"], "correta": 0},
+    "Anos Bissextos e Calendários": [
+        {
+            "pergunta": "Para que existe o ano bissexto?",
+            "alternativas": ["Ajustar o calendário ao tempo da órbita da Terra", "Aumentar as férias", "Mudar as estações"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Com que frequência, em geral, ocorre um ano bissexto?",
+            "alternativas": ["A cada dois anos", "A cada quatro anos", "A cada dez anos"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual dia extra é acrescentado em um ano bissexto?",
+            "alternativas": ["31 de abril", "32 de dezembro", "29 de fevereiro"],
+            "correta": 2
+        },
     ],
 
-    "Geografia do Brasil": [
-        {"pergunta": "Qual é a maior região brasileira em área territorial?", "alternativas": ["Norte", "Sul", "Sudeste"], "correta": 0},
-        {"pergunta": "Qual é o maior estado brasileiro em área?", "alternativas": ["Bahia", "Amazonas", "São Paulo"], "correta": 1},
-        {"pergunta": "Qual rio possui a maior bacia hidrográfica do mundo?", "alternativas": ["São Francisco", "Paraná", "Amazonas"], "correta": 2},
-        {"pergunta": "Qual bioma predomina em grande parte da região Norte?", "alternativas": ["Amazônia", "Pampa", "Caatinga"], "correta": 0},
-        {"pergunta": "Qual é a capital do Brasil?", "alternativas": ["Rio de Janeiro", "Brasília", "São Paulo"], "correta": 1},
+    "História do Papel Higiênico": [
+        {
+            "pergunta": "Antes do papel higiênico moderno, as pessoas utilizavam diferentes materiais conforme o quê?",
+            "alternativas": ["Época e região", "Tipo sanguíneo", "Horário do dia"],
+            "correta": 0
+        },
+        {
+            "pergunta": "O papel higiênico comercial começou a se popularizar principalmente em qual século?",
+            "alternativas": ["Século XV", "Século XIX", "Século XXI"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual característica ajudou o papel higiênico em rolo a se popularizar?",
+            "alternativas": ["Ser metálico", "Precisar de eletricidade", "Praticidade"],
+            "correta": 2
+        },
     ],
 
-    "Capitais do Brasil": [
-        {"pergunta": "Qual é a capital da Paraíba?", "alternativas": ["Recife", "João Pessoa", "Natal"], "correta": 1},
-        {"pergunta": "Qual é a capital de Pernambuco?", "alternativas": ["Maceió", "Fortaleza", "Recife"], "correta": 2},
-        {"pergunta": "Qual é a capital da Bahia?", "alternativas": ["Salvador", "Aracaju", "Vitória"], "correta": 0},
-        {"pergunta": "Qual é a capital do Ceará?", "alternativas": ["Teresina", "Fortaleza", "São Luís"], "correta": 1},
-        {"pergunta": "Qual é a capital do Amazonas?", "alternativas": ["Belém", "Porto Velho", "Manaus"], "correta": 2},
+    "História do Zíper": [
+        {
+            "pergunta": "Para que serve principalmente um zíper?",
+            "alternativas": ["Unir e separar rapidamente duas partes de tecido", "Medir comprimento", "Produzir luz"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual nome em inglês é usado para zíper?",
+            "alternativas": ["Button", "Zipper", "Pocket"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual componente desliza ao longo dos dentes do zíper?",
+            "alternativas": ["Botão", "Mola", "Cursor"],
+            "correta": 2
+        },
     ],
 
-    "Língua Portuguesa": [
-        {"pergunta": "Qual palavra é um substantivo?", "alternativas": ["Correr", "Bonito", "Casa"], "correta": 2},
-        {"pergunta": "Qual palavra é um verbo?", "alternativas": ["Cantar", "Azul", "Mesa"], "correta": 0},
-        {"pergunta": "Qual palavra está escrita corretamente?", "alternativas": ["Excessão", "Exceção", "Eceção"], "correta": 1},
-        {"pergunta": "Qual é o plural de cidadão?", "alternativas": ["Cidadões", "Cidadães", "Cidadãos"], "correta": 2},
-        {"pergunta": "Qual palavra é sinônimo de rápido?", "alternativas": ["Veloz", "Lento", "Parado"], "correta": 0},
+    "História do Guarda-Chuva": [
+        {
+            "pergunta": "Os primeiros modelos semelhantes a guarda-chuvas eram usados também para proteção contra quê?",
+            "alternativas": ["Sol", "Som", "Frio de geladeira"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Como é chamado o objeto usado principalmente para proteção do sol, semelhante a um guarda-chuva?",
+            "alternativas": ["Capacete", "Sombrinha ou parasol", "Bússola"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual material é comum na estrutura interna de guarda-chuvas modernos?",
+            "alternativas": ["Papel", "Argila", "Metal"],
+            "correta": 2
+        },
     ],
 
-    "Matemática Rápida": [
-        {"pergunta": "Quanto é 7 vezes 8?", "alternativas": ["56", "54", "64"], "correta": 0},
-        {"pergunta": "Quanto é 144 dividido por 12?", "alternativas": ["14", "12", "10"], "correta": 1},
-        {"pergunta": "Quanto é 15 por cento de 200?", "alternativas": ["20", "40", "30"], "correta": 2},
-        {"pergunta": "Qual é a raiz quadrada de 81?", "alternativas": ["9", "8", "7"], "correta": 0},
-        {"pergunta": "Quanto é 25 mais 37?", "alternativas": ["52", "62", "72"], "correta": 1},
+    "História da Escova de Dentes": [
+        {
+            "pergunta": "Antes das escovas modernas, algumas culturas limpavam os dentes usando o quê?",
+            "alternativas": ["Galhos e fibras vegetais", "Pedras grandes", "Moedas"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual parte da escova entra diretamente em contato com os dentes?",
+            "alternativas": ["Cabo apenas", "Cerdas", "Embalagem"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual produto é normalmente colocado na escova durante a higiene bucal?",
+            "alternativas": ["Sabão em pó", "Shampoo", "Creme dental"],
+            "correta": 2
+        },
     ],
 
-    "Mitos e Verdades do Dia a Dia": [
-        {"pergunta": "Engolir chiclete faz ele ficar sete anos no estômago?", "alternativas": ["Sim", "Não", "Somente em crianças"], "correta": 1},
-        {"pergunta": "Raspar o pelo faz ele crescer mais grosso de verdade?", "alternativas": ["Sim, sempre", "Somente no inverno", "Não"], "correta": 2},
-        {"pergunta": "Ler com pouca luz estraga permanentemente a visão?", "alternativas": ["Não, mas pode causar desconforto temporário", "Sim, sempre causa cegueira", "Só se o livro for digital"], "correta": 0},
-        {"pergunta": "Estalar os dedos causa artrite automaticamente?", "alternativas": ["Sim, sempre", "Não há evidência de que cause artrite automaticamente", "Somente na mão esquerda"], "correta": 1},
-        {"pergunta": "Tomar água ajuda a manter o corpo hidratado?", "alternativas": ["Não", "Somente durante o verão", "Sim"], "correta": 2},
+    "História do Controle Remoto": [
+        {
+            "pergunta": "Qual é a principal função de um controle remoto?",
+            "alternativas": ["Comandar um aparelho à distância", "Gerar eletricidade", "Aumentar o tamanho da televisão"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual tecnologia é tradicionalmente usada em muitos controles de televisão?",
+            "alternativas": ["Raio X", "Infravermelho", "Ultrassom médico"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Para funcionar, um controle remoto tradicional normalmente precisa de quê?",
+            "alternativas": ["Combustível", "Água", "Pilhas ou bateria"],
+            "correta": 2
+        },
     ],
 
-    "Frases que Todo Professor Já Falou": [
-        {"pergunta": "Complete: A prova vai ser baseada no que foi...", "alternativas": ["dito no recreio", "postado no grupo da família", "dado em sala"], "correta": 2},
-        {"pergunta": "Complete: Pode guardar o material, agora é...", "alternativas": ["prova", "intervalo eterno", "hora de ir embora"], "correta": 0},
-        {"pergunta": "Complete: Quem terminou pode ficar em...", "alternativas": ["pé", "silêncio", "casa"], "correta": 1},
-        {"pergunta": "Complete: Eu vou esperar todo mundo ficar em...", "alternativas": ["fila do lanche", "casa", "silêncio"], "correta": 2},
-        {"pergunta": "Complete: Essa conversa eu quero ver na hora da...", "alternativas": ["prova", "merenda", "saída"], "correta": 0},
+    "Símbolos das Etiquetas de Roupa": [
+        {
+            "pergunta": "O símbolo de uma bacia com água em uma etiqueta de roupa indica instruções relacionadas a quê?",
+            "alternativas": ["Lavagem", "Passar roupa", "Secagem ao sol apenas"],
+            "correta": 0
+        },
+        {
+            "pergunta": "Qual símbolo representa instruções para passar a roupa?",
+            "alternativas": ["Um círculo", "Um ferro de passar", "Um triângulo"],
+            "correta": 1
+        },
+        {
+            "pergunta": "Um símbolo riscado em uma etiqueta geralmente significa o quê?",
+            "alternativas": ["Obrigatório", "Preferencial", "Não realizar aquele procedimento"],
+            "correta": 2
+        },
     ],
+
 }
 
 
